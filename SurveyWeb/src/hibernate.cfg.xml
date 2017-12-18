@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:sqlserver://localhost</property>
+        <property name="connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+        <property name="dialect">org.hibernate.dialect.SQLServerDialect</property>
+        <mapping class="com.moyo.Beans.AnswerEntity"/>
+        <mapping resource="com/moyo/Beans/AnswerEntity.hbm.xml"/>
+        <mapping resource="com/moyo/Beans/BatchEntity.hbm.xml"/>
+        <mapping class="com.moyo.Beans.BatchEntity"/>
+        <mapping class="com.moyo.Beans.ManagerDetailEntity"/>
+        <mapping resource="com/moyo/Beans/ManagerDetailEntity.hbm.xml"/>
+        <mapping resource="com/moyo/Beans/OptionEntity.hbm.xml"/>
+        <mapping class="com.moyo.Beans.OptionEntity"/>
+        <mapping class="com.moyo.Beans.ParticipationEntity"/>
+        <mapping resource="com/moyo/Beans/ParticipationEntity.hbm.xml"/>
+        <mapping class="com.moyo.Beans.QuestionEntity"/>
+        <mapping resource="com/moyo/Beans/QuestionEntity.hbm.xml"/>
+        <mapping resource="com/moyo/Beans/SurevyEntity.hbm.xml"/>
+        <mapping class="com.moyo.Beans.SurevyEntity"/>
+        <mapping class="com.moyo.Beans.UserDetailEntity"/>
+        <mapping resource="com/moyo/Beans/UserDetailEntity.hbm.xml"/>
+        <mapping class="com.moyo.Beans.SurveyEntity"/>
+        <mapping resource="com/moyo/Beans/SurveyEntity.hbm.xml"/>
+        <mapping class="com.moyo.Beans.TipEntity"/>
+        <mapping resource="com/moyo/Beans/TipEntity.hbm.xml"/>
+        <mapping class="com.moyo.Beans.FeedbackEntity"/>
+        <mapping resource="com/moyo/Beans/FeedbackEntity.hbm.xml"/>
+        <!-- <property name="connection.username"/> -->
+        <!-- <property name="connection.password"/> -->
+
+        <!-- DB schema will be updated if needed -->
+        <!-- <property name="hbm2ddl.auto">update</property> -->
+    </session-factory>
+</hibernate-configuration>

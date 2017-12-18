@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.moyo.Beans.BatchEntity" table="Batch" schema="dbo" catalog="SurveyWeb">
+        <id name="batchId">
+            <column name="batchId" sql-type="varchar(10)" length="10"/>
+        </id>
+        <property name="batchName">
+            <column name="batchName" sql-type="varchar(20)" length="20" not-null="true"/>
+        </property>
+        <property name="description">
+            <column name="description" sql-type="varchar(120)" length="120" not-null="true"/>
+        </property>
+        <property name="createTime">
+            <column name="createTime" sql-type="date" not-null="true"/>
+        </property>
+        <property name="managerId">
+            <column name="managerId" sql-type="varchar(10)" length="10" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.moyo.Beans.ParticipationEntity" table="Participation" schema="dbo" catalog="SurveyWeb">
+        <id name="partId">
+            <column name="partId" sql-type="varchar(10)" length="10"/>
+        </id>
+        <property name="batchId">
+            <column name="batchId" sql-type="varchar(10)" length="10" not-null="true"/>
+        </property>
+        <property name="uesrId">
+            <column name="uesrId" sql-type="varchar(10)" length="10" not-null="true"/>
+        </property>
+        <property name="partTime">
+            <column name="partTime" sql-type="date" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

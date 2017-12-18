@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.moyo.Beans.AnswerEntity" table="Answer" schema="dbo" catalog="SurveyWeb">
+        <id name="answerId">
+            <column name="answerId" sql-type="varchar(10)" length="10"/>
+        </id>
+        <property name="uesrId">
+            <column name="uesrId" sql-type="varchar(10)" length="10" not-null="true"/>
+        </property>
+        <property name="naireId">
+            <column name="naireId" sql-type="varchar(10)" length="10" not-null="true"/>
+        </property>
+        <property name="answerTime">
+            <column name="answerTime" sql-type="date" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
