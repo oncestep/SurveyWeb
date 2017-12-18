@@ -112,4 +112,12 @@ public class UserDetailManagedBean {
             throw e;
         }
     }
+    public void update(){
+        try {
+            UserDetailDAO udd=new UserDetailDAO();
+            udd.merge(getEntity());
+        }catch (Exception e){
+            throw e;
+        }
+    }
 }

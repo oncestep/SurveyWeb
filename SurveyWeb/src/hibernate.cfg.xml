@@ -4,7 +4,7 @@
         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
-        <property name="connection.url">jdbc:sqlserver://localhost</property>
+        <property name="connection.url">jdbc:sqlserver://localhost:1433;integratedSecurity=true</property>
         <property name="connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
         <property name="dialect">org.hibernate.dialect.SQLServerDialect</property>
         <mapping class="com.moyo.Beans.AnswerEntity"/>
@@ -19,8 +19,6 @@
         <mapping resource="com/moyo/Beans/ParticipationEntity.hbm.xml"/>
         <mapping class="com.moyo.Beans.QuestionEntity"/>
         <mapping resource="com/moyo/Beans/QuestionEntity.hbm.xml"/>
-        <mapping resource="com/moyo/Beans/SurevyEntity.hbm.xml"/>
-        <mapping class="com.moyo.Beans.SurevyEntity"/>
         <mapping class="com.moyo.Beans.UserDetailEntity"/>
         <mapping resource="com/moyo/Beans/UserDetailEntity.hbm.xml"/>
         <mapping class="com.moyo.Beans.SurveyEntity"/>

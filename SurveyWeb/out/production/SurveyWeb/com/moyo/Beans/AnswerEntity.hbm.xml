@@ -6,16 +6,16 @@
 
     <class name="com.moyo.Beans.AnswerEntity" table="Answer" schema="dbo" catalog="SurveyWeb">
         <id name="answerId">
-            <column name="answerId" sql-type="varchar(10)" length="10"/>
+            <column name="answerId" sql-type="bigint"/>
         </id>
-        <property name="uesrId">
-            <column name="uesrId" sql-type="varchar(10)" length="10" not-null="true"/>
+        <property name="userId">
+            <column name="userId" sql-type="bigint" not-null="true"/>
         </property>
         <property name="naireId">
-            <column name="naireId" sql-type="varchar(10)" length="10" not-null="true"/>
+            <column name="naireId" sql-type="bigint" not-null="true"/>
         </property>
         <property name="answerTime">
-            <column name="answerTime" sql-type="date" not-null="true"/>
+            <column name="answerTime" sql-type="datetime" not-null="true"/>
         </property>
     </class>
 </hibernate-mapping>

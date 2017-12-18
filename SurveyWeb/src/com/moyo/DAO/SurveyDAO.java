@@ -17,6 +17,8 @@ public class SurveyDAO {
             Transaction transaction=session.beginTransaction();
             session.save(object);
             transaction.commit();
+            session.clear();
+            session.close();
         }catch (Exception e){
             throw e;
         }
@@ -27,6 +29,8 @@ public class SurveyDAO {
             Transaction transaction=session.beginTransaction();
             session.delete(object);
             transaction.commit();
+            session.clear();
+            session.close();
         }catch (Exception e){
             throw e;
         }
@@ -60,7 +64,12 @@ public class SurveyDAO {
     }
     public SurveyEntity merge(SurveyEntity detachedInstance) {
         try {
-            SurveyEntity result = (SurveyEntity) getSession().merge(detachedInstance);
+            Session session=getSession();
+            Transaction transaction=session.beginTransaction();
+            SurveyEntity result = (SurveyEntity) session.merge(detachedInstance);
+            transaction.commit();
+            session.clear();
+            session.close();
             return result;
         } catch (Exception e) {
             throw e;

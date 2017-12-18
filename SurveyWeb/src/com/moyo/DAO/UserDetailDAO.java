@@ -17,6 +17,8 @@ public class UserDetailDAO {
             Transaction transaction=session.beginTransaction();
             session.save(object);
             transaction.commit();
+            session.clear();
+            session.close();
         }catch (Exception e){
             throw e;
         }
@@ -27,6 +29,8 @@ public class UserDetailDAO {
             Transaction transaction=session.beginTransaction();
             session.delete(object);
             transaction.commit();
+            session.clear();
+            session.close();
         }catch (Exception e){
             throw e;
         }
@@ -84,7 +88,12 @@ public class UserDetailDAO {
     }
     public UserDetailEntity merge(UserDetailEntity detachedInstance) {
         try {
-            UserDetailEntity result = (UserDetailEntity) getSession().merge(detachedInstance);
+            Session session=getSession();
+            Transaction transaction= session.beginTransaction();
+            UserDetailEntity result = (UserDetailEntity) session.merge(detachedInstance);
+            transaction.commit();
+            session.clear();
+            session.close();
             return result;
         } catch (Exception e) {
             throw e;

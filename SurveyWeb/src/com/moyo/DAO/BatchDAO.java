@@ -13,10 +13,12 @@ import static com.moyo.SessionFactory.SF.getSession;
 public class BatchDAO {
     public void save(BatchEntity object){
         try{
-            getSession().beginTransaction();
-            getSession().save(object);
-            getSession().getTransaction().commit();
-            getSession().close();
+            Session session=getSession();
+            Transaction transaction=session.beginTransaction();
+            session.save(object);
+            transaction.commit();
+            session.clear();
+            session.close();
         }catch (Exception e){
             throw e;
         }
@@ -25,8 +27,10 @@ public class BatchDAO {
         try{
             Session session=getSession();
             Transaction transaction=session.beginTransaction();
-            session.save(object);
+            session.delete(object);
             transaction.commit();
+            session.clear();
+            session.close();
         }catch (Exception e){
             throw e;
         }
@@ -60,7 +64,12 @@ public class BatchDAO {
     }
     public BatchEntity merge(BatchEntity detachedInstance) {
         try {
-            BatchEntity result = (BatchEntity) getSession().merge(detachedInstance);
+            Session session=getSession();
+            Transaction transaction=session.beginTransaction();
+            BatchEntity result = (BatchEntity) session.merge(detachedInstance);
+            transaction.commit();
+            session.clear();
+            session.close();
             return result;
         } catch (Exception e) {
             throw e;

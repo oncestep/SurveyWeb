@@ -6,16 +6,16 @@
 
     <class name="com.moyo.Beans.UserDetailEntity" table="UserDetail" schema="dbo" catalog="SurveyWeb">
         <id name="userId">
-            <column name="uesrId" sql-type="varchar(10)" length="10"/>
+            <column name="userId" sql-type="bigint"/>
         </id>
         <property name="username">
-            <column name="Username" sql-type="varchar(20)" length="20" not-null="true"/>
+            <column name="Username" sql-type="varchar(50)" length="50" not-null="true"/>
         </property>
         <property name="password">
-            <column name="Password" sql-type="varchar(20)" length="20" not-null="true"/>
+            <column name="Password" sql-type="varchar(200)" length="200" not-null="true"/>
         </property>
         <property name="name">
-            <column name="Name" sql-type="varchar(20)" length="20" not-null="true"/>
+            <column name="Name" sql-type="varchar(50)" length="50" not-null="true"/>
         </property>
         <property name="gender">
             <column name="gender" sql-type="int" not-null="true"/>
@@ -24,13 +24,13 @@
             <column name="birthYear" sql-type="date" not-null="true"/>
         </property>
         <property name="nickname">
-            <column name="nickname" sql-type="varchar(20)" length="20" not-null="true"/>
+            <column name="nickname" sql-type="varchar(50)" length="50" not-null="true"/>
         </property>
         <property name="mobile">
             <column name="mobile" sql-type="numeric(11)" precision="11" not-null="true"/>
         </property>
         <property name="email">
-            <column name="email" sql-type="varchar(40)" length="40" not-null="true"/>
+            <column name="email" sql-type="varchar(50)" length="50" not-null="true"/>
         </property>
     </class>
 </hibernate-mapping>
