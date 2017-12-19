@@ -1,21 +1,10 @@
-/*
-	创建数据库
-*/
 create database SurveyWeb
 go
-
-/*
-	使用数据库
-*/
 use SurveyWeb
 go
-
-/*
-	实体映射表 & 关系映射表
-*/
 create table ManagerDetail 
 (
-   managerId            bigint                         not null				identity(10000,1),
+   managerId            bigint                         not null				identity(1,1),
    username             varchar(50)                    null,
    password             varchar(200)                   null,
    name                 varchar(50)                    null,
@@ -26,6 +15,7 @@ create table ManagerDetail
    email                varchar(50)                    null,
    constraint PK_MANAGERDETAIL primary key clustered (managerId)
 );
+insert into ManagerDetail values('a','c','d',1,GETDATE(),'y',12345678910,'e')
 create table UserDetail 
 (
    userId               bigint                         not null				identity(1,1),
@@ -41,7 +31,7 @@ create table UserDetail
 );
 create table Batch 
 (
-   batchId              bigint                         not null,
+   batchId              bigint                         not null				identity(1,1),
    batchName            varchar(50)                    null,
    description          text                           null,
    createTime           datetime                       null,
@@ -51,7 +41,7 @@ create table Batch
 
 create table Participation 
 (
-   partId               bigint                         not null,
+   partId               bigint                         not null				identity(1,1),
    batchId              bigint                         null,
    userId               bigint                         null,
    partTime             datetime                       null,
@@ -60,7 +50,7 @@ create table Participation
 
 create table Tip 
 (
-   tipId                bigint                         not null,
+   tipId                bigint                         not null				identity(1,1),
    managerId            bigint                         null,
    batchId              bigint                         null,
    tips                 varchar(200)                   null,
@@ -69,7 +59,7 @@ create table Tip
 
 create table Survey 
 (
-   naireId              bigint                         not null,
+   naireId              bigint                         not null				identity(1,1),
    naireName            text                           null,
    description          text                           null,
    createTime           datetime                       null,
@@ -79,7 +69,7 @@ create table Survey
 
 create table Answer 
 (
-   answerId             bigint                         not null,
+   answerId             bigint                         not null				identity(1,1),
    userId               bigint                         null,
    naireId              bigint                         null,
    answerTime           datetime                       null,
@@ -88,7 +78,7 @@ create table Answer
 
 create table feedback 
 (
-   feedbackId           bigint                         not null,
+   feedbackId           bigint                         not null				identity(1,1),
    userId               bigint                         null,
    naireId              bigint                         null,
    feedbacks            varchar(200)                   null,
@@ -97,7 +87,7 @@ create table feedback
 
 create table Question 
 (
-   questionId           bigint                         not null,
+   questionId           bigint                         not null				identity(1,1),
    type                 int                            null,
    "order"              bigint                         null,
    content              text                           null,
@@ -107,7 +97,7 @@ create table Question
 
 create table "Option" 
 (
-   optionId             bigint                         not null,
+   optionId             bigint                         not null				identity(1,1),
    content              text                           null,
    questionId           bigint                         null,
    constraint PK_OPTION primary key clustered (optionId)
