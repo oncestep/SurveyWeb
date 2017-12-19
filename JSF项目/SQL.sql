@@ -4,7 +4,7 @@ use SurveyWeb
 go
 create table ManagerDetail 
 (
-   managerId            bigint                         not null,
+   managerId            bigint                         not null				identity(10000,1),
    username             varchar(50)                    null,
    password             varchar(200)                   null,
    name                 varchar(50)                    null,
@@ -17,7 +17,7 @@ create table ManagerDetail
 );
 create table UserDetail 
 (
-   userId               bigint                         not null,
+   userId               bigint                         not null				identity(1,1),
    Username             varchar(50)                    null,
    Password             varchar(200)                   null,
    Name                 varchar(50)                    null,
