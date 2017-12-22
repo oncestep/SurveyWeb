@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!--<property name="connection.url">jdbc:sqlserver://localhost:1433;integratedSecurity=true</property>-->
+        <property name="connection.url">jdbc:sqlserver://localhost:1433;</property>
+        <property name="connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+        <property name="dialect">org.hibernate.dialect.SQLServerDialect</property>
+
+        <property name="connection.username">javauser</property>
+        <property name="connection.password">123456</property>
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+
+        <mapping resource="com/moyo/beans/AnswerEntity.hbm.xml"/>
+        <mapping class="com.moyo.beans.AnswerEntity"/>
+        <mapping resource="com/moyo/beans/BatchEntity.hbm.xml"/>
+        <mapping class="com.moyo.beans.BatchEntity"/>
+        <mapping resource="com/moyo/beans/ManagerDetailEntity.hbm.xml"/>
+        <mapping class="com.moyo.beans.ManagerDetailEntity"/>
+        <mapping class="com.moyo.beans.OptionEntity"/>
+        <mapping resource="com/moyo/beans/OptionEntity.hbm.xml"/>
+        <mapping resource="com/moyo/beans/ParticipationEntity.hbm.xml"/>
+        <mapping class="com.moyo.beans.ParticipationEntity"/>
+        <mapping resource="com/moyo/beans/QuestionEntity.hbm.xml"/>
+        <mapping class="com.moyo.beans.QuestionEntity"/>
+        <mapping class="com.moyo.beans.SurveyEntity"/>
+        <mapping resource="com/moyo/beans/SurveyEntity.hbm.xml"/>
+        <mapping resource="com/moyo/beans/TipEntity.hbm.xml"/>
+        <mapping class="com.moyo.beans.TipEntity"/>
+        <mapping class="com.moyo.beans.UserDetailEntity"/>
+        <mapping resource="com/moyo/beans/UserDetailEntity.hbm.xml"/>
+        <mapping resource="com/moyo/beans/FeedbackEntity.hbm.xml"/>
+        <mapping class="com.moyo.beans.FeedbackEntity"/>
+        <!-- <property name="connection.username"/> -->
+        <!-- <property name="connection.password"/> -->
+
+        <!-- DB schema will be updated if needed -->
+        <!-- <property name="hbm2ddl.auto">update</property> -->
+    </session-factory>
+</hibernate-configuration>
