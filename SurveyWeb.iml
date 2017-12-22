@@ -33,5 +33,10 @@
     <orderEntry type="library" scope="PROVIDED" name="GlassFish 4.1.1 - JSF" level="application_server_libraries" />
     <orderEntry type="library" scope="PROVIDED" name="GlassFish 4.1.1 - CDI: Contexts and Dependency Injection" level="application_server_libraries" />
     <orderEntry type="library" name="sqljdbc41" level="project" />
+<<<<<<< HEAD
+    <orderEntry type="library" scope="PROVIDED" name="GlassFish 4.1.1 - CDI: Contexts and Dependency Injection" level="application_server_libraries" />
+    <orderEntry type="library" scope="PROVIDED" name="GlassFish 4.1.1 - JSF" level="application_server_libraries" />
+=======
+>>>>>>> 72898e8f675890135dca55fe2dfc576f768ed5ef
   </component>
 </module>

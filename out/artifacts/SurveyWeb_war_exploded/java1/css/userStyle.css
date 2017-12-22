@@ -1,0 +1,124 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2017-12-21, 17:35:17
+    Author     : Administrator
+*/
+.col-lg-4,col-md-5,.col-lg-8,.col-lg-7{
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+div{
+    display: block;
+}
+*{
+    box-sizing: border-box;
+}
+.row{
+    margin-right: -15px;
+    margin-left: -15px;
+    display: block;
+}
+.card{
+    border-radius: 6px;
+    box-shadow: 0 2px 2px rgba(204, 197, 185, 0.5);
+    background-color: #FFFFFF;
+    color: #252422;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+.content.author{
+    font-family: 'Muli', Arial, sans-serif;
+}
+.card-user .author .title {
+    color: #403D39;
+}
+.card-user .title {
+    font-weight: 600;
+    line-height: 24px;
+}
+/*.card .title {
+    margin: 0;
+}*/
+h4{
+    font-size: 1.5em;
+    font-weight: 600;
+    line-height: 1.2em;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Muli', "Helvetica", Arial, sans-serif;
+}
+.card-user .description {
+    margin-top: 10px;
+}
+.card .description {
+    font-size: 16px;
+    color: #66615b;
+}
+.text-center {
+    text-align: center;
+}
+p{
+    line-height: 1.4em;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Muli', "Helvetica", Arial, sans-serif;
+    margin: 0 0 10px;
+}
+/*.text-center{
+    display: block;
+    font-size: 14px;
+    font-family: 'Muli', Arial, sans-serif;
+    text-align: center;
+}
+.text-center .row{
+    margin-right: -15px;
+    margin-left: -15px;
+    box-sizing: border-box;
+    display: block;
+}*/
+.col-lg-8,col-md-7{
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.col-md-7 {
+    display: block;
+    width: 58.33333333%;
+    float: left;
+}
+
+.col-lg-8 .card .header{
+    padding: 20px 20px 0;
+}
+.card.content{    padding: 15px 15px 10px 15px;
+}
+form{
+    display: block;
+    margin-top: 0em;
+}
+
+.col-md-5,.col-md-3,col-md-4.col-md-6,
+.col-md-12{
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.btn-info.btn-fill {
+    color: #FFFFFF;
+    background-color: #68B3C8;
+    opacity: 1;
+}
+.btn-wd {
+    min-width: 140px;
+}
+
+
+
+

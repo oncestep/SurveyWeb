@@ -1,0 +1,72 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2017-12-21, 9:59:08
+    Author     : Administrator
+*/
+*{box-sizing: border-box;}
+form{
+    display: block;
+    margin-top: 0em;
+}
+.form-horizontal{
+    margin-left: 800px;;
+    margin-top: 20%;
+}
+.form-horizontal .form-group{
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.margin-bottom-none{
+    margin-bottom: 0;
+}
+.col-lg-9{
+    width: 75%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.col-sm-3{
+    width: 25%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.form-control:not(select){
+    -webkit-appearance: none;
+}
+.form-control{
+    border-radius: 0;
+    box-shadow: none;
+    display: block;
+    width: 100%;
+    border-color: #d2d6de;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.input-sm{
+     height: 30px;
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+}
+.but-danger{
+    background-color: #dd4b39;
+    border-color: #d73925;
+}
+.btn{
+    margin-top: 2%;
+    border-radius: 3px;
+    box-shadow: none;
+    border: 1px solid transparent;
+}
