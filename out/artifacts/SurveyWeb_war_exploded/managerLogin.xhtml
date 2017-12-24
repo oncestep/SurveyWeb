@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Manager Login</title>
+        <link href="resources/LoginandRegistercss.css" rel="stylesheet" type="text/css"/>
+    </h:head>
+    <h:body>
+        <h:form>
+            <div id="div0">
+            </div>
+            <div id="div1">
+                <center>
+                    <h1>Manager Login</h1>
+                    <p>
+                        <h:inputText id="magnameL" styleClass="in"/>
+                    </p>
+                    <p>
+                        <h:inputSecret id="magpwdL" styleClass="in"/>
+                    </p>
+                    <p>
+                        <h:commandButton value="Login" styleClass="Loginbut"/>
+                    </p>
+                    <p>            <h:outputLabel value="do not have a manager accont?"/>
+                        <h:commandLink value="Register now!" action="managerRegister.xhtml"/>
+                    </p>
+                </center>
+            </div>
+        </h:form>
+    </h:body>
+</html>
+

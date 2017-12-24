@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <title>Manager Register</title>
+</h:head>
+<h:body>
+    <h:form>
+        <table>
+            <tr>
+                <td>Manager Register</td>
+            </tr>
+            <tr>
+                <td>Manager User Name:</td>
+                <f:ajax event="keyup" render="nameEorr">
+                    <td><h:inputText id="magnameR" value="#{managerDetailManagedBean.username}"
+                                     validator="#{managerDetailManagedBean.validateUserName}" styleClass="in"/>
+                        <h:message for="magnameR" id="nameEorr" style="color: red"/>
+                    </td>
+                </f:ajax>
+            </tr>
+            <TR>
+                <TD>Password</TD>
+                <TD><h:inputSecret id="magpwdR" value="#{managerDetailManagedBean.password}"
+                                   validator="#{managerDetailManagedBean.validateUserName}" styleClass="in"/></TD>
+            </TR>
+            <TR>
+                <TD>Verify Password</TD>
+                <f:ajax event="keyup" render="cPasswordEorr">
+                    <TD><h:inputSecret id="magpwdRR" value="#{managerDetailManagedBean.cpassword}"
+                                       validator="#{managerDetailManagedBean.validatePassword}" styleClass="in"/></TD>
+                    <h:message for="magpwdRR" id="cPasswordEorr" style="color: red"/>
+                </f:ajax>
+            </TR>
+            <TR>
+                <TD>Name</TD>
+                <TD><h:inputText id="magname" styleClass="in" value="#{managerDetailManagedBean.name}"/></TD>
+            </TR>
+            <TR>
+                <TD>Gender</TD>
+                <TD><h:selectOneRadio id="maggender" title="Gender Select" layout="lineDirection" valueChangeListener="#{managerDetailManagedBean.processValueChange}">
+                    <f:selectItem id="sil1" itemLabel="male"/>
+                    <f:selectItem id="sil2" itemLabel="female"/>
+                </h:selectOneRadio></TD>
+            </TR>
+            <TR>
+                <TD>Birthday</TD>
+                <TD><h:inputText id="magbirthday" value="#{managerDetailManagedBean.name}" styleClass="in"/></TD>
+            </TR>
+            <TR>
+                <TD>Nickname</TD>
+                <TD><h:inputText id="magnickname" styleClass="in" value="#{managerDetailManagedBean.nickname}"/></TD>
+            </TR>
+            <TR>
+                <TD>Phone Number</TD>
+                <TD><h:inputText id="magpn" styleClass="in" value="#{managerDetailManagedBean.mobile}"/></TD>
+            </TR>
+            <TR>
+                <TD>Email</TD>
+                <TD><h:inputText id="magemail" value="#{managerDetailManagedBean.email}" styleClass="in"/></TD>
+            </TR>
+            <TR>
+                <td>
+                    <h:commandButton value="Register" styleClass="but" action="#{managerDetailManagedBean.managerRegistor}"/>
+                </td>
+            </TR>
+        </table>
+    </h:form>
+</h:body>
+</html>
+
