@@ -1,46 +1,65 @@
 <?xml version='1.0' encoding='UTF-8' ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
-    <h:head>
-        <title>User Register</title>
-    </h:head>
-    <h:body>
-        <h:form>
-            <table>
-                <tr><td>User Register</td></tr>
+<h:head>
+    <title>User Register</title>
+</h:head>
+<h:body>
+    <h:form>
+        <table>
+            <tr>
+                <td>User Register</td>
+            </tr>
             <tr>
                 <td>User Name</td>
                 <td><h:inputText id="usernameR" styleClass="in"/>
                 </td>
             </tr>
-            <TR><TD>Password</TD>
-            <TD><h:inputSecret id="userpwdR" styleClass="in"/></TD></TR>
-            <TR><TD>Verify Password</TD>
-            <TD><h:inputSecret id="magpwdRR" styleClass="in"/></TD></TR>
-            <TR><TD>Name</TD>
-            <TD><h:inputText id="name" styleClass="in"/></TD></TR>
-            <TR><TD>Gender</TD>
-            <TD><h:selectOneRadio id="usergender" title="Gender Select" layout="lineDirection">
-                <f:selectItem id="sil1" itemLabel="male"/>
-                <f:selectItem id="sil2" itemLabel="female"/>
-            </h:selectOneRadio></TD></TR>
-            <TR><TD>Birthday</TD>
-            <TD><h:inputText id="userbirthday" styleClass="in"/></TD></TR>
-            <TR><TD>Nickname</TD>
-            <TD><h:inputText id="usernickname" styleClass="in"/></TD></TR>
-            <TR><TD>Phone Number</TD>
-            <TD><h:inputText id="userpn" styleClass="in"/></TD></TR>
-            <TR><TD>Email</TD>
-            <TD><h:inputText id="useremail" styleClass="in"/></TD></TR>
+            <TR>
+                <TD>Password</TD>
+                <TD><h:inputSecret id="userpwdR" styleClass="in"/></TD>
+            </TR>
+            <TR>
+                <TD>Verify Password</TD>
+                <TD><h:inputSecret id="magpwdRR" styleClass="in"/></TD>
+            </TR>
+            <TR>
+                <TD>Name</TD>
+                <TD><h:inputText id="name" styleClass="in"/></TD>
+            </TR>
+            <TR>
+                <TD>Gender</TD>
+                <TD><h:selectOneRadio id="usergender" title="Gender Select" layout="lineDirection">
+                    <f:selectItem id="sil1" itemLabel="male"/>
+                    <f:selectItem id="sil2" itemLabel="female"/>
+                </h:selectOneRadio></TD>
+            </TR>
+            <TR>
+                <TD>Birthday</TD>
+                <TD><h:inputText id="userbirthday" styleClass="in"/></TD>
+            </TR>
+            <TR>
+                <TD>Nickname</TD>
+                <TD><h:inputText id="usernickname" styleClass="in"/></TD>
+            </TR>
+            <TR>
+                <TD>Phone Number</TD>
+                <TD><h:inputText id="userpn" styleClass="in"/></TD>
+            </TR>
+            <TR>
+                <TD>Email</TD>
+                <TD><h:inputText id="useremail" styleClass="in"/></TD>
+            </TR>
             <TR>
                 <td>
                     <h:commandButton value="Register" styleClass="but"/>
                 </td>
             </TR>
-            </table>
-        </h:form>
-    </h:body>
+        </table>
+    </h:form>
+</h:body>
 </html>
 

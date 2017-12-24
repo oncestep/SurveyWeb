@@ -8,6 +8,7 @@ import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.component.UIComponent;
+import javax.faces.component.UIViewRoot;
 import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
 import javax.faces.event.AbortProcessingException;
@@ -19,17 +20,26 @@ import java.sql.Date;
 
 @ManagedBean
 @SessionScoped
-public class ManagerDetailManagedBean implements ValueChangeListener {
+public class ManagerDetailManagedBean {
     private long managerId;
     private String username;
     private String password;
     private String cpassword;
     private String name;
+    private String wGender;
     private Integer gender;
-    private Date birthYear;
+    private java.util.Date birthYear;
     private String nickname;
     private Long mobile;
     private String email;
+
+    public String getwGender() {
+        return wGender;
+    }
+
+    public void setwGender(String wGender) {
+        this.wGender = wGender;
+    }
 
     public String getCpassword() {
         return cpassword;
@@ -79,11 +89,11 @@ public class ManagerDetailManagedBean implements ValueChangeListener {
         this.gender = gender;
     }
 
-    public Date getBirthYear() {
+    public java.util.Date getBirthYear() {
         return birthYear;
     }
 
-    public void setBirthYear(Date birthYear) {
+    public void setBirthYear(java.util.Date birthYear) {
         this.birthYear = birthYear;
     }
 
@@ -112,19 +122,18 @@ public class ManagerDetailManagedBean implements ValueChangeListener {
     }
 
     private int getGenderCode(){
-        int gender;
-        if (this.gender.equals("male")){
+        if(wGender.equals("male")){
             gender=0;
         }else {
             gender=1;
         }
         return gender;
     }
-    private ManagerDetailEntity getEntity(){
-        ManagerDetailEntity managerDetailEntity=new ManagerDetailEntity();
+    private ManagerDetailEntity getEntity() {
+        ManagerDetailEntity managerDetailEntity = new ManagerDetailEntity();
         java.sql.Date birthYearSQL = new java.sql.Date(birthYear.getTime());
         try {
-            String encPassword=EncodeMD5.encode(password);
+            String encPassword = EncodeMD5.encode(password);
             managerDetailEntity.setGender(getGenderCode());
             managerDetailEntity.setBirthYear(birthYearSQL);
             managerDetailEntity.setEmail(email);
@@ -138,6 +147,7 @@ public class ManagerDetailManagedBean implements ValueChangeListener {
         }
         return managerDetailEntity;
     }
+
     /**
      * To set all the valuable null
      */
@@ -166,21 +176,20 @@ public class ManagerDetailManagedBean implements ValueChangeListener {
     /**
      * Manager Login Method
      */
-    public void managerLogin() {
+    public String managerLogin() {
         ManagerDetailDAO managerDetailDAO = new ManagerDetailDAO();
         ManagerDetailEntity managerDetailEntity = (ManagerDetailEntity) managerDetailDAO.findByUsername(username).get(0);
         try {
-            String endPassword = EncodeMD5.encode(managerDetailEntity.getPassword());
-            if (password.equals(endPassword)) {
+            String endPassword = EncodeMD5.encode(password);
+            if (managerDetailEntity.getPassword().equals(endPassword)) {
                 HttpSession session = getHttpSession();
                 session.setAttribute("managerId", managerDetailEntity.getManagerId());
-                return;//if login success
-            } else {
-                return;//if login failed
+                return "index";//if login success
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
+        return "managerRegister";
     }
 
     /**
@@ -200,22 +209,24 @@ public class ManagerDetailManagedBean implements ValueChangeListener {
                         ((String) value).contains("*"))
             throw new ValidatorException(new FacesMessage("Username cannot contain special characters"));
     }
-    public void validatePassword(FacesContext fc, UIComponent c, Object value){
-        if(!(password.equals(cpassword))){
+
+    public void validatePassword(FacesContext fc, UIComponent c, Object value) {
+        if (c.getId().equals("magpwdR")) {
+            password = (String) value;
+        }
+
+        if (!(password.equals(value))) {
             throw new ValidatorException(new FacesMessage("Not same as the password"));
         }
     }
 
-    public void managerRegistor(){
-        ManagerDetailDAO managerDetailDAO=new ManagerDetailDAO();
-        managerDetailDAO.save(getEntity());
-    }
-    @Override
-    public void processValueChange(ValueChangeEvent valueChangeEvent) throws AbortProcessingException {
-        if(valueChangeEvent.getNewValue().equals("male")){
-            gender=0;
-        }else {
-            gender=1;
+    public void managerRegister() {
+        try {
+            ManagerDetailDAO managerDetailDAO = new ManagerDetailDAO();
+            managerDetailDAO.save(getEntity());
+        } catch (Exception e) {
+            throw e;
         }
     }
+
 }

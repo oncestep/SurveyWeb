@@ -15,10 +15,12 @@
             <center>
                 <h1>Manager Login</h1>
                 <p>
-                    <h:inputText id="magnameL" styleClass="in" value="#{managerDetailManagedBean.username}"/>
+                    <h:inputText id="magnameL" styleClass="in" value="#{managerDetailManagedBean.username}"
+                                 required="true" requiredMessage="You must input your username!"/>
                 </p>
                 <p>
-                    <h:inputSecret id="magpwdL" styleClass="in" value="#{managerDetailManagedBean.password}"/>
+                    <h:inputSecret id="magpwdL" styleClass="in" value="#{managerDetailManagedBean.password}"
+                                   required="true" requiredMessage="You must input your password!"/>
                 </p>
                 <p>
                     <h:commandButton value="Login" styleClass="Loginbut"
