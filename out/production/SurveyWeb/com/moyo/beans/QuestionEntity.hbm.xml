@@ -12,9 +12,6 @@
         <property name="type">
             <column name="type" sql-type="int" not-null="true"/>
         </property>
-        <property name="order">
-            <column name="order" sql-type="bigint" not-null="true"/>
-        </property>
         <property name="content">
             <column name="content" sql-type="text" not-null="true"/>
         </property>

@@ -8,7 +8,6 @@ import javax.faces.bean.SessionScoped;
 public class QuestionManagedBean {
     private long questionId;
     private Integer type;
-    private Long order;
     private String content;
     private Long naireId;
 
@@ -26,14 +25,6 @@ public class QuestionManagedBean {
 
     public void setType(Integer type) {
         this.type = type;
-    }
-
-    public Long getOrder() {
-        return order;
-    }
-
-    public void setOrder(Long order) {
-        this.order = order;
     }
 
     public String getContent() {

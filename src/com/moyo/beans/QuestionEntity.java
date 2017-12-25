@@ -7,7 +7,6 @@ import javax.persistence.*;
 public class QuestionEntity {
     private long questionId;
     private Integer type;
-    private Long order;
     private String content;
     private Long naireId;
 
@@ -29,16 +28,6 @@ public class QuestionEntity {
 
     public void setType(Integer type) {
         this.type = type;
-    }
-
-    @Basic
-    @Column(name = "order", nullable = true)
-    public Long getOrder() {
-        return order;
-    }
-
-    public void setOrder(Long order) {
-        this.order = order;
     }
 
     @Basic
@@ -70,7 +59,6 @@ public class QuestionEntity {
 
         if (questionId != that.questionId) return false;
         if (type != null ? !type.equals(that.type) : that.type != null) return false;
-        if (order != null ? !order.equals(that.order) : that.order != null) return false;
         if (content != null ? !content.equals(that.content) : that.content != null) return false;
         if (naireId != null ? !naireId.equals(that.naireId) : that.naireId != null) return false;
 
@@ -81,7 +69,6 @@ public class QuestionEntity {
     public int hashCode() {
         int result = (int) (questionId ^ (questionId >>> 32));
         result = 31 * result + (type != null ? type.hashCode() : 0);
-        result = 31 * result + (order != null ? order.hashCode() : 0);
         result = 31 * result + (content != null ? content.hashCode() : 0);
         result = 31 * result + (naireId != null ? naireId.hashCode() : 0);
         return result;

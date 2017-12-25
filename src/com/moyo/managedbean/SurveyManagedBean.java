@@ -33,8 +33,6 @@ public class SurveyManagedBean {
         this.batchName = batchName;
     }
 
-
-
     public long getNaireId() {
         return naireId;
     }
@@ -98,8 +96,9 @@ public class SurveyManagedBean {
      */
     public List<SurveyEntity> getAllSurveyList(){
         BatchDAO batchDAO=new BatchDAO();
-        BatchEntity batchEntity= (BatchEntity) batchDAO.findByBatchName(batchName).get(0);
+        BatchEntity batchEntity = (BatchEntity) batchDAO.findByBatchName(batchName).get(0);
         List list=allSurveyList(batchEntity.getBatchId());
         return list;
     }
+
 }

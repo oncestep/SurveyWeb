@@ -97,9 +97,6 @@ public class QuestionDAO {
     public List findByNaireId(Object o){
         return findByProperty("naireId",o);
     }
-    public List findByOrder(Object o){
-        return findByProperty("order",o);
-    }
     public List findByType(Object o){
         return findByProperty("type",o);
     }

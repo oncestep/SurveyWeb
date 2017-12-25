@@ -18,7 +18,7 @@
                 <f:ajax event="keyup" render="nameEorr">
                     <td><h:inputText id="magnameR" value="#{managerDetailManagedBean.username}"
                                      validator="#{managerDetailManagedBean.validateUserName}" styleClass="in"
-                                     required="true"/>
+                                     required="true" requiredMessage="Can not be empty!"/>
                         <h:message for="magnameR" id="nameEorr" style="color: red"/>
                     </td>
                 </f:ajax>
@@ -28,7 +28,7 @@
                 <f:ajax event="keyup">
                     <TD><h:inputSecret id="magpwdR" value="#{managerDetailManagedBean.password}"
                                        validator="#{managerDetailManagedBean.validatePassword}" styleClass="in"
-                                       required="true"/></TD>
+                                       required="true" requiredMessage="Can not be empty!"/></TD>
                 </f:ajax>
             </TR>
             <TR>
@@ -36,13 +36,14 @@
                 <f:ajax event="keyup" render="cPasswordEorr">
                     <TD><h:inputSecret id="magpwdRR" value="#{managerDetailManagedBean.cpassword}"
                                        validator="#{managerDetailManagedBean.validatePassword}" styleClass="in"
-                                       required="true"/></TD>
+                                       required="true" requiredMessage="Can not be empty!"/></TD>
                     <h:message for="magpwdRR" id="cPasswordEorr" style="color: red"/>
                 </f:ajax>
             </TR>
             <TR>
                 <TD>Name</TD>
-                <TD><h:inputText id="magname" styleClass="in" value="#{managerDetailManagedBean.name}" required="true"/>
+                <TD><h:inputText id="magname" styleClass="in" value="#{managerDetailManagedBean.name}" required="true"
+                                 requiredMessage="Can not be empty!"/>
                 </TD>
             </TR>
             <TR>
@@ -67,11 +68,15 @@
             </TR>
             <TR>
                 <TD>Phone Number</TD>
-                <TD><h:inputText id="magpn" styleClass="in" value="#{managerDetailManagedBean.mobile}"/></TD>
+                <TD><h:inputText id="magpn" styleClass="in" maxlength="11" value="#{managerDetailManagedBean.mobile}"/>
+                </TD>
             </TR>
             <TR>
                 <TD>Email</TD>
-                <TD><h:inputText id="magemail" value="#{managerDetailManagedBean.email}" styleClass="in"/></TD>
+                <f:ajax event="keyup" render="emailEorr">
+                    <TD><h:inputText id="magemail" value="#{managerDetailManagedBean.email}" styleClass="in"
+                                     validator="#{registerManageBean1.validateEmail}"/></TD>
+                </f:ajax>
             </TR>
             <TR>
                 <td>

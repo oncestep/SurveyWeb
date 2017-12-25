@@ -10,7 +10,7 @@ import javax.faces.validator.ValidatorException;
 
 @ManagedBean
 @SessionScoped
-public class RegisterManageBean1 {
+public class RegisterManageBean1{
     private String ID;
     private String username;
     private String name;
@@ -110,8 +110,17 @@ public class RegisterManageBean1 {
                 ((String)value).contains("#")||((String)value).contains("&")||
                 ((String)value).contains("$")||((String)value).contains("%")||
                 ((String)value).contains("*"))
-            throw new ValidatorException(new FacesMessage("Userame cannot contain special characters"));
-          
-}
-   
+            throw new ValidatorException(new FacesMessage("Username cannot contain special characters!"));
+    }
+    public void validateEmail(FacesContext fc,UIComponent c,Object value){
+        String reg = "[a-zA-Z_]{1,}[0-9]{0,}@(([a-zA-z0-9]-*){1,}\\.){1,3}[a-zA-z\\-]{1,}";
+        
+            if(!((String)value).matches(reg))
+            throw new ValidatorException(new FacesMessage("Must enter the correct email format!"));
+    }
+    public void validateName(FacesContext fc,UIComponent c,Object value){
+        String reg ="[a-zA-Z]{1,}";
+        if(!((String)value).matches(reg))
+        throw new ValidatorException(new FacesMessage("Name cannot contain special characters!"));
+    }
 }

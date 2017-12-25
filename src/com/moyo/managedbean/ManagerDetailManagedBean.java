@@ -228,5 +228,16 @@ public class ManagerDetailManagedBean {
             throw e;
         }
     }
+    public void validateEmail(FacesContext fc,UIComponent c,Object value){
+        String reg = "[a-zA-Z_]{1,}[0-9]{0,}@(([a-zA-z0-9]-*){1,}\\.){1,3}[a-zA-z\\-]{1,}";
+
+        if(!((String)value).matches(reg))
+            throw new ValidatorException(new FacesMessage("Must enter the correct email format!"));
+    }
+    public void validateName(FacesContext fc,UIComponent c,Object value){
+        String reg ="[a-zA-Z]{1,}";
+        if(!((String)value).matches(reg))
+            throw new ValidatorException(new FacesMessage("Name cannot contain special characters!"));
+    }
 
 }

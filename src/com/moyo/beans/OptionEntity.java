@@ -3,7 +3,7 @@ package com.moyo.beans;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "Option", schema = "dbo", catalog = "SurveyWeb")
+@Table(name = "Options", schema = "dbo", catalog = "SurveyWeb")
 public class OptionEntity {
     private long optionId;
     private String content;
