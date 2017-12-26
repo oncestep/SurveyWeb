@@ -20,7 +20,7 @@
         </table>
         <table id="questions">
             <!--显示已插入的题目-->
-            <c:forEach items="#{generateSurveyManagedBean.initQuestions}" var="questemp">
+            <c:forEach items="#{generateSurveyManagedBean.initQuestions}" var="questemp" varStatus="ques">
                 <tr>
                     <td><h:outputText value="#{questemp.questionEntity.content}"/></td>
                 </tr>
@@ -29,6 +29,12 @@
                         <td><h:outputText value="#{optionitem.content}"/></td>
                     </tr>
                 </c:forEach>
+                <f:ajax event="click" render="questions">
+                    <td><h:commandButton value="delete"
+                                         actionListener="#{generateSurveyManagedBean.removeFromQuestion}">
+                        <f:attribute name="questionIndex" value="#{ques.index}"/>
+                    </h:commandButton></td>
+                </f:ajax>
             </c:forEach>
         </table>
         <table>

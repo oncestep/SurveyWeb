@@ -6,7 +6,7 @@ import java.util.List;
 
 public class InitSurvey {
     InitQuestion initQuestion;
-    List<InitQuestion> initQuestions=new ArrayList<>();
+    List<InitQuestion> initQuestions = new ArrayList<>();
     private String naireName;
     private String description;
     private Timestamp createTime;

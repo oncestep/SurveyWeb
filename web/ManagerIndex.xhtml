@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<!-- DW6 -->
+<h:head>
+    <!-- Copyright 2005 Macromedia, Inc. All rights reserved. -->
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+    <title>Untitled Document</title>
+    <link rel="stylesheet" href="resources/css1.css" type="text/css"/>
+    <style type="text/css">
+
+        .button {
+            border-radius: 40px;
+            background-color: #56536A;
+            height: 60px;
+            width: 300px;
+            color: white;
+            font-size: 20px;
+        }
+
+        .button4 {
+            border-radius: 40px;
+            background-color: #553962;
+            height: 50px;
+            width: 200px;
+            color: #CCCCCC;
+            font-size: 16px;
+
+        }
+
+        .button4A {
+            border-radius: 40px;
+            background-color: #625d61;
+            height: 50px;
+            width: 200px;
+            color: #CCCCCC;
+            font-size: 16px;
+
+        }
+
+        <!--
+        .STYLE1 {
+            font-weight: bold;
+            font-style: italic;
+            background-color: gray;
+        }
+
+        .STYLE3 {
+            font-size: 100%
+        }
+
+        .STYLE4 {
+            font-size: 50%
+        }
+
+        .STYLE5 {
+            font-size: 24px
+        }
+
+        .STYLE6 {
+            font-size: 36px;
+        }
+
+        -->
+    </style>
+</h:head>
+<!-- The structure of this file is exactly the same as 2col_leftNav.html;
+     the only difference between the two is the stylesheet they use -->
+<h:body>
+    <div id="masthead">
+        <h1 id="siteName">&nbsp;</h1>
+    </div>
+    <!-- end masthead -->
+    <div id="content">
+        <div class="feature">
+            <h3 align="center" class="STYLE6">Welcome Back</h3>
+            <h3 align="center" class="STYLE6" id="username">Manager</h3>
+            <p id="button4">
+                <h:commandButton name="goButton3" type="submit" value="Create a new Survey " styleClass="button4A"
+                                 action="generateSurvey.xhtml"/>
+                <h:commandButton name="goButton3" type="submit" value="Check my questionairs" styleClass="button4"
+                                 action="ManagerViewBatches.xhtml"/>
+            </p>
+        </div>
+    </div>
+    <!--end content -->
+    <div id="navBar">
+        <div id="search">
+            <h:form>
+                <p align="center">
+                    <h:commandButton name="goButton" value="Feedback" styleClass="button"/>
+                </p>
+                <p align="center">
+                    <h:commandButton name="goButton" value="Personal information" styleClass="button"
+                                     action="#{managerDetailManagedBean.showPersonalDetail}"/>
+                </p>
+                <p align="center">
+                    <h:commandButton name="goButton2" value="Log out" styleClass="button"
+                                     action="#{managerDetailManagedBean.managerLogout}"/>
+                </p>
+            </h:form>
+        </div>
+    </div>
+    <br/>
+</h:body>
+</html>

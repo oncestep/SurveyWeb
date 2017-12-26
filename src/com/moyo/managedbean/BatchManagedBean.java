@@ -15,6 +15,8 @@ import javax.servlet.http.HttpSession;
 import java.sql.Date;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.List;
 
 @ManagedBean
 @SessionScoped
@@ -24,6 +26,19 @@ public class BatchManagedBean {
     private String description;
     private Timestamp createTime;
     private Long managerId;
+    private List<BatchEntity> batchList=new ArrayList<>();
+
+    public List<BatchEntity> getBatchList() {
+        BatchDAO batchDAO=new BatchDAO();
+        HttpSession session=getHttpSession();
+        Long managerId= (Long) session.getAttribute("managerId");
+        batchList.addAll(batchDAO.findByManagerId(managerId));
+        return batchList;
+    }
+
+    public void setBatchList(List<BatchEntity> batchList) {
+        this.batchList = batchList;
+    }
 
     public long getBatchId() {
         return batchId;

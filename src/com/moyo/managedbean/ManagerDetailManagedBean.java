@@ -3,6 +3,7 @@ package com.moyo.managedbean;
 import com.moyo.beans.ManagerDetailEntity;
 import com.moyo.dao.ManagerDetailDAO;
 import com.moyo.util.EncodeMD5;
+import sun.security.util.Password;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
@@ -184,23 +185,35 @@ public class ManagerDetailManagedBean {
             if (managerDetailEntity.getPassword().equals(endPassword)) {
                 HttpSession session = getHttpSession();
                 session.setAttribute("managerId", managerDetailEntity.getManagerId());
-                return "index";//if login success
+                return "ManagerIndex";//if login success
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return "managerRegister";
+        return "";
     }
 
     /**
      * Manager Logout method
      */
-    public void managerLogout() {
+    public String managerLogout() {
         HttpSession session = getHttpSession();
         session.setAttribute("managerId", null);
         setNullToAll();
+        return "Main";
     }
-
+    public String showPersonalDetail(){
+        ManagerDetailDAO managerDetailDAO=new ManagerDetailDAO();
+        HttpSession session=getHttpSession();
+        long managerid= (long) session.getAttribute("managerId");
+        ManagerDetailEntity managerEntity=managerDetailDAO.findById(managerid);
+        this.password=managerEntity.getPassword();
+        this.email=managerEntity.getEmail();
+        this.name=managerEntity.getName();
+        this.nickname=managerEntity.getNickName();
+        this.mobile=managerEntity.getMobile();
+        return "ModifyPersonalInformation";
+    }
     public void validateUserName(FacesContext fc, UIComponent c, Object value) {
         if (
                 ((String) value).contains("!") || ((String) value).contains("@") ||
@@ -220,24 +233,20 @@ public class ManagerDetailManagedBean {
         }
     }
 
-    public void managerRegister() {
+    public String managerRegister() {
         try {
             ManagerDetailDAO managerDetailDAO = new ManagerDetailDAO();
             managerDetailDAO.save(getEntity());
         } catch (Exception e) {
             throw e;
         }
+        return "index";
     }
-    public void validateEmail(FacesContext fc,UIComponent c,Object value){
-        String reg = "[a-zA-Z_]{1,}[0-9]{0,}@(([a-zA-z0-9]-*){1,}\\.){1,3}[a-zA-z\\-]{1,}";
-
-        if(!((String)value).matches(reg))
-            throw new ValidatorException(new FacesMessage("Must enter the correct email format!"));
-    }
-    public void validateName(FacesContext fc,UIComponent c,Object value){
-        String reg ="[a-zA-Z]{1,}";
-        if(!((String)value).matches(reg))
-            throw new ValidatorException(new FacesMessage("Name cannot contain special characters!"));
-    }
+//    public void validateEmail(FacesContext fc,UIComponent c,Object value){
+//        String reg = "[a-zA-Z_]{1,}[0-9]{0,}@(([a-zA-z0-9]-*){1,}\\.){1,3}[a-zA-z\\-]{1,}";
+//
+//        if(!((String)value).matches(reg))
+//            throw new ValidatorException(new FacesMessage("Must enter the correct email format!"));
+//    }
 
 }

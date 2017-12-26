@@ -35,7 +35,7 @@ public class ManagerDetailDAO {
             throw e;
         }
     }
-    public ManagerDetailEntity findById(String id){
+    public ManagerDetailEntity findById(long id){
         try{
             ManagerDetailEntity object=(ManagerDetailEntity) getSession().get(ManagerDetailEntity.class,id);
             return object;

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:body>
+    <h:form>
+        <h:dataTable value="#{batchManagedBean.batchList}" var="batch">
+            <h:column>
+                <f:facet name="header">Batch Name</f:facet>
+                <h:outputText value="#{batch.batchName}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Description</f:facet>
+                <h:outputText value="#{batch.description}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Create Time</f:facet>
+                <h:outputText value="#{batch.createTime}"/>
+            </h:column>
+            <h:column>
+                <f:ajax event="click" render="batchSurvey">
+                    <h:commandButton value="View Survey" actionListener="${surveyManagedBean.processAction}">
+                        <f:attribute name="batchId" value="#{batch.batchId}"/>
+                    </h:commandButton>
+                </f:ajax>
+                <h:commandButton value="Delete Batch" action="#{batchManagedBean.deleteBatch}"/>
+            </h:column>
+        </h:dataTable>
+    </h:form>
+    <h:form>
+        <h:dataTable id="batchSurvey" value="#{surveyManagedBean.surveyList}" var="survey">
+            <h:column>
+                <f:facet name="header">Survey Name</f:facet>
+                <h:outputText value="#{survey.naireName}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Description</f:facet>
+                <h:outputText value="#{survey.description}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">Create Time</f:facet>
+                <h:outputText value="#{survey.createTime}"/>
+            </h:column>
+            <h:column>
+                <h:commandButton value="View Statistics"/><br/>
+                <f:ajax event="click" render="batchSurvey">
+                    <h:commandButton value="Delete" actionListener="#{surveyManagedBean.deleteSurvey}">
+                        <f:attribute value="#{survey.naireId}" name="surveyId"/>
+                    </h:commandButton>
+                </f:ajax>
+            </h:column>
+        </h:dataTable>
+    </h:form>
+</h:body>
+</html>

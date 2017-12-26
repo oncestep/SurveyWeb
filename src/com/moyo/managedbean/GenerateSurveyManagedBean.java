@@ -110,6 +110,11 @@ public class GenerateSurveyManagedBean implements ActionListener {
         options.remove(index);
     }
 
+    public void removeFromQuestion(ActionEvent actionEvent) {
+        int index = (int) actionEvent.getComponent().getAttributes().get("questionIndex");
+        initQuestions.remove(index);
+    }
+
     public void addToQuestion() {
         InitQuestion initQuestion = new InitQuestion();
         List<OptionEntity> options = new ArrayList<>();

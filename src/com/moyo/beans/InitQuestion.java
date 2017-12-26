@@ -6,7 +6,7 @@ import java.util.List;
 public class InitQuestion {
     private QuestionEntity questionEntity;
     private OptionEntity optionEntity;
-    private List<OptionEntity> optionEntityList=new ArrayList<>();
+    private List<OptionEntity> optionEntityList = new ArrayList<>();
 
     public List<OptionEntity> getOptionEntityList() {
         return optionEntityList;
