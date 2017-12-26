@@ -35,7 +35,7 @@ public class OptionDAO {
         }
     }
 
-    public OptionEntity findById(String id) {
+    public OptionEntity findById(long id) {
         try {
             OptionEntity object = (OptionEntity) getSession().get(OptionEntity.class, id);
             return object;
@@ -104,10 +104,10 @@ public class OptionDAO {
     }
 
 
-    /*  选项备选次数+1    */
-    public void addHits(String optId) {
+    /*  选项备选次数+1  */
+    public void addHits(long optId) {
 
-        String queryString = "update \"Option\" set hits = hits + 1 where optionId = "+optId;
+        String queryString = "update Options set hits = hits + 1 where optionId = "+optId;
         SQLQuery query = getSession().createSQLQuery(queryString);
         query.executeUpdate();
     }

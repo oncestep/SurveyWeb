@@ -36,7 +36,7 @@ public class AnswerDAO {
             throw e;
         }
     }
-    public AnswerEntity findById(String id){
+    public AnswerEntity findById(long id){
         try{
             AnswerEntity object=(AnswerEntity) getSession().get(AnswerEntity.class,id);
             return object;

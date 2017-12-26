@@ -36,9 +36,5 @@ public class OptionManagedBean {
         this.questionId = questionId;
     }
 
-    public void updateHits(String optId) {
-        OptionDAO optDAO = new OptionDAO();
 
-        optDAO.addHits(optId);
-    }
 }

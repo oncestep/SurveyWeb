@@ -11,61 +11,66 @@ import java.util.List;
 import static com.moyo.sessionfactory.SF.getSession;
 
 public class SurveyDAO {
-    public void save(SurveyEntity object){
-        try{
-            Session session=getSession();
-            Transaction transaction=session.beginTransaction();
+    public void save(SurveyEntity object) {
+        try {
+            Session session = getSession();
+            Transaction transaction = session.beginTransaction();
             session.save(object);
             transaction.commit();
             session.clear();
             session.close();
-        }catch (Exception e){
+        } catch (Exception e) {
             throw e;
         }
     }
-    public void delete(SurveyEntity object){
-        try{
-            Session session=getSession();
-            Transaction transaction=session.beginTransaction();
+
+    public void delete(SurveyEntity object) {
+        try {
+            Session session = getSession();
+            Transaction transaction = session.beginTransaction();
             session.delete(object);
             transaction.commit();
             session.clear();
             session.close();
-        }catch (Exception e){
+        } catch (Exception e) {
             throw e;
         }
     }
-    public SurveyEntity findById(String id){
-        try{
-            SurveyEntity object=(SurveyEntity) getSession().get(SurveyEntity.class,id);
+
+    public SurveyEntity findById(long id) {
+        try {
+            SurveyEntity object = (SurveyEntity) getSession().get(SurveyEntity.class, id);
             return object;
-        }catch (Exception e){
+        } catch (Exception e) {
             throw e;
         }
     }
-    public List findByProperty(String property, Object o){
-        try{
-            String queryString="from SurveyEntity as ude where ude."+property+"=?";
-            Query queryObject=getSession().createQuery(queryString);
-            queryObject.setParameter(0,o);
+
+    public List findByProperty(String property, Object o) {
+        try {
+            String queryString = "from SurveyEntity as ude where ude." + property + "=?";
+            Query queryObject = getSession().createQuery(queryString);
+            queryObject.setParameter(0, o);
             return queryObject.list();
-        }catch (Exception e){
+        } catch (Exception e) {
             throw e;
         }
     }
-    public List findAll(){
-        try{
+
+    public List findAll() {
+        try {
             String queryString = "from SurveyEntity";
-            Query queryObject=getSession().createQuery(queryString);
+            Query queryObject = getSession().createQuery(queryString);
             return queryObject.list();
-        }catch (Exception e){
+        } catch (Exception e) {
             throw e;
         }
     }
+
     public SurveyEntity merge(SurveyEntity detachedInstance) {
         try {
-            Session session=getSession();
-            Transaction transaction=session.beginTransaction();
+            Session session = getSession();
+            Transaction transaction = session.beginTransaction();
             SurveyEntity result = (SurveyEntity) session.merge(detachedInstance);
             transaction.commit();
             session.clear();
@@ -91,18 +96,33 @@ public class SurveyDAO {
             System.out.println(e);
         }
     }
-    public List findByBatchId(Object o){
-        return findByProperty("batchId",o);
-    }
-    public List findByCreateTime(Object o){
-        return findByProperty("createTime",o);
-    }
-    public List findByDescription(Object o){
-        return findByProperty("description",o);
-    }
-    public List findByNaireName(Object o){
-        return findByProperty("naireName",o);
+
+    public List findByBatchId(Object o) {
+        return findByProperty("batchId", o);
     }
 
+    public List findByCreateTime(Object o) {
+        return findByProperty("createTime", o);
+    }
 
+    public List findByDescription(Object o) {
+        return findByProperty("description", o);
+    }
+
+    public List findByNaireName(Object o) {
+        return findByProperty("naireName", o);
+    }
+
+    public List findAvailable(long batchId, long userId) {
+        try {
+            String queryString = "from SurveyEntity as s where s.batchId = ? " +
+                    "and s.naireId != all(select a.naireId from AnswerEntity as a where a.userId = ?)";
+            Query queryObject = getSession().createQuery(queryString);
+            queryObject.setParameter(0, batchId);
+            queryObject.setParameter(1, userId);
+            return queryObject.list();
+        } catch (Exception e) {
+            throw e;
+        }
+    }
 }

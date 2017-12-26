@@ -36,7 +36,7 @@ public class TipDAO {
             throw e;
         }
     }
-    public TipEntity findById(String id){
+    public TipEntity findById(long id){
         try{
             TipEntity object=(TipEntity) getSession().get(TipEntity.class,id);
             return object;

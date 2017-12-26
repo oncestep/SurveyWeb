@@ -4,7 +4,7 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="com.moyo.beans.OptionEntity" table="Option" schema="dbo" catalog="SurveyWeb">
+    <class name="com.moyo.beans.OptionEntity" table="Options" schema="dbo" catalog="SurveyWeb">
         <id name="optionId">
             <column name="optionId" sql-type="bigint"/>
         </id>

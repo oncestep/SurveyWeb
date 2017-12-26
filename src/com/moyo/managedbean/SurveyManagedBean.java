@@ -1,17 +1,13 @@
 package com.moyo.managedbean;
 
-import com.moyo.beans.ParticipationEntity;
-import com.moyo.beans.QuestionEntity;
-import com.moyo.beans.SurveyEntity;
-import com.moyo.dao.OptionDAO;
-import com.moyo.dao.ParticipationDAO;
-import com.moyo.dao.QuestionDAO;
-import com.moyo.dao.SurveyDAO;
+import com.moyo.beans.*;
+import com.moyo.dao.*;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import javax.faces.bean.SessionScoped;
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.List;
 
 @ManagedBean
@@ -24,11 +20,18 @@ public class SurveyManagedBean {
     private Timestamp createTime;
     private Long batchId;
 
-    /*  所有问卷信息 */
+    /*  所有问卷列表 */
     private List<SurveyEntity> surList;
 
-    /*  选中问卷所有问题    */
+    /*  指定问卷所有问题列表    */
     private List<QuestionEntity> queList;
+
+    /*  指定问卷所有单选提交答案列表    */
+    private List<OptionEntity> optOneList;
+
+    /*  指定问卷所有多选提交答案列表    */
+    private List<List<OptionEntity>> optMulList;
+
 
     public long getNaireId() {
         return naireId;
@@ -86,17 +89,34 @@ public class SurveyManagedBean {
         this.queList = queList;
     }
 
+    public List<OptionEntity> getOptOneList() {
+        return optOneList;
+    }
+
+    public void setOptOneList(List<OptionEntity> optOneList) {
+        this.optOneList = optOneList;
+    }
+
+    public List<List<OptionEntity>> getOptMulList() {
+        return optMulList;
+    }
+
+    public void setOptMulList(List<List<OptionEntity>> optMulList) {
+        this.optMulList = optMulList;
+    }
+
     /*  输出当前用户所需填写问卷    */
-    public void showAll(String userId) {
+    public void showAllSurvey(long userId) {
         SurveyDAO surDAO = new SurveyDAO();
         ParticipationDAO parDAO = new ParticipationDAO();
         List<ParticipationEntity> parList = parDAO.findByUserId(userId);
 
         long batchId = 0;
-        List<SurveyEntity> batchSurveyList = null;
+        List<SurveyEntity> batchSurveyList = new ArrayList<>();
+        surList = new ArrayList<>();
         for (ParticipationEntity par : parList) {
             batchId = par.getBatchId();
-            batchSurveyList = surDAO.findByBatchId(batchId);
+            batchSurveyList = surDAO.findAvailable(batchId, userId);
             if (batchSurveyList.isEmpty() == false) {
                 surList.addAll(batchSurveyList);
             }
@@ -104,10 +124,9 @@ public class SurveyManagedBean {
     }
 
     /*  填写Id对应问卷  */
-    public void showQuestion(String surId) {
+    public String showAllQuestion(long surId) {
         SurveyDAO surDAO = new SurveyDAO();
         QuestionDAO queDAO = new QuestionDAO();
-        OptionDAO optDAO = new OptionDAO();
 
         SurveyEntity survey = surDAO.findById(surId);
         naireId = survey.getNaireId();
@@ -117,5 +136,56 @@ public class SurveyManagedBean {
         batchId = survey.getBatchId();
 
         queList = queDAO.findByNaireId(surId);
+
+        return "/user/survey.xhtml";
     }
+
+    /*
+        提交问卷
+        更新选项被选次数
+        插入Answer表
+        清空单选，多选答案列表
+    */
+    public String answerSurvey(long userId) {
+        OptionDAO optDAO = new OptionDAO();
+
+        /*  更新选项被选次数  */
+        for (OptionEntity opt : optOneList
+                ) {
+            if (opt != null) {
+                optDAO.addHits(opt.getOptionId());
+            }
+        }
+        for (List<OptionEntity> optList : optMulList
+                ) {
+            if (optList != null) {
+                for (OptionEntity opt : optList
+                        ) {
+                    if (opt != null) {
+                        optDAO.addHits(opt.getOptionId());
+                    }
+                }
+            }
+        }
+
+        /*  插入Answer  */
+        AnswerDAO answerDAO = new AnswerDAO();
+        AnswerEntity answer = new AnswerEntity();
+        Timestamp time = new Timestamp(System.currentTimeMillis());
+        answer.setUserId(userId);
+        answer.setNaireId(naireId);
+        answer.setAnswerTime(time);
+        try {
+            answerDAO.save(answer);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        /*  清空单选多选答案列表  */
+        optOneList.clear();
+        optMulList.clear();
+
+        return "/user/index.xhtml";
+    }
+
 }

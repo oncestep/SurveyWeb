@@ -2,8 +2,10 @@ package com.moyo.managedbean;
 
 import com.moyo.beans.OptionEntity;
 import com.moyo.beans.QuestionEntity;
+import com.moyo.beans.SurveyEntity;
 import com.moyo.dao.OptionDAO;
 import com.moyo.dao.QuestionDAO;
+import com.moyo.dao.SurveyDAO;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
@@ -20,8 +22,9 @@ public class QuestionManagedBean {
     private String content;
     private Long naireId;
 
-    /*  问题对应选项  */
+    /*  每题选项列表  */
     private List<OptionEntity> optList;
+
 
     public long getQuestionId() {
         return questionId;
@@ -72,17 +75,23 @@ public class QuestionManagedBean {
     }
 
     /*  输出问题对应选项 */
-    public void showOption(String queId){
+    public List<OptionEntity> showAllOption(long queId) {
         QuestionDAO queDAO = new QuestionDAO();
-        OptionDAO optDAO =new OptionDAO();
+        OptionDAO optDAO = new OptionDAO();
 
         QuestionEntity question = queDAO.findById(queId);
         questionId = question.getQuestionId();
         type = question.getType();
-        order = question.getOrder();
         content = question.getContent();
         naireId = question.getNaireId();
 
         optList = optDAO.findByQuestionId(queId);
+        return optList;
+    }
+
+    /*  提交更新被选次数  */
+    public void updateHits(long optId) {
+        OptionDAO optDAO = new OptionDAO();
+        optDAO.addHits(optId);
     }
 }

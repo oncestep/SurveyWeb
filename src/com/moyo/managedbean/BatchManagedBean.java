@@ -1,8 +1,13 @@
 package com.moyo.managedbean;
 
+import com.moyo.beans.BatchEntity;
+import com.moyo.dao.BatchDAO;
+import com.moyo.dao.ParticipationDAO;
+
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import java.sql.Timestamp;
+import java.util.List;
 
 @ManagedBean
 @SessionScoped
@@ -12,6 +17,7 @@ public class BatchManagedBean {
     private String description;
     private Timestamp createTime;
     private Long managerId;
+
 
     public long getBatchId() {
         return batchId;
@@ -52,4 +58,19 @@ public class BatchManagedBean {
     public void setManagerId(Long managerId) {
         this.managerId = managerId;
     }
+
+
+    /*  查询当前用户未加入的所有批次  */
+    public List<BatchEntity> showElseBatch(long userId) {
+
+        try {
+            BatchDAO batDAO = new BatchDAO();
+            List<BatchEntity> batList = batDAO.findElseBatch(userId);
+            return batList;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
 }

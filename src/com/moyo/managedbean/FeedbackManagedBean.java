@@ -1,11 +1,14 @@
 package com.moyo.managedbean;
 
+import com.moyo.beans.FeedbackEntity;
+import com.moyo.dao.FeedbackDAO;
+
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
 @ManagedBean
 @SessionScoped
-public class FeedbakcManagedBean {
+public class FeedbackManagedBean {
     private long feedbackId;
     private Long userId;
     private Long naireId;
@@ -41,5 +44,21 @@ public class FeedbakcManagedBean {
 
     public void setFeedbacks(String feedbacks) {
         this.feedbacks = feedbacks;
+    }
+
+    /**
+     * 用户针对某一问卷反馈信息
+     *
+     */
+    public String sendFeedback(long userId){
+        FeedbackDAO feeDAO = new FeedbackDAO();
+        FeedbackEntity feedback = new FeedbackEntity();
+
+        feedback.setUserId(userId);
+        feedback.setNaireId(naireId);
+        feedback.setFeedbacks(feedbacks);
+        feeDAO.save(feedback);
+
+        return "/user/index.xhtml";
     }
 }

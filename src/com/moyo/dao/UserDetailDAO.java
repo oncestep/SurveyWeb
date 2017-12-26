@@ -47,7 +47,7 @@ public class UserDetailDAO {
         }
     }
 
-    public UserDetailEntity findById(String id) {
+    public UserDetailEntity findById(long id) {
         try {
             UserDetailEntity object = (UserDetailEntity) getSession().get(UserDetailEntity.class, id);
             return object;
@@ -124,6 +124,8 @@ public class UserDetailDAO {
             throw e;
         }
     }
+
+
 
     public void attachDirty(UserDetailEntity instance) {
         try {

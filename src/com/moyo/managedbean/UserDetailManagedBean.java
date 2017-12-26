@@ -1,5 +1,6 @@
 package com.moyo.managedbean;
 
+import com.moyo.beans.SurveyEntity;
 import com.moyo.beans.UserDetailEntity;
 import com.moyo.dao.UserDetailDAO;
 import com.moyo.util.EncodeMD5;
@@ -14,6 +15,7 @@ import java.util.List;
 @ManagedBean
 @SessionScoped
 public class UserDetailManagedBean {
+    private long userId;
     private String username;
     private String password;
     private String name;
@@ -24,6 +26,15 @@ public class UserDetailManagedBean {
     private String email;
     //用户名提示
     private String usernameTip;
+
+
+    public long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(long userId) {
+        this.userId = userId;
+    }
 
     public String getUsername() {
         return username;
@@ -130,6 +141,11 @@ public class UserDetailManagedBean {
         }
     }
 
+    /**
+     * 用户注册
+     *
+     * @return
+     */
     public boolean userRegister() {
         UserDetailDAO userDAO = new UserDetailDAO();
 
@@ -164,10 +180,25 @@ public class UserDetailManagedBean {
                 String encPassword = EncodeMD5.encode(password);
                 if (encPassword.equals(user.getPassword())) {
 
+                    /*  将用户信息存入UserManagerBean  */
+                    userId = user.getUserId();
+                    name = user.getName();
+                    gender = user.getGender();
+                    birthYear = user.getBirthYear();
+                    nickname = user.getNickname();
+                    mobile = user.getMobile();
+                    email = user.getEmail();
+
+                    /*  将userId存入session    */
                     FacesContext facesContext = FacesContext.getCurrentInstance();
                     ExternalContext extContext = facesContext.getExternalContext();
                     HttpSession session = (HttpSession) extContext.getSession(true);
-                    session.setAttribute("user", user);
+                    session.setAttribute("userId", userId);
+
+                    /*  调用SurveyManagerBean的showQuestion方法  */
+                    SurveyManagedBean surBean = new SurveyManagedBean();
+                    session.setAttribute("surveyManagedBean", surBean);
+                    surBean.showAllSurvey(user.getUserId());
 
                     return true;
                 } else {
@@ -187,45 +218,39 @@ public class UserDetailManagedBean {
      *
      * @return
      */
-    public void userUpdate() {
+    public String userUpdate() {
         //获取session
         FacesContext facesContext = FacesContext.getCurrentInstance();
         ExternalContext extContext = facesContext.getExternalContext();
         HttpSession session = (HttpSession) extContext.getSession(true);
-        UserDetailEntity userDefault = (UserDetailEntity) session.getAttribute("user");
+        long userId = (long) session.getAttribute("userId");
 
         UserDetailDAO userDAO = new UserDetailDAO();
-        UserDetailEntity user = (UserDetailEntity) userDAO.findByUsername(username).get(0);
+        UserDetailEntity user = userDAO.findById(userId);
 
-        if (user == null || username == userDefault.getUserName()) {
-            try {
-                userDAO.merge(getEntity());
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+        try {
+            password = EncodeMD5.encode(password);
+            UserDetailEntity userEntity = getEntity();
+            userEntity.setUserId(userId);
+            userDAO.merge(userEntity);
+            return "/user/index.xhtml";
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+        return "/user/login.xhtml";
     }
 
     /**
      * 用户登出
      */
-    public void userLogout() {
+    public String userLogout() {
         //清除session
         FacesContext facesContext = FacesContext.getCurrentInstance();
         ExternalContext extContext = facesContext.getExternalContext();
-        HttpSession session = (HttpSession) extContext.getSession(true);
-        session.setAttribute("user", null);
+        HttpSession session = (HttpSession) extContext.getSession(false);
 
-        //初始化Bean
-        username = null;
-        password = null;
-        name = null;
-        gender = null;
-        birthYear = null;
-        nickname = null;
-        mobile = null;
-        email = null;
+        session.invalidate();
+        return "/user/login.xhtml";
     }
-
 
 }
