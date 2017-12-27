@@ -11,14 +11,17 @@ import java.util.List;
 import static com.moyo.sessionfactory.SF.getSession;
 
 public class BatchDAO {
+
     public void save(BatchEntity object) {
         try {
             Session session = getSession();
             Transaction transaction = session.beginTransaction();
+
             session.save(object);
             transaction.commit();
             session.clear();
             session.close();
+
         } catch (Exception e) {
             throw e;
         }
@@ -71,6 +74,7 @@ public class BatchDAO {
         try {
             Session session = getSession();
             Transaction transaction = session.beginTransaction();
+
             BatchEntity result = (BatchEntity) session.merge(detachedInstance);
             transaction.commit();
             session.clear();
@@ -124,5 +128,6 @@ public class BatchDAO {
         } catch (Exception e) {
             throw e;
         }
+
     }
 }

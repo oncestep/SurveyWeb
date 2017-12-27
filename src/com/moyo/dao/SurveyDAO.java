@@ -57,6 +57,19 @@ public class SurveyDAO {
         }
     }
 
+
+    public List findByBatchIdAndNaireName(Long batchId, String naireName) {
+        try {
+            String queryString = "from SurveyEntity as ude where ude.batchId=? and ude.naireName=?";
+            Query queryObject = getSession().createQuery(queryString);
+            queryObject.setParameter(0, batchId);
+            queryObject.setParameter(1, naireName);
+            return queryObject.list();
+        } catch (Exception e) {
+            throw e;
+        }
+    }
+
     public List findAll() {
         try {
             String queryString = "from SurveyEntity";
@@ -125,4 +138,5 @@ public class SurveyDAO {
             throw e;
         }
     }
+
 }

@@ -1,0 +1,74 @@
+body {
+    background: url("image/Loginbackground.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+
+}
+
+#div0 {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    margin: -150px 0 0 -150px;
+    width: 500px;
+    height: 300px;
+    z-index: 1;
+    background-color: #fff;
+    border-radius: 15px;
+    border-top: 1px solid #312E3D;
+    border-left: 1px solid #312E3D;
+    border-right: 1px solid #312E3D;
+    border-bottom: 1px solid #56536A;
+    opacity: 0.5;
+
+}
+
+#div1 {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    margin: -150px 0 0 -150px;
+    width: 500px;
+    height: 300px;
+    z-index: 2;
+}
+
+.Loginbut {
+    width: 300px;
+    min-height: 20px;
+    display: block;
+    background-color: #4a77d4;
+    border: 1px solid #3762bc;
+    color: #fff;
+    padding: 9px 14px;
+    font-size: 15px;
+    line-height: normal;
+    border-radius: 5px;
+    margin: 0;
+}
+
+h1 {
+    font-size: 1.5em;
+    margin: 0.67em 0;
+    font-family: "Times New Roman";
+}
+
+.in {
+    width: 278px;
+    height: 18px;
+    margin-bottom: 10px;
+    outline: none;
+    padding: 10px;
+    font-size: 13px;
+    border-radius: 4px;
+    border-top: 1px solid #312E3D;
+    border-left: 1px solid #312E3D;
+    border-right: 1px solid #312E3D;
+    border-bottom: 1px solid #56536A;
+}
+
+h2 {
+    font-size: 15px;
+}
+

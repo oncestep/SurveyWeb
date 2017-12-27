@@ -1,7 +1,6 @@
 package com.moyo.dao;
 
 import com.moyo.beans.FeedbackEntity;
-import com.moyo.beans.FeedbackEntity;
 import org.hibernate.LockMode;
 import org.hibernate.Query;
 import org.hibernate.Session;

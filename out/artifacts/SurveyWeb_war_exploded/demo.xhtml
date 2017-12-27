@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:body>
+    <h:form>
+        <f:ajax event="keyup" render="@all">
+            <h:inputText id="inpt" value="#{userDetailManagedBean.id}" validator="#{userDetailManagedBean.dopro}"/>
+            <h:outputText id="oupt" value="#{userDetailManagedBean.id}"/>
+        </f:ajax>
+
+        <h:dataTable value="#{userDetailManagedBean.list}" var="ud" id="dt">
+            <h:column>
+                <f:facet name="header">userID</f:facet>
+                #{ud.userId}
+            </h:column>
+            <h:column>
+                <f:facet name="header">userName</f:facet>
+                #{ud.userName}
+            </h:column>
+            <h:column>
+                <f:facet name="header">realName</f:facet>
+                #{ud.name}
+            </h:column>
+            <h:column>
+                <f:facet name="header">gender</f:facet>
+                #{ud.gender}
+            </h:column>
+            <h:column>
+                <f:facet name="header">BirthYear</f:facet>
+                #{ud.birthYear}
+            </h:column>
+            <h:column>
+                <f:facet name="header">NickName</f:facet>
+                #{ud.nickname}
+            </h:column>
+            <h:column>
+                <f:facet name="header">mobile</f:facet>
+                #{ud.mobile}
+            </h:column>
+            <h:column>
+                <f:facet name="header">email</f:facet>
+                #{ud.email}
+            </h:column>
+        </h:dataTable>
+    </h:form>
+</h:body>
+</html>

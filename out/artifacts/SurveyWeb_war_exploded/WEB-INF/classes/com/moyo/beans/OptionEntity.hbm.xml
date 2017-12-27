@@ -2,11 +2,13 @@
 <!DOCTYPE hibernate-mapping PUBLIC
     "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
 <hibernate-mapping>
 
     <class name="com.moyo.beans.OptionEntity" table="Options" schema="dbo" catalog="SurveyWeb">
         <id name="optionId">
             <column name="optionId" sql-type="bigint"/>
+            <generator class="identity"/>
         </id>
         <property name="content">
             <column name="content" sql-type="text" not-null="true"/>

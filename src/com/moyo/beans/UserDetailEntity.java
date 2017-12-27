@@ -108,42 +108,21 @@ public class UserDetailEntity {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
+
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
 
         UserDetailEntity that = (UserDetailEntity) o;
 
-        if (userId != that.userId) {
-            return false;
-        }
-        if (userName != null ? !userName.equals(that.userName) : that.userName != null) {
-            return false;
-        }
-        if (password != null ? !password.equals(that.password) : that.password != null) {
-            return false;
-        }
-        if (name != null ? !name.equals(that.name) : that.name != null) {
-            return false;
-        }
-        if (gender != null ? !gender.equals(that.gender) : that.gender != null) {
-            return false;
-        }
-        if (birthYear != null ? !birthYear.equals(that.birthYear) : that.birthYear != null) {
-            return false;
-        }
-        if (nickname != null ? !nickname.equals(that.nickname) : that.nickname != null) {
-            return false;
-        }
-        if (mobile != null ? !mobile.equals(that.mobile) : that.mobile != null) {
-            return false;
-        }
-        if (email != null ? !email.equals(that.email) : that.email != null) {
-            return false;
-        }
+        if (userId != that.userId) return false;
+        if (userName != null ? !userName.equals(that.userName) : that.userName != null) return false;
+        if (password != null ? !password.equals(that.password) : that.password != null) return false;
+        if (name != null ? !name.equals(that.name) : that.name != null) return false;
+        if (gender != null ? !gender.equals(that.gender) : that.gender != null) return false;
+        if (birthYear != null ? !birthYear.equals(that.birthYear) : that.birthYear != null) return false;
+        if (nickname != null ? !nickname.equals(that.nickname) : that.nickname != null) return false;
+        if (mobile != null ? !mobile.equals(that.mobile) : that.mobile != null) return false;
+        if (email != null ? !email.equals(that.email) : that.email != null) return false;
 
         return true;
     }

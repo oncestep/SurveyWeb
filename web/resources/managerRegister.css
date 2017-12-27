@@ -1,0 +1,43 @@
+body{
+    background: url("image/Loginbackground.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    z-index: -1;
+    
+}
+#div2{   
+    position: absolute;   
+    top: 50%;   
+    left:45%;   
+    margin: -150px 0 0 -150px;   
+    width: 500px;   
+    height: 300px;
+    z-index: 1;
+    background-color: #fff;
+    border-radius: 15px;
+    border-top: 1px solid #312E3D;   
+    border-left: 1px solid #312E3D;   
+    border-right: 1px solid #312E3D;   
+    border-bottom: 1px solid #56536A;
+    opacity: 0.5;
+
+    
+} 
+#div3{   
+    position: absolute;   
+    top: 50%;   
+    left:45%;   
+    margin: -150px 0 0 -150px;   
+    width: 500px;   
+    height: 300px;
+    z-index: 2;
+} /*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2017-12-25, 11:33:15
+    Author     : Administrator
+*/
+

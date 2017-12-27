@@ -1,7 +1,9 @@
 package com.moyo.dao;
 
 import com.moyo.beans.OptionEntity;
+
 import org.hibernate.*;
+
 
 import java.util.List;
 
@@ -9,10 +11,12 @@ import static com.moyo.sessionfactory.SF.getSession;
 
 
 public class OptionDAO {
+
     public void save(OptionEntity object) {
         try {
             Session session = getSession();
             Transaction transaction = session.beginTransaction();
+
             session.save(object);
             transaction.commit();
             session.clear();
@@ -26,6 +30,7 @@ public class OptionDAO {
         try {
             Session session = getSession();
             Transaction transaction = session.beginTransaction();
+
             session.delete(object);
             transaction.commit();
             session.clear();
@@ -69,6 +74,7 @@ public class OptionDAO {
         try {
             Session session = getSession();
             Transaction transaction = session.beginTransaction();
+
             OptionEntity result = (OptionEntity) session.merge(detachedInstance);
             transaction.commit();
             session.clear();
@@ -107,8 +113,10 @@ public class OptionDAO {
     /*  选项备选次数+1  */
     public void addHits(long optId) {
 
-        String queryString = "update Options set hits = hits + 1 where optionId = "+optId;
-        SQLQuery query = getSession().createSQLQuery(queryString);
-        query.executeUpdate();
+        String queryString = "update OptionEntity as o set o.hits = o.hits + 1 where optionId = ?";
+        Query queryObject = getSession().createQuery(queryString);
+        queryObject.setParameter(0,optId);
+        queryObject.executeUpdate();
+
     }
 }

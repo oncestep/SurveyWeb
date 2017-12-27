@@ -12,6 +12,7 @@ import static com.moyo.sessionfactory.SF.getSession;
 
 
 public class UserDetailDAO {
+
     public void save(UserDetailEntity object) {
         try {
             //通过SessionFactory的getSession得到session
@@ -38,6 +39,7 @@ public class UserDetailDAO {
         try {
             Session session = getSession();
             Transaction transaction = session.beginTransaction();
+
             session.delete(object);
             transaction.commit();
             session.clear();
@@ -115,6 +117,7 @@ public class UserDetailDAO {
         try {
             Session session = getSession();
             Transaction transaction = session.beginTransaction();
+
             UserDetailEntity result = (UserDetailEntity) session.merge(detachedInstance);
             transaction.commit();
             session.clear();
@@ -124,8 +127,6 @@ public class UserDetailDAO {
             throw e;
         }
     }
-
-
 
     public void attachDirty(UserDetailEntity instance) {
         try {

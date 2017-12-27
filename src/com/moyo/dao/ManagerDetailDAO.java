@@ -116,6 +116,6 @@ public class ManagerDetailDAO {
         return findByProperty("password",o);
     }
     public List findByUsername(Object o){
-        return findByProperty("username",o);
+        return findByProperty("userName",o);
     }
 }

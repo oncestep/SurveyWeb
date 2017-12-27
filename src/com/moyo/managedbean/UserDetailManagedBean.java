@@ -1,6 +1,7 @@
 package com.moyo.managedbean;
 
 import com.moyo.beans.SurveyEntity;
+
 import com.moyo.beans.UserDetailEntity;
 import com.moyo.dao.UserDetailDAO;
 import com.moyo.util.EncodeMD5;
@@ -10,12 +11,22 @@ import javax.faces.bean.SessionScoped;
 import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
 import javax.servlet.http.HttpSession;
+import javax.faces.application.FacesMessage;
+import javax.faces.component.UIComponent;
+import javax.faces.validator.ValidatorException;
+import java.util.ArrayList;
+
 import java.util.List;
 
 @ManagedBean
 @SessionScoped
 public class UserDetailManagedBean {
+
     private long userId;
+
+    private long id;
+    List<UserDetailEntity> list = new ArrayList<>();
+
     private String username;
     private String password;
     private String name;
@@ -24,6 +35,8 @@ public class UserDetailManagedBean {
     private String nickname;
     private Long mobile;
     private String email;
+
+    private String wGender;
     //用户名提示
     private String usernameTip;
 
@@ -34,6 +47,30 @@ public class UserDetailManagedBean {
 
     public void setUserId(long userId) {
         this.userId = userId;
+    }
+
+    public String getwGender() {
+        return wGender;
+    }
+
+    public void setwGender(String wGender) {
+        this.wGender = wGender;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public List<UserDetailEntity> getList() {
+        return list;
+    }
+
+    public void setList(List<UserDetailEntity> list) {
+        this.list = list;
     }
 
     public String getUsername() {
@@ -111,6 +148,12 @@ public class UserDetailManagedBean {
     private UserDetailEntity getEntity() {
         java.sql.Date birthYearSQL = new java.sql.Date(birthYear.getTime());
         UserDetailEntity entity = new UserDetailEntity();
+
+        if(wGender.equals("male")){
+            gender=0;
+        }else {
+            gender=1;
+        }
         entity.setUserName(username);
         entity.setPassword(password);
         entity.setName(name);
@@ -123,10 +166,46 @@ public class UserDetailManagedBean {
         return entity;
     }
 
+//    public String userLogin() {
+//        UserDetailDAO userDAO = new UserDetailDAO();
+//        UserDetailEntity user = (UserDetailEntity) userDAO.findByUsername(username).get(0);
+//        try {
+//            String encPassword = EncodeMD5.encode(password);
+//            if (encPassword.equals(user.getPassword())) {
+//                FacesContext context = FacesContext.getCurrentInstance();
+//                HttpSession session = (HttpSession) context.getExternalContext().getSession(true);
+//                session.setAttribute("userID", user.getUserId());
+//                return "index";
+//            }
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//        return "userRegister";
+//    }
+//
+//    public void userLogout() {
+//        //清除session
+//        FacesContext facesContext = FacesContext.getCurrentInstance();
+//        ExternalContext extContext = facesContext.getExternalContext();
+//        HttpSession session = (HttpSession) extContext.getSession(true);
+//        session.setAttribute("userId", null);
+//
+//        //初始化Bean
+//        username = null;
+//        password = null;
+//        name = null;
+//        gender = null;
+//        birthYear = null;
+//        nickname = null;
+//        mobile = null;
+//        email = null;
+//    }
+
     public void insert() {
         try {
-            UserDetailDAO udd = new UserDetailDAO();
-            udd.save(getEntity());
+            UserDetailDAO userDetailDAO=new UserDetailDAO();
+            userDetailDAO.save(getEntity());
+
         } catch (Exception e) {
             throw e;
         }
@@ -134,8 +213,9 @@ public class UserDetailManagedBean {
 
     public void update() {
         try {
-            UserDetailDAO udd = new UserDetailDAO();
-            udd.merge(getEntity());
+            UserDetailDAO userDetailDAO = new UserDetailDAO();
+            userDetailDAO.merge(getEntity());
+
         } catch (Exception e) {
             throw e;
         }
@@ -251,6 +331,44 @@ public class UserDetailManagedBean {
 
         session.invalidate();
         return "/user/login.xhtml";
+    }
+
+    public void dopro(FacesContext facesContex, UIComponent uiComponent, Object o) {
+        UserDetailEntity user;
+        UserDetailDAO userDetailDAO = new UserDetailDAO();
+        user = userDetailDAO.findById(id);
+        list.set(0, user);
+    }
+
+    public void validateUserName(FacesContext fc, UIComponent c, Object value) {
+        if (
+                ((String) value).contains("!") || ((String) value).contains("@") ||
+                        ((String) value).contains("#") || ((String) value).contains("&") ||
+                        ((String) value).contains("$") || ((String) value).contains("%") ||
+                        ((String) value).contains("*"))
+            throw new ValidatorException(new FacesMessage("Username cannot contain special characters!"));
+    }
+
+    public void validateEmail(FacesContext fc, UIComponent c, Object value) {
+        String reg = "[a-zA-Z_]{1,}[0-9]{0,}@(([a-zA-z0-9]-*){1,}\\.){1,3}[a-zA-z\\-]{1,}";
+
+        if (!((String) value).matches(reg))
+            throw new ValidatorException(new FacesMessage("Must enter the correct email format!"));
+    }
+
+    public void validateName(FacesContext fc, UIComponent c, Object value) {
+        String reg = "[a-zA-Z]{1,}";
+        if (!((String) value).matches(reg))
+            throw new ValidatorException(new FacesMessage("Name cannot contain special characters!"));
+    }
+    public void validatePassword(FacesContext fc, UIComponent c, Object value) {
+        if (c.getId().equals("userpwdR")) {
+            password = (String) value;
+        }
+
+        if (!(password.equals(value))) {
+            throw new ValidatorException(new FacesMessage("Not same as the password"));
+        }
     }
 
 }

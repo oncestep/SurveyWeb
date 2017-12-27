@@ -1,6 +1,8 @@
 package com.moyo.managedbean;
 
 import com.moyo.dao.OptionDAO;
+import com.moyo.beans.OptionEntity;
+import com.moyo.dao.QuestionDAO;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
@@ -36,5 +38,15 @@ public class OptionManagedBean {
         this.questionId = questionId;
     }
 
+    private OptionEntity getEntity(){
+        OptionEntity optionEntity=new OptionEntity();
+        QuestionDAO questionDAO=new QuestionDAO();
 
+        optionEntity.setContent(content);
+
+        return optionEntity;
+    }
+    public void addOption(){
+
+    }
 }

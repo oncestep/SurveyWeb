@@ -52,27 +52,16 @@ public class QuestionEntity {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
+
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
 
         QuestionEntity that = (QuestionEntity) o;
 
-        if (questionId != that.questionId) {
-            return false;
-        }
-        if (type != null ? !type.equals(that.type) : that.type != null) {
-            return false;
-        }
-        if (content != null ? !content.equals(that.content) : that.content != null) {
-            return false;
-        }
-        if (naireId != null ? !naireId.equals(that.naireId) : that.naireId != null) {
-            return false;
-        }
+        if (questionId != that.questionId) return false;
+        if (type != null ? !type.equals(that.type) : that.type != null) return false;
+        if (content != null ? !content.equals(that.content) : that.content != null) return false;
+        if (naireId != null ? !naireId.equals(that.naireId) : that.naireId != null) return false;
 
         return true;
     }

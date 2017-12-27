@@ -3,22 +3,32 @@ package com.moyo.managedbean;
 import com.moyo.beans.*;
 import com.moyo.dao.*;
 
+/**
+ * Query all the Survey data from database
+ * you can parsing batchName to reach the survey in particular batch
+ */
+
+import com.moyo.beans.SurveyEntity;
+import com.moyo.dao.SurveyDAO;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.RequestScoped;
 import javax.faces.bean.SessionScoped;
+import javax.faces.event.AbortProcessingException;
+import javax.faces.event.ActionEvent;
+import javax.faces.event.ActionListener;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
-@ManagedBean
-@RequestScoped
-//@SessionScoped
-public class SurveyManagedBean {
+
+
+@SessionScoped
+public class SurveyManagedBean implements ActionListener {
     private long naireId;
     private String naireName;
     private String description;
     private Timestamp createTime;
     private Long batchId;
+    private String batchName;
 
     /*  所有问卷列表 */
     private List<SurveyEntity> surList;
@@ -32,6 +42,24 @@ public class SurveyManagedBean {
     /*  指定问卷所有多选提交答案列表    */
     private List<List<OptionEntity>> optMulList;
 
+    private List<SurveyEntity> surveyList=new ArrayList<>();
+
+
+    public List<SurveyEntity> getSurveyList() {
+        return surveyList;
+    }
+
+    public void setSurveyList(List<SurveyEntity> surveyList) {
+        this.surveyList = surveyList;
+    }
+
+    public String getBatchName() {
+        return batchName;
+    }
+
+    public void setBatchName(String batchName) {
+        this.batchName = batchName;
+    }
 
     public long getNaireId() {
         return naireId;
@@ -188,4 +216,38 @@ public class SurveyManagedBean {
         return "/user/index.xhtml";
     }
 
+    /**
+     * To get all the Surveys. You can get the Surveys in a particular batch by using batchId
+     *
+     * @return List<SurveyEntity>
+     */
+    public List<SurveyEntity> allSurveyList() {
+        List list;
+        SurveyDAO surveyDAO = new SurveyDAO();
+        list = surveyDAO.findAll();
+        return list;
+    }
+
+    public List<SurveyEntity> allSurveyList(Long batchId) {
+        List list;
+        SurveyDAO surveyDAO = new SurveyDAO();
+        list = surveyDAO.findByBatchId(batchId);
+        return list;
+    }
+
+    public void deleteSurvey(ActionEvent action){
+        SurveyDAO surveyDAO=new SurveyDAO();
+        Long surveyId= (Long) action.getComponent().getAttributes().get("surveyId");
+        SurveyEntity surveyEntity=new SurveyEntity();
+        surveyEntity.setNaireId(surveyId);
+        surveyDAO.delete(surveyEntity);
+    }
+    @Override
+    public void processAction(ActionEvent actionEvent) throws AbortProcessingException {
+        Long batchId= (Long) actionEvent.getComponent().getAttributes().get("batchId");
+        if(surveyList.isEmpty() == false){
+            surveyList.clear();
+        }
+        surveyList.addAll(allSurveyList(batchId));
+    }
 }

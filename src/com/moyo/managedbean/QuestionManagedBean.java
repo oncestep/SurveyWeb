@@ -2,14 +2,11 @@ package com.moyo.managedbean;
 
 import com.moyo.beans.OptionEntity;
 import com.moyo.beans.QuestionEntity;
-import com.moyo.beans.SurveyEntity;
 import com.moyo.dao.OptionDAO;
 import com.moyo.dao.QuestionDAO;
-import com.moyo.dao.SurveyDAO;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
-import javax.faces.bean.SessionScoped;
 import java.util.List;
 
 @ManagedBean
@@ -18,12 +15,12 @@ import java.util.List;
 public class QuestionManagedBean {
     private long questionId;
     private Integer type;
-    private Long order;
     private String content;
     private Long naireId;
 
     /*  每题选项列表  */
     private List<OptionEntity> optList;
+
 
 
     public long getQuestionId() {
@@ -40,14 +37,6 @@ public class QuestionManagedBean {
 
     public void setType(Integer type) {
         this.type = type;
-    }
-
-    public Long getOrder() {
-        return order;
-    }
-
-    public void setOrder(Long order) {
-        this.order = order;
     }
 
     public String getContent() {
