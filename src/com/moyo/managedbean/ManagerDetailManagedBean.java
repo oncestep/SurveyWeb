@@ -1,20 +1,17 @@
 package com.moyo.managedbean;
 
+
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+
 import com.moyo.beans.ManagerDetailEntity;
 import com.moyo.dao.ManagerDetailDAO;
 import com.moyo.util.EncodeMD5;
-import sun.security.util.Password;
 
 import javax.faces.application.FacesMessage;
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
 import javax.faces.component.UIComponent;
-import javax.faces.component.UIViewRoot;
 import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
-import javax.faces.event.AbortProcessingException;
-import javax.faces.event.ValueChangeEvent;
-import javax.faces.event.ValueChangeListener;
 import javax.faces.validator.ValidatorException;
 import javax.servlet.http.HttpSession;
 import java.sql.Date;
@@ -122,20 +119,26 @@ public class ManagerDetailManagedBean {
         this.email = email;
     }
 
-    private int getGenderCode(){
-        if(wGender.equals("male")){
-            gender=0;
-        }else {
-            gender=1;
+    private int getGenderCode() {
+        if (wGender.equals("male")) {
+            gender = 0;
+        } else {
+            gender = 1;
         }
         return gender;
     }
+
     private ManagerDetailEntity getEntity() {
         ManagerDetailEntity managerDetailEntity = new ManagerDetailEntity();
-        java.sql.Date birthYearSQL = new java.sql.Date(birthYear.getTime());
+        java.sql.Date birthYearSQL = null;
+        if (birthYear != null) {
+            birthYearSQL = new java.sql.Date(birthYear.getTime());
+        }
         try {
             String encPassword = EncodeMD5.encode(password);
-            managerDetailEntity.setGender(getGenderCode());
+            if (wGender != null) {
+                managerDetailEntity.setGender(getGenderCode());
+            }
             managerDetailEntity.setBirthYear(birthYearSQL);
             managerDetailEntity.setEmail(email);
             managerDetailEntity.setMobile(mobile);
@@ -145,6 +148,7 @@ public class ManagerDetailManagedBean {
             managerDetailEntity.setUserName(username);
         } catch (Exception e) {
             e.printStackTrace();
+            return null;
         }
         return managerDetailEntity;
     }
@@ -185,6 +189,12 @@ public class ManagerDetailManagedBean {
             if (managerDetailEntity.getPassword().equals(endPassword)) {
                 HttpSession session = getHttpSession();
                 session.setAttribute("managerId", managerDetailEntity.getManagerId());
+
+                /*  手动初始化surveyManagedBean  */
+                SurveyManagedBean surveyManagedBean = new SurveyManagedBean();
+                session.setAttribute("surveyManagedBean", surveyManagedBean);
+
+
                 return "ManagerIndex";//if login success
             }
         } catch (Exception e) {
@@ -197,23 +207,27 @@ public class ManagerDetailManagedBean {
      * Manager Logout method
      */
     public String managerLogout() {
-        HttpSession session = getHttpSession();
-        session.setAttribute("managerId", null);
-        setNullToAll();
-        return "Main";
+        FacesContext facesContext = FacesContext.getCurrentInstance();
+        ExternalContext extContext = facesContext.getExternalContext();
+        HttpSession session = (HttpSession) extContext.getSession(false);
+
+        session.invalidate();
+        return "managerLogin";
     }
-    public String showPersonalDetail(){
-        ManagerDetailDAO managerDetailDAO=new ManagerDetailDAO();
-        HttpSession session=getHttpSession();
-        long managerid= (long) session.getAttribute("managerId");
-        ManagerDetailEntity managerEntity=managerDetailDAO.findById(managerid);
-        this.password=managerEntity.getPassword();
-        this.email=managerEntity.getEmail();
-        this.name=managerEntity.getName();
-        this.nickname=managerEntity.getNickName();
-        this.mobile=managerEntity.getMobile();
+
+    public String showPersonalDetail() {
+        ManagerDetailDAO managerDetailDAO = new ManagerDetailDAO();
+        HttpSession session = getHttpSession();
+        long managerid = (long) session.getAttribute("managerId");
+        ManagerDetailEntity managerEntity = managerDetailDAO.findById(managerid);
+        this.password = managerEntity.getPassword();
+        this.email = managerEntity.getEmail();
+        this.name = managerEntity.getName();
+        this.nickname = managerEntity.getNickName();
+        this.mobile = managerEntity.getMobile();
         return "ModifyPersonalInformation";
     }
+
     public void validateUserName(FacesContext fc, UIComponent c, Object value) {
         if (
                 ((String) value).contains("!") || ((String) value).contains("@") ||
@@ -236,11 +250,30 @@ public class ManagerDetailManagedBean {
     public String managerRegister() {
         try {
             ManagerDetailDAO managerDetailDAO = new ManagerDetailDAO();
-            managerDetailDAO.save(getEntity());
+            ManagerDetailEntity manager = getEntity();
+            if (manager != null) {
+                managerDetailDAO.merge(manager);
+            }
         } catch (Exception e) {
             throw e;
         }
-        return "index";
+        return "managerLogin";
+    }
+
+    public String managerUpdate() {
+        try {
+            ManagerDetailDAO managerDetailDAO = new ManagerDetailDAO();
+            ManagerDetailEntity manager = getEntity();
+
+            HttpSession session = getHttpSession();
+            manager.setManagerId((long)session.getAttribute("managerId"));
+            if (manager != null) {
+                managerDetailDAO.merge(manager);
+            }
+        } catch (Exception e) {
+            throw e;
+        }
+        return "ManagerIndex";
     }
 //    public void validateEmail(FacesContext fc,UIComponent c,Object value){
 //        String reg = "[a-zA-Z_]{1,}[0-9]{0,}@(([a-zA-z0-9]-*){1,}\\.){1,3}[a-zA-z\\-]{1,}";

@@ -1,7 +1,8 @@
 package com.moyo.managedbean;
 
-import com.moyo.beans.BatchEntity;
+
 import com.moyo.beans.FeedbackEntity;
+<<<<<<< HEAD
 import com.moyo.beans.FeedbackItem;
 import com.moyo.beans.SurveyEntity;
 import com.moyo.dao.BatchDAO;
@@ -9,13 +10,22 @@ import com.moyo.dao.FeedbackDAO;
 import com.moyo.dao.SurveyDAO;
 import com.moyo.dao.UserDetailDAO;
 import com.sun.xml.internal.ws.resources.HttpserverMessages;
+=======
+import com.moyo.dao.FeedbackDAO;
+>>>>>>> backup
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+
+import com.moyo.beans.BatchEntity;
+import com.moyo.beans.SurveyEntity;
+import com.moyo.dao.BatchDAO;
+import com.moyo.dao.SurveyDAO;
 import javax.faces.context.FacesContext;
 import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
 import java.util.List;
+
 
 @ManagedBean
 @SessionScoped
@@ -84,6 +94,23 @@ public class FeedbackManagedBean {
 
     public void setFeedbacks(String feedbacks) {
         this.feedbacks = feedbacks;
+    }
+
+
+    /**
+     * 用户针对某一问卷反馈信息
+     *
+     */
+    public String sendFeedback(long userId){
+        FeedbackDAO feeDAO = new FeedbackDAO();
+        FeedbackEntity feedback = new FeedbackEntity();
+
+        feedback.setUserId(userId);
+        feedback.setNaireId(naireId);
+        feedback.setFeedbacks(feedbacks);
+        feeDAO.save(feedback);
+
+        return "/user/index.xhtml";
     }
 
     private HttpSession getHttpSession(){

@@ -36,7 +36,8 @@ public class ParticipationDAO {
             throw e;
         }
     }
-    public ParticipationEntity findById(String id){
+    public ParticipationEntity findById(long id){
+
         try{
             ParticipationEntity object=(ParticipationEntity) getSession().get(ParticipationEntity.class,id);
             return object;
@@ -101,4 +102,5 @@ public class ParticipationDAO {
     public List findByUserId(Object o){
         return findByProperty("userId",o);
     }
+
 }

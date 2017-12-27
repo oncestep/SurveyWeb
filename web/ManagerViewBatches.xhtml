@@ -23,7 +23,7 @@
             </h:column>
             <h:column>
                 <f:ajax event="click" render="batchSurvey">
-                    <h:commandButton value="View Survey" actionListener="${surveyManagedBean.processAction}">
+                    <h:commandButton value="View Survey" actionListener="#{surveyManagedBean.processAction}">
                         <f:attribute name="batchId" value="#{batch.batchId}"/>
                     </h:commandButton>
                 </f:ajax>

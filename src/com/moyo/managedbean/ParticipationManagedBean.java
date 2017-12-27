@@ -1,21 +1,25 @@
 package com.moyo.managedbean;
+
+import com.moyo.beans.BatchEntity;
+import com.moyo.beans.ParticipationEntity;
+import com.moyo.dao.ParticipationDAO;
+
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+import java.sql.Timestamp;
+import java.util.List;
+
 /**
  * Add or delete user from Participation
  * you should pass the value of BatchName and UserName
  */
-
-import com.moyo.beans.BatchEntity;
-import com.moyo.beans.ParticipationEntity;
 import com.moyo.beans.UserDetailEntity;
 import com.moyo.dao.BatchDAO;
-import com.moyo.dao.ParticipationDAO;
 import com.moyo.dao.UserDetailDAO;
-
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 import javax.servlet.http.HttpSession;
-import java.sql.Timestamp;
+
+
 
 @ManagedBean
 @SessionScoped
@@ -24,6 +28,7 @@ public class ParticipationManagedBean {
     private Long batchId;
     private Long userId;
     private Timestamp partTime;
+
     private String batchName;
     private String userName;
 
@@ -73,6 +78,26 @@ public class ParticipationManagedBean {
 
     public void setPartTime(Timestamp partTime) {
         this.partTime = partTime;
+    }
+
+    /*  展示当前用户所有可加入批次  */
+    public List<BatchEntity> showAvailable(long userId){
+        ParticipationDAO parDAO = new ParticipationDAO();
+        return parDAO.findByUserId(userId);
+    }
+
+    /*  用户参与批次  */
+    public String participateBatch(long userId) {
+        ParticipationDAO parDAO = new ParticipationDAO();
+        ParticipationEntity participation = new ParticipationEntity();
+        Timestamp time = new Timestamp(System.currentTimeMillis());
+
+        participation.setUserId(userId);
+        participation.setBatchId(batchId);
+        participation.setPartTime(time);
+        parDAO.save(participation);
+
+        return "user/index.xhtml";
     }
 
     private HttpSession getHttpSession(){

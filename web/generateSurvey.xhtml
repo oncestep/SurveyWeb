@@ -12,6 +12,7 @@
 </h:head>
 <h:body>
     <h:form>
+<<<<<<< HEAD
         <div id="div1"/>
         <div id="div2">
             <table>
@@ -59,6 +60,68 @@
                         </table>
                     </TD>
                     <TD>
+=======
+        <table>
+            <tr>
+                <td>Belong to Batch</td>
+                <td>
+                    <h:selectOneMenu value="#{generateSurveyManagedBean.batId}">
+                        <c:forEach items="#{batchManagedBean.batchAllList}" var="batch">
+                            <f:selectItem itemValue="#{batch.batchId}" itemLabel="#{batch.batchName}"/>
+                        </c:forEach>
+                    </h:selectOneMenu>
+                </td>
+            </tr>
+            <tr>
+                <td>Survey Title:</td>
+                <td><h:inputText value="#{generateSurveyManagedBean.naireName}"/></td>
+            </tr>
+            <tr>
+                <td>Survey Description:</td>
+                <td><h:inputTextarea value="#{generateSurveyManagedBean.description}"/></td>
+            </tr>
+        </table>
+        <table id="questions">
+            <!--显示已插入的题目-->
+            <c:forEach items="#{generateSurveyManagedBean.initQuestions}" var="questemp" varStatus="ques">
+                <tr>
+                    <td><h:outputText value="#{questemp.questionEntity.content}"/></td>
+                </tr>
+                <c:forEach items="#{questemp.optionEntityList}" var="optionitem">
+                    <tr>
+                        <td><h:outputText value="#{optionitem.content}"/></td>
+                    </tr>
+                </c:forEach>
+                <f:ajax event="click" render="questions">
+                    <td><h:commandButton value="delete"
+                                         actionListener="#{generateSurveyManagedBean.removeFromQuestion}">
+                        <f:attribute name="questionIndex" value="#{ques.index}"/>
+                    </h:commandButton></td>
+                </f:ajax>
+            </c:forEach>
+        </table>
+        <table>
+            <tr>
+                <td>Question:<h:inputTextarea value="#{generateSurveyManagedBean.questionContent}"/></td>
+                <td>
+                    <h:selectOneMenu value="#{generateSurveyManagedBean.type}">
+                        <f:selectItem itemLabel="Single Choice" itemValue="2"/>
+                        <f:selectItem itemLabel="Multiple Choice" itemValue="3"/>
+                    </h:selectOneMenu>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h:inputTextarea value="#{generateSurveyManagedBean.optionContent}"/>
+                    <!--点击插入一个选项-->
+                    <f:ajax event="click" render="optionTable">
+                        <h:commandButton id="addOption" value="Add Option"
+                                         action="#{generateSurveyManagedBean.showOptions}"/>
+                    </f:ajax>
+                </td>
+                <td>
+                    <f:ajax event="click" render="optionTable">
+>>>>>>> backup
                         <table id="optionTable">
                             <c:forEach items="#{generateSurveyManagedBean.options}" var="option" varStatus="status">
                                 <tr>

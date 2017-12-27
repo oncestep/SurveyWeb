@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+>
+<h:head>
+    <title>Question</title>
+
+    <link type="text/css" href="../java1/css/text.css" rel="stylesheet"/>
+
+    <link type="text/css" href="../java1/css/paper-dashboard.css" rel="stylesheet"/>
+
+    <link type="text/css" href="../java1/css/themify-icons.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../java1/css/AdminLTE.min.css"/>
+
+    <link rel="stylesheet" href="../java1/css/_all-skins.min.css"/>
+    <link type="text/css" href="../java1/css/textarea.css" rel="stylesheet"/>
+</h:head>
+<h:body style="background: #f4f3ef">
+    <h:form>
+        <div class="wrapper">
+            <div class="sidebar" data-background-color="white" data-active-color="danger">
+                <div class="sidebar-wrapper">
+                    <div class="logo">
+                        <h:commandLink action="#" value="Survey" class="simple-text"/>
+                    </div>
+
+                    <ul class="nav">
+                        <li>
+                            <a href="index.xhtml?faces-redirect=true">
+                                <i class="ti-layout-grid2"></i>
+                                <p>Questionnaire</p>
+                            </a>
+                        </li>
+                        <!--<li>-->
+                        <!--<a href="survey.xhtml?faces-redirect=true">-->
+                        <!--<i class="ti-panel"></i>-->
+                        <!--<p>All Survey</p>-->
+                        <!--</a>-->
+                        <!--</li>-->
+                        <li>
+                            <a href="user.xhtml?faces-redirect=true">
+                                <i class="ti-user"></i>
+                                <p>User</p>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="question.xhtml?faces-redirect=true">
+                                <i class="ti-comment-alt"></i>
+                                <p>Feedback</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main-panel">
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+
+                        </div>
+                        <div class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li>
+                                    <a href="user.xhtml" class="dropdown-toggle" data-toggle="dropdown">
+                                        <i class="ti-user"></i>
+                                        <p>User</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <h:commandLink action="#{userDetailManagedBean.userLogout()}">
+                                        <i class="ti-settings"></i>
+                                        <p>Log Out</p>
+                                    </h:commandLink>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <div>
+                    <!-- Content Header (Page header) -->
+                    <section class="content-header">
+                        <h1>
+                            Question
+                        </h1>
+                    </section>
+                    <section class="content">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <ul class="timeline">
+                                    <li class="time-label">
+                                    <span class="bg-red">
+                                        FeedBack
+                                    </span>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-envelope bg-blue"></i>
+                                        <div style="margin-left: 150px;">
+                                            <h3><a><h:outputText
+                                                    value="Anything Puzzled, "/></a>Please Send Us A Feedback</h3>
+                                            <div class="timeline-body">
+                                                <div id="form-main">
+                                                    <div id="form-div">
+                                                        <!--<form class="form" id="form1">-->
+
+                                                            <p class="name">
+                                                                <h:inputText name="name" type="text"
+                                                                             value="#{userDetailManagedBean.nickname}"
+                                                                             disabled="true"
+                                                                             class="validate[required,custom[onlyLetter],length[0,100]] feedback-input name"
+                                                                             pt:placeholder="Name" id="name"/>
+                                                            </p>
+
+                                                            <p class="email">
+                                                                <h:inputText name="email" type="text"
+                                                                             value="#{userDetailManagedBean.email}"
+                                                                             disabled="true"
+                                                                             class="validate[required,custom[email]] feedback-input email"
+                                                                             id="email" pt:placeholder="Email"/>
+                                                            </p>
+
+                                                            <p class="text">
+                                                                <h:inputTextarea name="text"
+                                                                                 class="validate[required,length[6,300]] feedback-input comment"
+                                                                                 id="comment"
+                                                                                 value="#{feedbackManagedBean}"
+                                                                                 pt:placeholder="Comment"></h:inputTextarea>
+                                                            </p>
+
+                                                            <div class="submit">
+                                                                <h:commandButton styleClass="button-blue" type="submit"
+                                                                                 value="SEND" id="button-blue"/>
+                                                                <div class="ease"></div>
+                                                            </div>
+                                                        <!--</form>-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="timeline-footer">
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-clock-o bg-gray"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </h:form>
+</h:body>
+</html>
+

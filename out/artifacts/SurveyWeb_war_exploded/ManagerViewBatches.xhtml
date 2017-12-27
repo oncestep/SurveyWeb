@@ -23,6 +23,7 @@
             </h:column>
             <h:column>
                 <f:ajax event="click" render="batchSurvey">
+<<<<<<< HEAD
                     <h:commandButton value="View Survey" actionListener="${surveyManagedBean.processAction}">
                         <f:attribute name="batchId" value="#{batch.batchId}"/>
                     </h:commandButton>
@@ -30,6 +31,13 @@
                 <h:commandButton value="Delete Batch" actionListener="#{batchManagedBean.processAction}">
                     <f:attribute name="batchId" value="#{batch.batchId}"/>
                 </h:commandButton>
+=======
+                    <h:commandButton value="View Survey" actionListener="#{surveyManagedBean.processAction}">
+                        <f:attribute name="batchId" value="#{batch.batchId}"/>
+                    </h:commandButton>
+                </f:ajax>
+                <h:commandButton value="Delete Batch" action="#{batchManagedBean.deleteBatch}"/>
+>>>>>>> backup
             </h:column>
         </h:dataTable>
     </h:form>
@@ -49,7 +57,11 @@
             </h:column>
             <h:column>
                 <h:commandButton value="View Statistics"/><br/>
+<<<<<<< HEAD
                 <f:ajax event="keydown" render="batchSurvey">
+=======
+                <f:ajax event="click" render="batchSurvey">
+>>>>>>> backup
                     <h:commandButton value="Delete" actionListener="#{surveyManagedBean.deleteSurvey}">
                         <f:attribute value="#{survey.naireId}" name="surveyId"/>
                     </h:commandButton>

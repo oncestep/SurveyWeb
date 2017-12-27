@@ -37,7 +37,11 @@ public class SurveyDAO {
         }
     }
 
+<<<<<<< HEAD
     public SurveyEntity findById(Long id) {
+=======
+    public SurveyEntity findById(long id) {
+>>>>>>> backup
         try {
             SurveyEntity object = (SurveyEntity) getSession().get(SurveyEntity.class, id);
             return object;
@@ -56,6 +60,7 @@ public class SurveyDAO {
             throw e;
         }
     }
+
 
     public List findByBatchIdAndNaireName(Long batchId, String naireName) {
         try {
@@ -124,4 +129,18 @@ public class SurveyDAO {
     public List findByNaireName(Object o) {
         return findByProperty("naireName", o);
     }
+
+    public List findAvailable(long batchId, long userId) {
+        try {
+            String queryString = "from SurveyEntity as s where s.batchId = ? " +
+                    "and s.naireId != all(select a.naireId from AnswerEntity as a where a.userId = ?)";
+            Query queryObject = getSession().createQuery(queryString);
+            queryObject.setParameter(0, batchId);
+            queryObject.setParameter(1, userId);
+            return queryObject.list();
+        } catch (Exception e) {
+            throw e;
+        }
+    }
+
 }

@@ -33,6 +33,10 @@ public class GenerateSurveyManagedBean implements ActionListener {
     private List<QuestionEntity> questions = new ArrayList<>();
     private List<InitQuestion> initQuestions = new ArrayList<>();
 
+    /*  生成问卷所属Batch  */
+    private Long batId;
+
+
     public List<InitQuestion> getInitQuestions() {
         return initQuestions;
     }
@@ -97,6 +101,14 @@ public class GenerateSurveyManagedBean implements ActionListener {
         this.type = type;
     }
 
+    public Long getBatId() {
+        return batId;
+    }
+
+    public void setBatId(Long batId) {
+        this.batId = batId;
+    }
+
     public List<OptionEntity> showOptions() {
         OptionEntity optionEntity = new OptionEntity();
         optionEntity.setContent(optionContent);
@@ -133,8 +145,8 @@ public class GenerateSurveyManagedBean implements ActionListener {
         HttpSession session = (HttpSession) context.getExternalContext().getSession(true);
         java.util.Date nowTime = new java.util.Date();
         Timestamp timestamp = new Timestamp(nowTime.getTime());
-        long batchId = Long.parseLong(/*(String) session.getAttribute("batchId")*/"0");//通过前一个页面点击获取批次id并存在session中
-
+//        long batchId = Long.parseLong(/*(String) session.getAttribute("batchId")*/"0");//通过前一个页面点击获取批次id并存在session中
+        long batchId = batId;
         SurveyEntity surveyEntity = new SurveyEntity();
 
         SurveyDAO surveyDAO = new SurveyDAO();

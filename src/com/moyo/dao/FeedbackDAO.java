@@ -35,7 +35,7 @@ public class FeedbackDAO {
             throw e;
         }
     }
-    public FeedbackEntity findById(String id){
+    public FeedbackEntity findById(long id){
         try{
             FeedbackEntity object=(FeedbackEntity) getSession().get(FeedbackEntity.class,id);
             return object;

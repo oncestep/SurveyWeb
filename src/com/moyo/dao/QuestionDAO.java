@@ -35,7 +35,9 @@ public class QuestionDAO {
             throw e;
         }
     }
-    public QuestionEntity findById(String id){
+
+    public QuestionEntity findById(long id){
+
         try{
             QuestionEntity object=(QuestionEntity) getSession().get(QuestionEntity.class,id);
             return object;
