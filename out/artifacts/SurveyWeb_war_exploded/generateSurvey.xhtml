@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <title>0.0</title>
+    <link href="./resources/genernateSurvey.css" rel="stylesheet" type="text/css"/>
+</h:head>
+<h:body>
+    <h:form>
+        <div id="div1"/>
+        <div id="div2">
+            <table>
+                <TR>
+                    <TD>
+                        <table>
+                            <tr>
+                                <td>Survey Title:</td>
+                                <td><h:inputTextarea value="#{generateSurveyManagedBean.naireName}" styleClass="in"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Survey Description:</td>
+                                <td><h:inputTextarea value="#{generateSurveyManagedBean.description}" styleClass="in"/>
+                                </td>
+                            </tr>
+                        </table>
+                    </TD>
+                    <TD>
+                        <table>
+                            <tr>
+                                <td>Question:</td>
+                                <td><h:inputTextarea value="#{generateSurveyManagedBean.questionContent}"
+                                                     styleClass="in"/></td>
+                                <td>
+                                    <h:selectOneMenu value="#{generateSurveyManagedBean.type}" styleClass="sel">
+                                        <f:selectItem itemLabel="Single Choice" itemValue="2"/>
+                                        <f:selectItem itemLabel="Multiple Choice" itemValue="3"/>
+                                    </h:selectOneMenu>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Option:</td>
+                                <td>
+                                    <h:inputTextarea value="#{generateSurveyManagedBean.optionContent}"
+                                                     styleClass="in"/>
+                                    <!--点击插入一个选项-->
+                                </td>
+                                <td>
+                                    <h:commandButton id="addOption" value="Add"
+                                                     action="#{generateSurveyManagedBean.showOptions}"
+                                                     styleClass="but"/>
+                                </td>
+                            </tr>
+                        </table>
+                    </TD>
+                    <TD>
+                        <table id="optionTable">
+                            <c:forEach items="#{generateSurveyManagedBean.options}" var="option" varStatus="status">
+                                <tr>
+                                    <td>
+                                        <h:outputText value="#{option.content}"/></td>
+                                    <!--点击删除一个选项-->
+                                    <td><h:commandButton value="delete"
+                                                         actionListener="#{generateSurveyManagedBean.processAction}"
+                                                         styleClass="but">
+                                        <f:attribute name="optionIndex" value="#{status.index}"/>
+                                    </h:commandButton><br/></td>
+                                </tr>
+                            </c:forEach>
+                        </table>
+                    </TD>
+                </TR>
+                <TR>
+                    <td>
+                        <!--点击插入一个题目-->
+                        <!--<f:ajax event="click" render="questions">-->
+                        <center><h:commandButton value="Submit Question"
+                                                 action="#{generateSurveyManagedBean.addToQuestion}"
+                                                 styleClass="but2"/>
+                        </center>
+                        <!--</f:ajax>-->
+                    </td>
+                </TR>
+                <TR>
+                    <td>
+                        <center><h:commandButton value="Submit Survey" action="#{generateSurveyManagedBean.addToSurvey}"
+                                                 styleClass="but2"/></center>
+                    </td>
+                    <!--点击提交一份问卷-->
+                </TR>
+                <TR>
+                    <td>
+                        <table id="questions">
+                            <!--显示已插入的题目-->
+                            <c:forEach items="#{generateSurveyManagedBean.initQuestions}" var="questemp"
+                                       varStatus="ques">
+                                <tr>
+                                    <td><h:outputText value="#{questemp.questionEntity.content}"/></td>
+                                </tr>
+                                <c:forEach items="#{questemp.optionEntityList}" var="optionitem">
+                                    <tr>
+                                        <td><h:outputText value="#{optionitem.content}"/></td>
+                                    </tr>
+                                </c:forEach>
+                                <!--<f:ajax event="click" render="questions">-->
+                                <td><h:commandButton value="delete"
+                                                     actionListener="#{generateSurveyManagedBean.removeFromQuestion}"
+                                                     styleClass="but">
+                                    <f:attribute name="questionIndex" value="#{ques.index}"/>
+                                </h:commandButton></td>
+                                <!--</f:ajax>-->
+                            </c:forEach>
+                        </table>
+                    </td>
+                </TR>
+            </table>
+        </div>
+    </h:form>
+</h:body>
+</html>

@@ -1,0 +1,71 @@
+body{
+    background: url("image/Loginbackground.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    z-index: -1;
+    
+}
+.in {
+    width: 278px;
+    height: 18px;
+    margin-bottom: 10px;
+    outline: none;
+    padding: 10px;
+    font-size: 13px;
+    border-radius: 4px;
+    border-top: 1px solid #312E3D;
+    border-left: 1px solid #312E3D;
+    border-right: 1px solid #312E3D;
+    border-bottom: 1px solid #56536A;
+}
+#div2{   
+    position: absolute;   
+    top: 18%;   
+    left:42%;   
+    margin: -150px 0 0 -150px;   
+    width:600px;   
+    height:880px;
+    z-index: 1;
+    background-color: #fff;
+    border-radius: 15px;
+    border-top: 1px solid #312E3D;   
+    border-left: 1px solid #312E3D;   
+    border-right: 1px solid #312E3D;   
+    border-bottom: 1px solid #56536A;
+    opacity: 0.5;
+
+    
+} 
+#div3{   
+    position: absolute;   
+    top: 16%;   
+    left:45%;   
+    margin: -150px 0 0 -150px;   
+    width:auto;   
+    height:auto;
+    z-index: 2;
+    font-family: cursive;
+    font-size:medium;
+}
+.but {
+    width: 300px;
+    min-height: 20px;
+    display: block;
+    background-color: #4a77d4;
+    border: 1px solid #3762bc;
+    color: #fff;
+    padding: 9px 14px;
+    font-size: 15px;
+    line-height: normal;
+    border-radius: 5px;
+    margin: 0;
+}/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2017-12-25, 11:33:40
+    Author     : Administrator
+*/
+
