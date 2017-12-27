@@ -202,12 +202,6 @@ public class UserDetailManagedBean {
         }
     }
 
-    public void dopro(FacesContext facesContex, UIComponent uiComponent, Object o) {
-        UserDetailEntity user;
-        UserDetailDAO userDetailDAO = new UserDetailDAO();
-        user = userDetailDAO.findById(id);
-        list.set(0, user);
-    }
 
     public void validateUserName(FacesContext fc, UIComponent c, Object value) {
         if (

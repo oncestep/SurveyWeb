@@ -37,7 +37,7 @@ public class SurveyDAO {
         }
     }
 
-    public SurveyEntity findById(String id) {
+    public SurveyEntity findById(Long id) {
         try {
             SurveyEntity object = (SurveyEntity) getSession().get(SurveyEntity.class, id);
             return object;

@@ -10,56 +10,76 @@
 </h:head>
 <h:body>
     <h:form>
-        <div id="div4"></div>
-        <div id="div5">
+        <div id="div2"/>
+        <div id="div3">
             <center>
                 <table>
                     <tr>
-                        <td>User Register</td>
+                        <td/>
+                        <td><h1>User Register</h1></td>
                     </tr>
                     <tr>
-                        <td>User Name</td>
+                        <td>User Name:<br/>
+                                &nbsp;
+                        </td>
                         <f:ajax event="keyup" render="nameEorr">
                             <td><h:inputText id="usernameR" value="#{userDetailManagedBean.username}"
                                              validator="#{userDetailManagedBean.validateUserName}" styleClass="in"
                                              required="true"
                                              requiredMessage="Can not be empty!"/>
+                                <br/>
+                                &nbsp;
                                 <h:message for="usernameR" id="nameEorr" style="color: red"/>
                             </td>
                         </f:ajax>
                     </tr>
                     <TR>
-                        <TD>Password</TD>
+                        <TD>Password:<br/>
+                                &nbsp;
+                        </TD>
                         <f:ajax event="keyup">
                             <TD><h:inputSecret id="userpwdR" styleClass="in" required="true"
                                                value="#{userDetailManagedBean.password}"
                                                requiredMessage="Can not be empty!"
                                                validator="#{userDetailManagedBean.validatePassword}"/>
+                                <br/>
+                                &nbsp;
+                                <h:message for="userpwdR" style="color: red"/>
                             </TD>
                         </f:ajax>
                     </TR>
                     <TR>
-                        <TD>Verify Password</TD>
+                        <TD>Verify Password:<br/>
+                                &nbsp;
+                        </TD>
                         <f:ajax event="keyup" render="cPasswordEorr">
                             <TD><h:inputSecret id="userpwdRR" styleClass="in" required="true"
                                                requiredMessage="Can not be empty!"
                                                validator="#{userDetailManagedBean.validatePassword}"/>
+                                <br/>
+                                &nbsp;
                                 <h:message for="userpwdRR" id="cPasswordEorr" style="color: red"/>
                             </TD>
                         </f:ajax>
                     </TR>
                     <TR>
-                        <TD>Name</TD>
+                        <TD>Name:<br/>
+                                &nbsp;
+                        </TD>
                         <f:ajax event="keyup" render="nameEorr0">
                             <TD><h:inputText id="username" value="#{userDetailManagedBean.name}"
                                              validator="#{userDetailManagedBean.validateName}" styleClass="in"
                                              required="true"
                                              requiredMessage="Can not be empty!"/>
+                                <br/>
+                                &nbsp;
                                 <h:message for="username" id="nameEorr0" style="color: red"/></TD>
                         </f:ajax>
                     </TR>
                     <TR>
-                        <TD>Gender</TD>
+                        <TD>Gender:<br/>
+                                &nbsp;
+                        </TD>
                         <TD><h:selectOneRadio id="usergender" title="Gender Select" layout="lineDirection"
                                               value="#{userDetailManagedBean.wGender}">
                             <f:selectItem id="sil1" itemLabel="male" itemValue="male"/>
@@ -67,40 +87,62 @@
                         </h:selectOneRadio></TD>
                     </TR>
                     <TR>
-                        <TD>Birthday</TD>
+                        <TD>Birthday:<br/>
+                                &nbsp;
+                        </TD>
                         <TD><h:inputText id="userbirthday" styleClass="in" required="true"
                                          value="#{userDetailManagedBean.birthYear}" requiredMessage="Can not be empty!">
                             <f:convertDateTime pattern="yyyy-mm-dd"/>
                         </h:inputText>
+                            <br/>
+                            &nbsp;
+                            <h:message for="userbirthday" style="color: red"/>
                         </TD>
                     </TR>
                     <TR>
-                        <TD>Nickname</TD>
+                        <TD>Nickname:<br/>
+                                &nbsp;</TD>
                         <TD><h:inputText id="usernickname" styleClass="in" maxlength="20" required="true"
                                          value="#{userDetailManagedBean.nickname}"
-                                         requiredMessage="Can not be empty!"/></TD>
+                        
+                                         requiredMessage="Can not be empty!"/>
+                            <br/>
+                            &nbsp;
+                            <h:message for="usernickname" style="color: red"/>
+                        </TD>
                     </TR>
                     <TR>
-                        <TD>Phone Number</TD>
+                        <TD>Phone Number:<br/>
+                                &nbsp;
+                        </TD>
                         <TD><h:inputText id="userpn" styleClass="in" required="true" maxlength="11"
                                          value="#{userDetailManagedBean.mobile}"
                                          requiredMessage="Can not be empty!"/>
+                            <br/>
+                                &nbsp;
+                                <h:message for="userpn" style="color: red"/>
                         </TD>
                     </TR>
                     <tr>
-                        <TD>Email</TD>
+                        <TD>Email:<br/>
+                                &nbsp;</TD>
                         <f:ajax event="keyup" render="emailEorr">
                             <TD><h:inputText id="useremail" value="#{userDetailManagedBean.email}"
                                              validator="#{userDetailManagedBean.validateEmail}" styleClass="in"
                                              required="true"
                                              requiredMessage="Can not be empty!"/>
+                                <br/>
+                                &nbsp;
                                 <h:message for="useremail" id="emailEorr" style="color: red"/></TD>
                         </f:ajax>
                     </tr>
                     <TR>
+                        <td/>
                         <td>
                             <h:commandButton value="Register" styleClass="but"
                                              action="#{userDetailManagedBean.insert}"/>
+                            <br/>
+                                &nbsp;
                         </td>
                     </TR>
                 </table>

@@ -114,6 +114,6 @@ public class SurveyManagedBean implements ActionListener {
     @Override
     public void processAction(ActionEvent actionEvent) throws AbortProcessingException {
         Long batchId= (Long) actionEvent.getComponent().getAttributes().get("batchId");
-        surveyList.addAll(allSurveyList(batchId));
+        surveyList=allSurveyList(batchId);
     }
 }

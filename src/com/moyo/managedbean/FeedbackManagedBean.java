@@ -2,10 +2,12 @@ package com.moyo.managedbean;
 
 import com.moyo.beans.BatchEntity;
 import com.moyo.beans.FeedbackEntity;
+import com.moyo.beans.FeedbackItem;
 import com.moyo.beans.SurveyEntity;
 import com.moyo.dao.BatchDAO;
 import com.moyo.dao.FeedbackDAO;
 import com.moyo.dao.SurveyDAO;
+import com.moyo.dao.UserDetailDAO;
 import com.sun.xml.internal.ws.resources.HttpserverMessages;
 
 import javax.faces.bean.ManagedBean;
@@ -22,6 +24,35 @@ public class FeedbackManagedBean {
     private Long userId;
     private Long naireId;
     private String feedbacks;
+    private List<FeedbackItem> feedbackItems=new ArrayList<>();
+
+    public List<FeedbackItem> getFeedbackItems() {
+        String questionnaireName = null;
+        String content=null;
+        String userName=null;
+        UserDetailDAO userDetailDAO=new UserDetailDAO();
+        SurveyDAO surveyDAO=new SurveyDAO();
+
+        FeedbackItem feedbackItem=new FeedbackItem();
+        List<FeedbackEntity> feedbcakList;
+        feedbcakList=getAllFeedbacks();
+        for(FeedbackEntity item:feedbcakList){
+            questionnaireName=surveyDAO.findById(item.getNaireId()).getNaireName();
+            content=item.getFeedbacks();
+            userName=userDetailDAO.findById(item.getUserId()).getNickname();
+        }
+
+        feedbackItem.setContent(content);
+        feedbackItem.setNaireName(questionnaireName);
+        feedbackItem.setUserName(userName);
+
+        feedbackItems.add(feedbackItem);
+        return feedbackItems;
+    }
+
+    public void setFeedbackItems(List<FeedbackItem> feedbackItems) {
+        this.feedbackItems = feedbackItems;
+    }
 
     public long getFeedbackId() {
         return feedbackId;
@@ -60,6 +91,10 @@ public class FeedbackManagedBean {
         HttpSession session=(HttpSession) facesContext.getExternalContext().getSession(true);
         return session;
     }
+    /**
+     *
+     * @return 所有当前登录的管理员管理的反馈信息
+     */
     public List<FeedbackEntity> getAllFeedbacks(){
         FeedbackDAO feedbackDAO=new FeedbackDAO();
         BatchDAO batchDAO=new BatchDAO();

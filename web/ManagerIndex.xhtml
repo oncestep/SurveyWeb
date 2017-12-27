@@ -80,10 +80,12 @@
             <h3 align="center" class="STYLE6">Welcome Back</h3>
             <h3 align="center" class="STYLE6" id="username">Manager</h3>
             <p id="button4">
-                <h:commandButton name="goButton3" type="submit" value="Create a new Survey " styleClass="button4A"
-                                 action="generateSurvey.xhtml"/>
-                <h:commandButton name="goButton3" type="submit" value="Check my questionairs" styleClass="button4"
-                                 action="ManagerViewBatches.xhtml"/>
+                <h:form>
+                    <h:commandButton name="goButton3" type="submit" value="Create a new Survey " styleClass="button4A"
+                                     action="generateSurvey"/>
+                    <h:commandButton name="goButton3" type="submit" value="Check my questionairs" styleClass="button4"
+                                     action="ManagerViewBatches"/>
+                </h:form>
             </p>
         </div>
     </div>
@@ -92,7 +94,7 @@
         <div id="search">
             <h:form>
                 <p align="center">
-                    <h:commandButton name="goButton" value="Feedback" styleClass="button"/>
+                    <h:commandButton name="goButton" value="Feedback" styleClass="button" action="FeedbackPage"/>
                 </p>
                 <p align="center">
                     <h:commandButton name="goButton" value="Personal information" styleClass="button"

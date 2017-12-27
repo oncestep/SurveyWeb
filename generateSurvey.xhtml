@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8' ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
@@ -14,7 +14,7 @@
     <h:form>
         <div id="div1"/>
         <div id="div2">
-            <table>
+            <TABLE>
                 <TR>
                     <TD>
                         <table>
@@ -49,42 +49,43 @@
                                     <h:inputTextarea value="#{generateSurveyManagedBean.optionContent}"
                                                      styleClass="in"/>
                                     <!--点击插入一个选项-->
-                                </td>
-                                <td>
-                                    <h:commandButton id="addOption" value="Add"
-                                                     action="#{generateSurveyManagedBean.showOptions}"
-                                                     styleClass="but"/>
+                                    <f:ajax event="click" render="optionTable">
+                                        <td>
+                                            <h:commandButton id="addOption" value="Add"
+                                                             action="#{generateSurveyManagedBean.showOptions}"
+                                                             styleClass="but"/>
+                                        </td>
+                                    </f:ajax>
                                 </td>
                             </tr>
                         </table>
                     </TD>
                     <TD>
-                        <table id="optionTable">
-                            <c:forEach items="#{generateSurveyManagedBean.options}" var="option" varStatus="status">
-                                <tr>
-                                    <td>
-                                        <h:outputText value="#{option.content}"/></td>
-                                    <!--点击删除一个选项-->
-                                    <td><h:commandButton value="delete"
-                                                         actionListener="#{generateSurveyManagedBean.processAction}"
-                                                         styleClass="but">
-                                        <f:attribute name="optionIndex" value="#{status.index}"/>
-                                    </h:commandButton><br/></td>
-                                </tr>
-                            </c:forEach>
-                        </table>
+                        <f:ajax event="click" render="optionTable">
+                            <table id="optionTable">
+                                <c:forEach items="#{generateSurveyManagedBean.options}" var="option" varStatus="status">
+                                    <tr>
+                                        <td>
+                                            <h:outputText value="#{option.content}"/></td>
+                                        <!--点击删除一个选项-->
+                                        <td><h:commandButton value="delete"
+                                                             actionListener="#{generateSurveyManagedBean.processAction}"
+                                                             styleClass="but">
+                                            <f:attribute name="optionIndex" value="#{status.index}"/>
+                                        </h:commandButton><br/></td>
+                                    </tr>
+                                </c:forEach>
+                            </table>
+                        </f:ajax>
                     </TD>
                 </TR>
                 <TR>
-                    <td>
-                        <!--点击插入一个题目-->
-                        <!--<f:ajax event="click" render="questions">-->
+                    <!--点击插入一个题目-->
+                    <f:ajax event="click" render="questions">
                         <center><h:commandButton value="Submit Question"
-                                                 action="#{generateSurveyManagedBean.addToQuestion}"
-                                                 styleClass="but2"/>
+                                                 action="#{generateSurveyManagedBean.addToQuestion}" styleClass="but2"/>
                         </center>
-                        <!--</f:ajax>-->
-                    </td>
+                    </f:ajax>
                 </TR>
                 <TR>
                     <td>
@@ -107,18 +108,18 @@
                                         <td><h:outputText value="#{optionitem.content}"/></td>
                                     </tr>
                                 </c:forEach>
-                                <!--<f:ajax event="click" render="questions">-->
-                                <td><h:commandButton value="delete"
-                                                     actionListener="#{generateSurveyManagedBean.removeFromQuestion}"
-                                                     styleClass="but">
-                                    <f:attribute name="questionIndex" value="#{ques.index}"/>
-                                </h:commandButton></td>
-                                <!--</f:ajax>-->
+                                <f:ajax event="click" render="questions">
+                                    <td><h:commandButton value="delete"
+                                                         actionListener="#{generateSurveyManagedBean.removeFromQuestion}"
+                                                         styleClass="but">
+                                        <f:attribute name="questionIndex" value="#{ques.index}"/>
+                                    </h:commandButton></td>
+                                </f:ajax>
                             </c:forEach>
                         </table>
                     </td>
                 </TR>
-            </table>
+            </TABLE>
         </div>
     </h:form>
 </h:body>

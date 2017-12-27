@@ -36,7 +36,7 @@ public class UserDetailDAO {
             throw e;
         }
     }
-    public UserDetailEntity findById(String id){
+    public UserDetailEntity findById(Long id){
         try{
             UserDetailEntity object=(UserDetailEntity) getSession().get(UserDetailEntity.class,id);
             return object;
