@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-
+@ManagedBean
 @SessionScoped
 public class SurveyManagedBean implements ActionListener {
     private long naireId;
@@ -245,13 +245,10 @@ public class SurveyManagedBean implements ActionListener {
     @Override
     public void processAction(ActionEvent actionEvent) throws AbortProcessingException {
         Long batchId= (Long) actionEvent.getComponent().getAttributes().get("batchId");
-<<<<<<< HEAD
         surveyList=allSurveyList(batchId);
-=======
         if(surveyList.isEmpty() == false){
             surveyList.clear();
         }
-        surveyList.addAll(allSurveyList(batchId));
->>>>>>> backup
+        surveyList=allSurveyList(batchId);
     }
 }

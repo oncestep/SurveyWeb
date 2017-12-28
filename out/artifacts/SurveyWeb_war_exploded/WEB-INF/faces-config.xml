@@ -19,6 +19,19 @@
         </navigation-case>
     </navigation-rule>
 
+    <navigation-rule>
+        <from-view-id>/managerLogin.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>true</from-outcome>
+            <to-view-id>/ManagerIndex.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>false</from-outcome>
+            <to-view-id>/managerRigister.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
     <!--  用户登录重定向  -->
     <navigation-rule>
         <from-view-id>/user/login.xhtml</from-view-id>

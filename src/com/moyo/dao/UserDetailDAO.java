@@ -48,16 +48,9 @@ public class UserDetailDAO {
             throw e;
         }
     }
-<<<<<<< HEAD
-    public UserDetailEntity findById(Long id){
-        try{
-            UserDetailEntity object=(UserDetailEntity) getSession().get(UserDetailEntity.class,id);
-=======
-
     public UserDetailEntity findById(long id) {
         try {
             UserDetailEntity object = (UserDetailEntity) getSession().get(UserDetailEntity.class, id);
->>>>>>> backup
             return object;
         } catch (Exception e) {
             throw e;

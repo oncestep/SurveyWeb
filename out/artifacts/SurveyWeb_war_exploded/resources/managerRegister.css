@@ -5,7 +5,6 @@ body{
     z-index: -1;
     
 }
-<<<<<<< HEAD
 .in {
     width: 278px;
     height: 18px;
@@ -26,15 +25,6 @@ body{
     margin: -150px 0 0 -150px;   
     width:600px;   
     height:880px;
-=======
-#div2{   
-    position: absolute;   
-    top: 50%;   
-    left:45%;   
-    margin: -150px 0 0 -150px;   
-    width: 500px;   
-    height: 300px;
->>>>>>> backup
     z-index: 1;
     background-color: #fff;
     border-radius: 15px;
@@ -42,7 +32,6 @@ body{
     border-left: 1px solid #312E3D;   
     border-right: 1px solid #312E3D;   
     border-bottom: 1px solid #56536A;
-<<<<<<< HEAD
     opacity: 0.5;   
 } 
 #div3{   
@@ -70,21 +59,6 @@ body{
     margin: 0;
 }
 /*
-=======
-    opacity: 0.5;
-
-    
-} 
-#div3{   
-    position: absolute;   
-    top: 50%;   
-    left:45%;   
-    margin: -150px 0 0 -150px;   
-    width: 500px;   
-    height: 300px;
-    z-index: 2;
-} /*
->>>>>>> backup
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.

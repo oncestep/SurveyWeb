@@ -10,6 +10,7 @@ import com.moyo.util.EncodeMD5;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.component.UIComponent;
+import javax.faces.context.ExceptionHandler;
 import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
 import javax.faces.validator.ValidatorException;
@@ -154,21 +155,6 @@ public class ManagerDetailManagedBean {
     }
 
     /**
-     * To set all the valuable null
-     */
-    private void setNullToAll() {
-        managerId = 0;
-        birthYear = null;
-        email = null;
-        gender = null;
-        mobile = null;
-        name = null;
-        nickname = null;
-        password = null;
-        username = null;
-    }
-
-    /**
      * To get HttpSession
      */
     private HttpSession getHttpSession() {
@@ -188,19 +174,20 @@ public class ManagerDetailManagedBean {
             String endPassword = EncodeMD5.encode(password);
             if (managerDetailEntity.getPassword().equals(endPassword)) {
                 HttpSession session = getHttpSession();
+                if(session.getAttribute("managerId")!=null){
+                    session.setAttribute("managerId",null);
+                }
                 session.setAttribute("managerId", managerDetailEntity.getManagerId());
 
                 /*  手动初始化surveyManagedBean  */
                 SurveyManagedBean surveyManagedBean = new SurveyManagedBean();
                 session.setAttribute("surveyManagedBean", surveyManagedBean);
-
-
-                return "ManagerIndex";//if login success
+                return "true";//if login success
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return "";
+        return "false";
     }
 
     /**

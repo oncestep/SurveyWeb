@@ -8,6 +8,13 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <h:body>
     <h:form>
+        Batch Name:
+        <h:inputText value="#{batchManagedBean.batchName}"/>
+        Description:
+        <h:inputText value="#{batchManagedBean.description}"/>
+        <h:commandButton value="Add Batch" action="#{batchManagedBean.addBatch}"/>
+    </h:form>
+    <h:form>
         <h:dataTable value="#{batchManagedBean.batchList}" var="batch">
             <h:column>
                 <f:facet name="header">Batch Name</f:facet>
@@ -23,11 +30,13 @@
             </h:column>
             <h:column>
                 <f:ajax event="click" render="batchSurvey">
-                    <h:commandButton value="View Survey" actionListener="#{surveyManagedBean.processAction}">
+                    <h:commandButton value="View Survey" action="ManagerViewBatches"
+                                     actionListener="#{surveyManagedBean.processAction}">
                         <f:attribute name="batchId" value="#{batch.batchId}"/>
                     </h:commandButton>
                 </f:ajax>
-                <h:commandButton value="Delete Batch" actionListener="#{batchManagedBean.processAction}">
+                <h:commandButton value="Delete Batch" action="ManagerViewBatches"
+                                 actionListener="#{batchManagedBean.processAction}">
                     <f:attribute name="batchId" value="#{batch.batchId}"/>
                 </h:commandButton>
             </h:column>
@@ -48,9 +57,12 @@
                 <h:outputText value="#{survey.createTime}"/>
             </h:column>
             <h:column>
-                <h:commandButton value="View Statistics"/><br/>
+                <h:commandButton value="View Statistics" action="ViewStatistics" actionListener="#{questionManagedBean.processAction}">
+                    <f:attribute value="#{survey.naireId}" name="naireId"/>
+                </h:commandButton><br/>
                 <f:ajax event="keydown" render="batchSurvey">
-                    <h:commandButton value="Delete" actionListener="#{surveyManagedBean.deleteSurvey}">
+                    <h:commandButton value="Delete" action="ManagerViewBatches"
+                                     actionListener="#{surveyManagedBean.deleteSurvey}">
                         <f:attribute value="#{survey.naireId}" name="surveyId"/>
                     </h:commandButton>
                 </f:ajax>

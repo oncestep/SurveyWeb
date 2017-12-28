@@ -1,9 +1,11 @@
 package com.moyo.managedbean;
 
 import com.moyo.beans.*;
+import com.moyo.dao.BatchDAO;
 import com.moyo.dao.OptionDAO;
 import com.moyo.dao.QuestionDAO;
 import com.moyo.dao.SurveyDAO;
+import org.jboss.weld.context.http.Http;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
@@ -32,10 +34,38 @@ public class GenerateSurveyManagedBean implements ActionListener {
     private List<OptionEntity> options = new ArrayList<>();
     private List<QuestionEntity> questions = new ArrayList<>();
     private List<InitQuestion> initQuestions = new ArrayList<>();
-
+    private List batchIds=new ArrayList<>();
+    private List<BatchEntity> batchEntityList=new ArrayList<>();
     /*  生成问卷所属Batch  */
     private Long batId;
 
+    public List<BatchEntity> getBatchEntityList() {
+        BatchDAO batchDAO=new BatchDAO();
+        FacesContext context=FacesContext.getCurrentInstance();
+        HttpSession session= (HttpSession) context.getExternalContext().getSession(true);
+        long batchId= (long) session.getAttribute("managerId");
+        batchIds=batchDAO.findByManagerId(batchId);
+        List<BatchEntity> batchList=new ArrayList<>();
+        for(Object bId:batchIds){
+            BatchEntity batchEntity= (BatchEntity) bId;
+            batchList.add(batchEntity);
+        }
+        batchEntityList=batchList;
+        return batchEntityList;
+    }
+
+    public void setBatchEntityList(List<BatchEntity> batchEntityList) {
+        this.batchEntityList = batchEntityList;
+    }
+
+    public List<Long> getBatchIds() {
+
+        return batchIds;
+    }
+
+    public void setBatchIds(List<Long> batchIds) {
+        this.batchIds = batchIds;
+    }
 
     public List<InitQuestion> getInitQuestions() {
         return initQuestions;

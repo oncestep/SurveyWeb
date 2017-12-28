@@ -2,7 +2,6 @@ package com.moyo.managedbean;
 
 
 import com.moyo.beans.FeedbackEntity;
-<<<<<<< HEAD
 import com.moyo.beans.FeedbackItem;
 import com.moyo.beans.SurveyEntity;
 import com.moyo.dao.BatchDAO;
@@ -10,9 +9,6 @@ import com.moyo.dao.FeedbackDAO;
 import com.moyo.dao.SurveyDAO;
 import com.moyo.dao.UserDetailDAO;
 import com.sun.xml.internal.ws.resources.HttpserverMessages;
-=======
-import com.moyo.dao.FeedbackDAO;
->>>>>>> backup
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
@@ -37,26 +33,26 @@ public class FeedbackManagedBean {
     private List<FeedbackItem> feedbackItems=new ArrayList<>();
 
     public List<FeedbackItem> getFeedbackItems() {
-        String questionnaireName = null;
-        String content=null;
-        String userName=null;
+        List<FeedbackItem> listTemp=new ArrayList<>();
+
         UserDetailDAO userDetailDAO=new UserDetailDAO();
         SurveyDAO surveyDAO=new SurveyDAO();
-
-        FeedbackItem feedbackItem=new FeedbackItem();
         List<FeedbackEntity> feedbcakList;
         feedbcakList=getAllFeedbacks();
         for(FeedbackEntity item:feedbcakList){
+            FeedbackItem feedbackItem=new FeedbackItem();
+            String questionnaireName = null;
+            String content=null;
+            String userName=null;
             questionnaireName=surveyDAO.findById(item.getNaireId()).getNaireName();
             content=item.getFeedbacks();
             userName=userDetailDAO.findById(item.getUserId()).getNickname();
+            feedbackItem.setContent(content);
+            feedbackItem.setNaireName(questionnaireName);
+            feedbackItem.setUserName(userName);
+            listTemp.add(feedbackItem);
         }
-
-        feedbackItem.setContent(content);
-        feedbackItem.setNaireName(questionnaireName);
-        feedbackItem.setUserName(userName);
-
-        feedbackItems.add(feedbackItem);
+        feedbackItems=listTemp;
         return feedbackItems;
     }
 

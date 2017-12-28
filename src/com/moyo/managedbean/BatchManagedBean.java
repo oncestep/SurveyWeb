@@ -15,13 +15,10 @@ import javax.faces.context.FacesContext;
 import javax.faces.event.AbortProcessingException;
 import javax.faces.event.ActionListener;
 import javax.servlet.http.HttpSession;
-<<<<<<< HEAD
 import java.awt.event.ActionEvent;
 import java.sql.Date;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
-=======
->>>>>>> backup
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,19 +30,8 @@ public class BatchManagedBean implements ActionListener {
     private String description;
     private Timestamp createTime;
     private Long managerId;
-
-<<<<<<< HEAD
-    public List<BatchEntity> getBatchList() {
-        BatchDAO batchDAO=new BatchDAO();
-        HttpSession session=getHttpSession();
-        Long managerId= (Long) session.getAttribute("managerId");
-        batchList=batchDAO.findByManagerId(managerId);
-        return batchList;
-    }
-=======
     private List<BatchEntity> batchList=new ArrayList<>();
     private List<BatchEntity> batchAllList;
->>>>>>> backup
 
 
     public long getBatchId() {

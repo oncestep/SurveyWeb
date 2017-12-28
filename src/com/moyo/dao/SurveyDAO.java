@@ -37,11 +37,7 @@ public class SurveyDAO {
         }
     }
 
-<<<<<<< HEAD
-    public SurveyEntity findById(Long id) {
-=======
     public SurveyEntity findById(long id) {
->>>>>>> backup
         try {
             SurveyEntity object = (SurveyEntity) getSession().get(SurveyEntity.class, id);
             return object;

@@ -221,8 +221,6 @@ public class UserDetailManagedBean {
         }
     }
 
-<<<<<<< HEAD
-=======
     /**
      * 用户注册
      *
@@ -341,7 +339,6 @@ public class UserDetailManagedBean {
         user = userDetailDAO.findById(id);
         list.set(0, user);
     }
->>>>>>> backup
 
     public void validateUserName(FacesContext fc, UIComponent c, Object value) {
         if (
