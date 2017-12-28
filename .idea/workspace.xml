@@ -6,130 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ada4dcf9-4963-4dde-83d4-86e7dab1f53a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genernateSurvey.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/ViewStatistics.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/java1/js/exporting.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/java1/js/highcharts-zh_CN.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/java1/js/highcharts.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/java1/js/jquery-1.8.3.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/java1/js/oldie.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/FeedbackPage.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/Main.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/AJAX/RegisterManageBean1.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/AJAX/RegisterManageBean1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/beans/AnswerEntity.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/beans/AnswerEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/beans/BatchEntity.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/beans/BatchEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/beans/FeedbackEntity.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/beans/FeedbackEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/beans/ManagerDetailEntity.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/beans/ManagerDetailEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/beans/OptionEntity.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/beans/OptionEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/beans/ParticipationEntity.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/beans/ParticipationEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/beans/QuestionEntity.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/beans/QuestionEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/beans/SurveyEntity.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/beans/SurveyEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/beans/TipEntity.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/beans/TipEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/beans/UserDetailEntity.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/beans/UserDetailEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/dao/AnswerDAO.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/dao/AnswerDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/dao/BatchDAO.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/dao/BatchDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/dao/FeedbackDAO.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/dao/FeedbackDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/dao/ManagerDetailDAO.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/dao/ManagerDetailDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/dao/OptionDAO.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/dao/OptionDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/dao/ParticipationDAO.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/dao/ParticipationDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/dao/QuestionDAO.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/dao/QuestionDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/dao/SurveyDAO.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/dao/SurveyDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/dao/TipDAO.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/dao/TipDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/dao/UserDetailDAO.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/dao/UserDetailDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/listener/SecurityPhaseListener.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/listener/SecurityPhaseListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/managedbean/AnswerManagedBean.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/managedbean/AnswerManagedBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/managedbean/BatchManagedBean.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/managedbean/BatchManagedBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/managedbean/FeedbackManagedBean.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/managedbean/FeedbackManagedBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/managedbean/GenerateSurveyManagedBean.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/managedbean/GenerateSurveyManagedBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/managedbean/ManagerDetailManagedBean.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/managedbean/ManagerDetailManagedBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/managedbean/OptionManagedBean.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/managedbean/OptionManagedBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/managedbean/ParticipationManagedBean.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/managedbean/ParticipationManagedBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/managedbean/QuestionManagedBean.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/managedbean/QuestionManagedBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/managedbean/SurveyManagedBean.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/managedbean/SurveyManagedBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/managedbean/TipManagedBean.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/managedbean/TipManagedBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/managedbean/UserDetailManagedBean.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/managedbean/UserDetailManagedBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/managedbean/test$ques.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/managedbean/test$ques.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/managedbean/test.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/managedbean/test.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/sessionfactory/SF.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/sessionfactory/SF.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/util/EncodeMD5.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/util/EncodeMD5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/Main.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/AJAX/RegisterManageBean1.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/AJAX/RegisterManageBean1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/beans/AnswerEntity.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/beans/AnswerEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/beans/BatchEntity.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/beans/BatchEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/beans/FeedbackEntity.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/beans/FeedbackEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/beans/ManagerDetailEntity.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/beans/ManagerDetailEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/beans/OptionEntity.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/beans/OptionEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/beans/ParticipationEntity.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/beans/ParticipationEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/beans/QuestionEntity.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/beans/QuestionEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/beans/SurveyEntity.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/beans/SurveyEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/beans/TipEntity.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/beans/TipEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/beans/UserDetailEntity.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/beans/UserDetailEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/dao/AnswerDAO.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/dao/AnswerDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/dao/BatchDAO.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/dao/BatchDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/dao/FeedbackDAO.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/dao/FeedbackDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/dao/ManagerDetailDAO.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/dao/ManagerDetailDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/dao/OptionDAO.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/dao/OptionDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/dao/ParticipationDAO.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/dao/ParticipationDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/dao/QuestionDAO.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/dao/QuestionDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/dao/SurveyDAO.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/dao/SurveyDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/dao/TipDAO.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/dao/TipDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/dao/UserDetailDAO.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/dao/UserDetailDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/listener/SecurityPhaseListener.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/listener/SecurityPhaseListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/managedbean/AnswerManagedBean.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/managedbean/AnswerManagedBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/managedbean/BatchManagedBean.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/managedbean/BatchManagedBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/managedbean/FeedbackManagedBean.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/managedbean/FeedbackManagedBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/managedbean/GenerateSurveyManagedBean.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/managedbean/GenerateSurveyManagedBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/managedbean/ManagerDetailManagedBean.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/managedbean/ManagerDetailManagedBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/managedbean/OptionManagedBean.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/managedbean/OptionManagedBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/managedbean/ParticipationManagedBean.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/managedbean/ParticipationManagedBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/managedbean/QuestionManagedBean.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/managedbean/QuestionManagedBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/managedbean/SurveyManagedBean.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/managedbean/SurveyManagedBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/managedbean/TipManagedBean.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/managedbean/TipManagedBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/managedbean/UserDetailManagedBean.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/managedbean/UserDetailManagedBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/managedbean/test$ques.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/managedbean/test$ques.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/managedbean/test.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/managedbean/test.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/sessionfactory/SF.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/sessionfactory/SF.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/util/EncodeMD5.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/util/EncodeMD5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/sqljdbc41.xml" afterPath="$PROJECT_DIR$/.idea/libraries/sqljdbc41.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SurveyWeb.iml" afterPath="$PROJECT_DIR$/SurveyWeb.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generateSurvey.xhtml" afterPath="$PROJECT_DIR$/generateSurvey.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/FeedbackPage.xhtml" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/FeedbackPage.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/Main.xhtml" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/Main.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/ManagerIndex.xhtml" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/ManagerIndex.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/ManagerViewBatches.xhtml" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/ManagerViewBatches.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/ModifyPersonalInformation.xhtml" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/ModifyPersonalInformation.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/hibernate.cfg.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/faces-config.xml" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/faces-config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/generateSurvey.xhtml" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/generateSurvey.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/managerLogin.xhtml" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/managerLogin.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/managerRigister.xhtml" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/managerRigister.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/resources/managerRegister.css" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/resources/managerRegister.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/resources/userRegister.css" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/resources/userRegister.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/user/index.xhtml" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/user/index.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/hibernate.cfg.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/moyo/dao/SurveyDAO.java" afterPath="$PROJECT_DIR$/src/com/moyo/dao/SurveyDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/moyo/dao/UserDetailDAO.java" afterPath="$PROJECT_DIR$/src/com/moyo/dao/UserDetailDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/moyo/managedbean/BatchManagedBean.java" afterPath="$PROJECT_DIR$/src/com/moyo/managedbean/BatchManagedBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/moyo/managedbean/FeedbackManagedBean.java" afterPath="$PROJECT_DIR$/src/com/moyo/managedbean/FeedbackManagedBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/moyo/managedbean/GenerateSurveyManagedBean.java" afterPath="$PROJECT_DIR$/src/com/moyo/managedbean/GenerateSurveyManagedBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/moyo/managedbean/ManagerDetailManagedBean.java" afterPath="$PROJECT_DIR$/src/com/moyo/managedbean/ManagerDetailManagedBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/moyo/managedbean/QuestionManagedBean.java" afterPath="$PROJECT_DIR$/src/com/moyo/managedbean/QuestionManagedBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/moyo/managedbean/SurveyManagedBean.java" afterPath="$PROJECT_DIR$/src/com/moyo/managedbean/SurveyManagedBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/moyo/managedbean/UserDetailManagedBean.java" afterPath="$PROJECT_DIR$/src/com/moyo/managedbean/UserDetailManagedBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/src/hibernate.cfg.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/FeedbackPage.xhtml" afterPath="$PROJECT_DIR$/web/FeedbackPage.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/Main.xhtml" afterPath="$PROJECT_DIR$/web/Main.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/ManagerIndex.xhtml" afterPath="$PROJECT_DIR$/web/ManagerIndex.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/ManagerViewBatches.xhtml" afterPath="$PROJECT_DIR$/web/ManagerViewBatches.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/faces-config.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/faces-config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/generateSurvey.xhtml" afterPath="$PROJECT_DIR$/web/generateSurvey.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/managerLogin.xhtml" afterPath="$PROJECT_DIR$/web/managerLogin.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/managerRigister.xhtml" afterPath="$PROJECT_DIR$/web/managerRigister.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/user/index.xhtml" afterPath="$PROJECT_DIR$/web/user/index.xhtml" />
-    </list>
+    <list default="true" id="ada4dcf9-4963-4dde-83d4-86e7dab1f53a" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -189,8 +66,8 @@
       <file leaf-file-name="FeedbackPage.xhtml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/FeedbackPage.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="23" column="70" lean-forward="true" selection-start-line="23" selection-start-column="70" selection-end-line="23" selection-end-column="70" />
+            <state relative-caret-position="378">
+              <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -548,12 +425,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1514460411103</updated>
-      <workItem from="1514460417838" duration="3754000" />
+      <workItem from="1514460417838" duration="3838000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32617000" />
+    <option name="totallyTimeSpent" value="32701000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
@@ -1105,8 +982,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/FeedbackPage.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="23" column="70" lean-forward="true" selection-start-line="23" selection-start-column="70" selection-end-line="23" selection-end-column="70" />
+        <state relative-caret-position="378">
+          <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
           <folding />
         </state>
       </provider>
