@@ -10,6 +10,9 @@ import com.moyo.dao.*;
 
 import com.moyo.beans.SurveyEntity;
 import com.moyo.dao.SurveyDAO;
+import com.moyo.listener.MultiplySelectListener;
+import com.moyo.listener.SingleSelectListener;
+
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.event.AbortProcessingException;
@@ -17,8 +20,8 @@ import javax.faces.event.ActionEvent;
 import javax.faces.event.ActionListener;
 import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
-
 
 
 @SessionScoped
@@ -30,19 +33,15 @@ public class SurveyManagedBean implements ActionListener {
     private Long batchId;
     private String batchName;
 
-    /*  所有问卷列表 */
+    /*  当前用户所有问卷列表 */
     private List<SurveyEntity> surList;
 
     /*  指定问卷所有问题列表    */
     private List<QuestionEntity> queList;
 
-    /*  指定问卷所有单选提交答案列表    */
-    private List<OptionEntity> optOneList;
+    /*  管理员指定批次下的所有问卷  */
+    private List<SurveyEntity> surveyList = new ArrayList<>();
 
-    /*  指定问卷所有多选提交答案列表    */
-    private List<List<OptionEntity>> optMulList;
-
-    private List<SurveyEntity> surveyList=new ArrayList<>();
 
 
     public List<SurveyEntity> getSurveyList() {
@@ -117,21 +116,6 @@ public class SurveyManagedBean implements ActionListener {
         this.queList = queList;
     }
 
-    public List<OptionEntity> getOptOneList() {
-        return optOneList;
-    }
-
-    public void setOptOneList(List<OptionEntity> optOneList) {
-        this.optOneList = optOneList;
-    }
-
-    public List<List<OptionEntity>> getOptMulList() {
-        return optMulList;
-    }
-
-    public void setOptMulList(List<List<OptionEntity>> optMulList) {
-        this.optMulList = optMulList;
-    }
 
     /*  输出当前用户所需填写问卷    */
     public void showAllSurvey(long userId) {
@@ -168,50 +152,52 @@ public class SurveyManagedBean implements ActionListener {
         return "/user/survey.xhtml";
     }
 
-    /*
-        提交问卷
-        更新选项被选次数
-        插入Answer表
-        清空单选，多选答案列表
-    */
-    public String answerSurvey(long userId) {
+    /**
+     * 提交问卷
+     * 更新选项被选次数
+     * 插入Answer表
+     * 刷新当前用户所有问卷列表
+     *
+     * @return
+     */
+    public String answerSurvey(long userId, long naireId) {
+        List<Long> singleSelectList = SingleSelectListener.singleSelectList;
+        List<Long[]> multiplySelectList = MultiplySelectListener.multiplySelectList;
         OptionDAO optDAO = new OptionDAO();
+        OptionEntity option = new OptionEntity();
 
-        /*  更新选项被选次数  */
-        for (OptionEntity opt : optOneList
+        /*  更新单选Hits  */
+        for (long optId : singleSelectList
                 ) {
-            if (opt != null) {
-                optDAO.addHits(opt.getOptionId());
+            option = optDAO.findById(optId);
+            option.setHits(option.getHits() + 1);
+            optDAO.merge(option);
+        }
+        /*  更新多选Hits  */
+        for (Long[] optIdList : multiplySelectList
+                ) {
+            for (long optId : optIdList
+                    ) {
+                option = optDAO.findById(optId);
+                option.setHits(option.getHits() + 1);
+                optDAO.merge(option);
             }
         }
-        for (List<OptionEntity> optList : optMulList
-                ) {
-            if (optList != null) {
-                for (OptionEntity opt : optList
-                        ) {
-                    if (opt != null) {
-                        optDAO.addHits(opt.getOptionId());
-                    }
-                }
-            }
-        }
+        SingleSelectListener.singleSelectList.clear();
+        MultiplySelectListener.multiplySelectList.clear();
 
-        /*  插入Answer  */
-        AnswerDAO answerDAO = new AnswerDAO();
+        /*  插入Answer表  */
+        AnswerDAO ansDAO = new AnswerDAO();
         AnswerEntity answer = new AnswerEntity();
         Timestamp time = new Timestamp(System.currentTimeMillis());
         answer.setUserId(userId);
         answer.setNaireId(naireId);
         answer.setAnswerTime(time);
-        try {
-            answerDAO.save(answer);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        ansDAO.save(answer);
 
-        /*  清空单选多选答案列表  */
-        optOneList.clear();
-        optMulList.clear();
+        /*  刷新当前用户所有问卷列表  */
+        surList.clear();
+        showAllSurvey(userId);
 
         return "/user/index.xhtml";
     }
@@ -235,17 +221,18 @@ public class SurveyManagedBean implements ActionListener {
         return list;
     }
 
-    public void deleteSurvey(ActionEvent action){
-        SurveyDAO surveyDAO=new SurveyDAO();
-        Long surveyId= (Long) action.getComponent().getAttributes().get("surveyId");
-        SurveyEntity surveyEntity=new SurveyEntity();
+    public void deleteSurvey(ActionEvent action) {
+        SurveyDAO surveyDAO = new SurveyDAO();
+        Long surveyId = (Long) action.getComponent().getAttributes().get("surveyId");
+        SurveyEntity surveyEntity = new SurveyEntity();
         surveyEntity.setNaireId(surveyId);
         surveyDAO.delete(surveyEntity);
     }
+
     @Override
     public void processAction(ActionEvent actionEvent) throws AbortProcessingException {
-        Long batchId= (Long) actionEvent.getComponent().getAttributes().get("batchId");
-        if(surveyList.isEmpty() == false){
+        Long batchId = (Long) actionEvent.getComponent().getAttributes().get("batchId");
+        if (surveyList.isEmpty() == false) {
             surveyList.clear();
         }
         surveyList.addAll(allSurveyList(batchId));

@@ -71,6 +71,7 @@ public class FeedbackManagedBean {
         feedback.setFeedbacks(feedbacks);
         feeDAO.save(feedback);
 
+        feedbacks = null;
         return "/user/index.xhtml";
     }
 

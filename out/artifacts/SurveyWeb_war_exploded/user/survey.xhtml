@@ -55,6 +55,7 @@
             </div>
         </div>
         <div class="main-panel">
+            <h:form>
             <nav class="navbar navbar-default">
                 <div class="container-fluid">
                     <div class="collapse navbar-collapse">
@@ -62,21 +63,20 @@
                             <li>
                                 <a href="user.xhtml" class="dropdown-toggle" data-toggle="dropdown">
                                     <i class="ti-user"></i>
-                                    <p>User</p>
+                                    <p>#{userDetailManagedBean.nickname}</p>
                                 </a>
                             </li>
                             <li>
-                                <h:form>
-                                    <h:commandLink action="#{userDetailManagedBean.userLogout()}">
-                                        <i class="ti-settings"></i>
-                                        <p>Logout</p>
-                                    </h:commandLink>
-                                </h:form>
+                                <h:commandLink action="#{userDetailManagedBean.userLogout()}">
+                                    <i class="ti-settings"></i>
+                                    <p>Log Out</p>
+                                </h:commandLink>
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
+            </h:form>
             <h:form class="register">
                 <i class="ti-pencil-alt" style="font-size: 40px"/>
                 <h1>#{surveyManagedBean.naireName}</h1>
@@ -88,42 +88,44 @@
                     Thank you for your cooperation.
                 </h5>
 
-                <c:forEach items="#{surveyManagedBean.queList}" var="question" varStatus="status">
-
+                <!--遍历渲染问题选项-->
+                <c:forEach items="#{surveyManagedBean.queList}" var="question">
                     <c:if test="#{question.type == 2}">
                         <span class="ques tag"></span>
                         <h:outputText value="#{question.content}" class="ques"/>
-                        <h:selectOneRadio value="#{surveyManagedBean.optOneList.get(status.index)}" class="ans">
+                        <h:selectOneRadio value="singleSelection" class="ans">
+                            <f:valueChangeListener type="com.moyo.listener.SingleSelectListener"/>
 
                             <c:forEach items="#{questionManagedBean.showAllOption(question.questionId)}" var="option">
                                 <f:selectItem itemValue="#{option.optionId}" itemLabel="#{option.content}"/>
                             </c:forEach>
-
                         </h:selectOneRadio>
                         <hr/>
+                        <br/>
                     </c:if>
 
                     <c:if test="#{question.type == 3}">
                         <br/>
                         <span class="ques tag"></span>
                         <h:outputText value="#{question.content}" class="ques"/>
-                        <h:selectManyCheckbox value="#{surveyManagedBean.optMulList.get(status.index)}" class="ans">
+                        <h:selectManyCheckbox value="#{multiplySelection}" class="ans">
+                            <f:valueChangeListener type="com.moyo.listener.MultiplySelectListener"/>
 
                             <c:forEach items="#{questionManagedBean.showAllOption(question.questionId)}" var="option">
                                 <f:selectItem itemValue="#{option.optionId}" itemLabel="#{option.content}"/>
                             </c:forEach>
-
                         </h:selectManyCheckbox>
                         <hr/>
                         <br/>
                     </c:if>
-
                 </c:forEach>
-
 
                 <div class="text-center">
                     <!---->
-                    <h:commandButton action="#{surveyManagedBean}" value="Submit" class="btn btn-info btn-fill btn-wd"> </h:commandButton>
+                    <h:commandButton
+                            action="#{surveyManagedBean.answerSurvey(userDetailManagedBean.userId,surveyManagedBean.naireId)}"
+                            value="Submit" class="btn btn-info btn-fill btn-wd">
+                    </h:commandButton>
                 </div>
             </h:form>
         </div>

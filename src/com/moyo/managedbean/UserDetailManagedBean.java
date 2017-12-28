@@ -149,11 +149,13 @@ public class UserDetailManagedBean {
         java.sql.Date birthYearSQL = new java.sql.Date(birthYear.getTime());
         UserDetailEntity entity = new UserDetailEntity();
 
-        if(wGender.equals("male")){
-            gender=0;
-        }else {
-            gender=1;
-        }
+        // ???
+//        if (wGender.equals("male")) {
+//            gender = 0;
+//        } else {
+//            gender = 1;
+//        }
+
         entity.setUserName(username);
         entity.setPassword(password);
         entity.setName(name);
@@ -165,6 +167,8 @@ public class UserDetailManagedBean {
 
         return entity;
     }
+
+
 
 //    public String userLogin() {
 //        UserDetailDAO userDAO = new UserDetailDAO();
@@ -203,7 +207,7 @@ public class UserDetailManagedBean {
 
     public void insert() {
         try {
-            UserDetailDAO userDetailDAO=new UserDetailDAO();
+            UserDetailDAO userDetailDAO = new UserDetailDAO();
             userDetailDAO.save(getEntity());
 
         } catch (Exception e) {
@@ -269,16 +273,20 @@ public class UserDetailManagedBean {
                     mobile = user.getMobile();
                     email = user.getEmail();
 
-                    /*  将userId存入session    */
+                    /*  将userId存入session  */
                     FacesContext facesContext = FacesContext.getCurrentInstance();
                     ExternalContext extContext = facesContext.getExternalContext();
                     HttpSession session = (HttpSession) extContext.getSession(true);
                     session.setAttribute("userId", userId);
 
-                    /*  调用SurveyManagerBean的showQuestion方法  */
+                    /*  初始化SurveyManagedBean调用SurveyManagedBean的showQuestion方法  */
                     SurveyManagedBean surBean = new SurveyManagedBean();
                     session.setAttribute("surveyManagedBean", surBean);
                     surBean.showAllSurvey(user.getUserId());
+
+                    /*  初始化FeedbackManagedBean  */
+                    FeedbackManagedBean feeBean = new FeedbackManagedBean();
+                    session.setAttribute("feedbackManagedBean", feeBean);
 
                     return true;
                 } else {
@@ -361,6 +369,7 @@ public class UserDetailManagedBean {
         if (!((String) value).matches(reg))
             throw new ValidatorException(new FacesMessage("Name cannot contain special characters!"));
     }
+
     public void validatePassword(FacesContext fc, UIComponent c, Object value) {
         if (c.getId().equals("userpwdR")) {
             password = (String) value;
