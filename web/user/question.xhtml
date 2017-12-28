@@ -4,6 +4,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://java.sun.com/jstl/core"
 >
 <h:head>
     <title>Question</title>
@@ -66,7 +68,7 @@
                                 <li>
                                     <a href="user.xhtml" class="dropdown-toggle" data-toggle="dropdown">
                                         <i class="ti-user"></i>
-                                        <p>User</p>
+                                        <p>#{userDetailManagedBean.nickname}</p>
                                     </a>
                                 </li>
                                 <li>
@@ -103,38 +105,40 @@
                                             <div class="timeline-body">
                                                 <div id="form-main">
                                                     <div id="form-div">
-                                                        <!--<form class="form" id="form1">-->
 
-                                                            <p class="name">
-                                                                <h:inputText name="name" type="text"
-                                                                             value="#{userDetailManagedBean.nickname}"
-                                                                             disabled="true"
-                                                                             class="validate[required,custom[onlyLetter],length[0,100]] feedback-input name"
-                                                                             pt:placeholder="Name" id="name"/>
-                                                            </p>
+                                                        <p class="name">
+                                                            <h:inputText name="name" type="text"
+                                                                         value="#{userDetailManagedBean.nickname}"
+                                                                         disabled="true"
+                                                                         class="validate[required,custom[onlyLetter],length[0,100]] feedback-input name"
+                                                                         pt:placeholder="Name" id="name"/>
+                                                        </p>
 
-                                                            <p class="email">
-                                                                <h:inputText name="email" type="text"
-                                                                             value="#{userDetailManagedBean.email}"
-                                                                             disabled="true"
-                                                                             class="validate[required,custom[email]] feedback-input email"
-                                                                             id="email" pt:placeholder="Email"/>
-                                                            </p>
+                                                        <h:selectOneMenu name="batchId"
+                                                                         value="#{feedbackManagedBean.naireId}"
+                                                                         class="feedback-input email"
+                                                                         id="email" pt:placeholder="Email">
+                                                            <c:forEach items="#{surveyManagedBean.surList}"
+                                                                       var="survey">
+                                                                <f:selectItem itemValue="#{survey.naireId}"
+                                                                              itemLabel="#{survey.naireName}"/>
+                                                            </c:forEach>
+                                                        </h:selectOneMenu>
 
-                                                            <p class="text">
-                                                                <h:inputTextarea name="text"
-                                                                                 class="validate[required,length[6,300]] feedback-input comment"
-                                                                                 id="comment"
-                                                                                 value="#{feedbackManagedBean}"
-                                                                                 pt:placeholder="Comment"></h:inputTextarea>
-                                                            </p>
 
-                                                            <div class="submit">
-                                                                <h:commandButton styleClass="button-blue" type="submit"
-                                                                                 value="SEND" id="button-blue"/>
-                                                                <div class="ease"></div>
-                                                            </div>
-                                                        <!--</form>-->
+                                                        <h:inputTextarea name="feedback" style="resize:none;"
+                                                                         class="feedback-input comment"
+                                                                         id="comment"
+                                                                         value="#{feedbackManagedBean.feedbacks}"
+                                                                         pt:placeholder="Please Enter Some Comments"/>
+
+
+                                                        <h:commandButton
+                                                                action="#{feedbackManagedBean.sendFeedback(userDetailManagedBean.userId)}"
+                                                                styleClass="button-blue" value="Send"
+                                                                id="button-blue">
+                                                        </h:commandButton>
+
                                                     </div>
                                                 </div>
                                             </div>

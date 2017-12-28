@@ -1,24 +1,22 @@
 body{
-    background: url("image/Loginbackground.jpg");
-    background-repeat: no-repeat;
+    background-color: #dddddd;
     background-size:cover;
     z-index: -1;
     
 }
 #div1{
     position: absolute;   
-    top: 18%;   
+    top: 18%;
+    bottom:0px;
     left:32%;   
     margin: -150px 0 0 -150px;   
-    width:1000px;  
-    height:880px;
+    width:49%;
+    height:2000px;
     z-index: 1;
     background-color: #fff;
-    border-radius: 15px;
     border-top: 1px solid #312E3D;   
     border-left: 1px solid #312E3D;   
-    border-right: 1px solid #312E3D;   
-    border-bottom: 1px solid #56536A;
+    border-right: 1px solid #312E3D;
 }
 #div2{
     position: absolute;
@@ -40,16 +38,13 @@ body{
     border-radius: 5px;
     margin: 0;
 }
-.in{
-    
+.in1{
+    width: 750px;
 }
-.sel{
-    width:115px;
-    height: 35px;
-    font-size: 15px;
-}
+
 .in{
-    height: 70px;
+    width: 900px;
+    height: 100px;
 }
 .but2
 {
@@ -66,4 +61,5 @@ body{
     border-radius: 5px;
     margin: 0;
 }
+
 

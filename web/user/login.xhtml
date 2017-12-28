@@ -22,19 +22,19 @@
             <div>
                 <h:inputText id="uid" class="inputText" value="#{userDetailManagedBean.username}"
                              pt:placeholder="Enter Your Username"
-                             required="true" requiredMessage="Enter ID" validatorMessage="Invalid ID Length">
+                             required="true" requiredMessage="Enter ID" validatorMessage="ID Should Be 3-20 Charaters">
                     <f:validateLength for="id" maximum="20" minimum="3"/>
                 </h:inputText>
-                <h:message for="uid"/>
+                <h:message for="uid" errorClass="error"/>
             </div>
             <div>
                 <h:inputSecret id="pass" class="inputText" value="#{userDetailManagedBean.password}"
                                pt:placeholder="Enter Your Password"
                                required="true" requiredMessage="Enter Password"
-                               validatorMessage="Invalid Password Length">
+                               validatorMessage="Password Should Be 3-20 Charaters">
                     <f:validateLength for="id" maximum="20" minimum="3"/>
                 </h:inputSecret>
-                <h:message for="pass"/>
+                <h:message for="pass" errorClass="error"/>
             </div>
             <h:commandButton class="cbutton" value="Login"
                              action="#{userDetailManagedBean.userLogin}">

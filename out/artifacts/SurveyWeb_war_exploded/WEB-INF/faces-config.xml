@@ -32,6 +32,20 @@
             <redirect/>
         </navigation-case>
     </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/ManagerIndex.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>generateSurvey</from-outcome>
+            <to-view-id>/generateSurvey.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>ManagerViewBatches</from-outcome>
+            <to-view-id>/ManagerViewBatches.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
     <!--  用户登录重定向  -->
     <navigation-rule>
         <from-view-id>/user/login.xhtml</from-view-id>
@@ -46,12 +60,35 @@
             <redirect/>
         </navigation-case>
     </navigation-rule>
+    
+    <!--  用户访问登录验证  -->
+    <navigation-rule>
+        <from-view-id>*</from-view-id>
+        <navigation-case>
+            <from-outcome>rejected</from-outcome>
+            <to-view-id>/user/login.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>userIndex</from-outcome>
+            <to-view-id>/user/index.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>managerIndex</from-outcome>
+            <to-view-id>/ManagerIndex.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
 
     <lifecycle>
         <phase-listener>
             com.moyo.listener.SecurityPhaseListener
         </phase-listener>
     </lifecycle>
+    <validator>
+        <validator-id>dobValidator</validator-id>
+        <validator-class>com.moyo.validator.DobValidator</validator-class>
+    </validator>
 
 
 </faces-config>

@@ -110,13 +110,11 @@ public class OptionDAO {
     }
 
 
-    /*  选项备选次数+1  */
+    /*  选项被选次数+1  */
     public void addHits(long optId) {
-
         String queryString = "update OptionEntity as o set o.hits = o.hits + 1 where optionId = ?";
         Query queryObject = getSession().createQuery(queryString);
         queryObject.setParameter(0,optId);
         queryObject.executeUpdate();
-
     }
 }
