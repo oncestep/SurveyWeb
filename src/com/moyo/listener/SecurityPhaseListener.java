@@ -19,53 +19,55 @@ public class SecurityPhaseListener implements PhaseListener {
         ExternalContext extContext = facesContext.getExternalContext();
         HttpSession session = (HttpSession) extContext.getSession(true);
 
-        Long userId = (Long) session.getAttribute("userId");
-        Long managerId = (Long) session.getAttribute("managerId");
+        Object type = session.getAttribute("type");
 
-        UIViewRoot uiv = new UIViewRoot();
         String viewId = facesContext.getViewRoot().getViewId();
         NavigationHandler navHandler = facesContext.getApplication().getNavigationHandler();
         boolean permit = ((viewId.lastIndexOf("login") != -1)
-                        || (viewId.lastIndexOf("Login") != -1)
-                        || (viewId.lastIndexOf("register") != -1)
-                        || (viewId.lastIndexOf("Rigister") != -1)
+                || (viewId.lastIndexOf("Login") != -1)
+                || (viewId.lastIndexOf("register") != -1)
+                || (viewId.lastIndexOf("Rigister") != -1)
         ) ? true : false;
 
-        //  用户管理员登录界面分离情况
-        /*
-            if (!permit) {
-                if (userId == null) {
-                    if (managerId == null) {
-                        navHandler.handleNavigation(facesContext, null, "userReject");
-                    } else {
-                        navHandler.handleNavigation(facesContext, null, "managerIndex");
-                    }
-                } else {
-                    if (managerId == null) {
-                        navHandler.handleNavigation(facesContext,null,"userIndex");
-                    }else{
-                        navHandler.handleNavigation(facesContext,null,"userIndex");
-                    }
-                }
-            }
-        */
-
         //  用户管理员登录界面统一情况
-        if (!permit) {
-            if (userId == null) {
-                if (managerId == null) {
+        if(!permit) {
+            if (type == null) {
+                navHandler.handleNavigation(facesContext, null, "rejected");
+            } else if ((int) type == 0) {
+                if (viewId.lastIndexOf("user") == -1) {
                     navHandler.handleNavigation(facesContext, null, "rejected");
-                } else {
-                    navHandler.handleNavigation(facesContext, null, "managerIndex");
                 }
             } else {
-                if (managerId == null) {
-                    navHandler.handleNavigation(facesContext, null, "userIndex");
-                } else {
-                    navHandler.handleNavigation(facesContext, null, "userIndex");
+                if (viewId.lastIndexOf("user") != -1) {
+                    navHandler.handleNavigation(facesContext, null, "rejected");
                 }
             }
         }
+
+//        if (!permit) {
+//            if (userId == null) {
+//                if (managerId == null) {
+//                    navHandler.handleNavigation(facesContext, null, "rejected");
+//                } else {
+//                    if (type == 0) {
+//                        navHandler.handleNavigation(facesContext, null, "rejected");
+//                    }
+//                }
+//            } else {
+//                if (managerId == null) {
+//                    if (type == 1) {
+//                        navHandler.handleNavigation(facesContext, null, "userIndex");
+//                    }
+//                } else {
+//                    if (type == 1) {
+//                        navHandler.handleNavigation(facesContext, null, "userIndex");
+//                    } else {
+//                        navHandler.handleNavigation(facesContext, null, "managerIndex");
+//                    }
+//
+//                }
+//            }
+//        }
 
     }
 

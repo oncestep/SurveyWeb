@@ -189,6 +189,7 @@ public class ManagerDetailManagedBean {
             if (managerDetailEntity.getPassword().equals(endPassword)) {
                 HttpSession session = getHttpSession();
                 session.setAttribute("managerId", managerDetailEntity.getManagerId());
+                session.setAttribute("type",1);
 
                 /*  手动初始化surveyManagedBean  */
                 SurveyManagedBean surveyManagedBean = new SurveyManagedBean();
