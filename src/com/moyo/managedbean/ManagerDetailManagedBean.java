@@ -178,7 +178,7 @@ public class ManagerDetailManagedBean {
                     session.setAttribute("managerId",null);
                 }
                 session.setAttribute("managerId", managerDetailEntity.getManagerId());
-
+                session.setAttribute("type",1);
                 /*  手动初始化surveyManagedBean  */
                 SurveyManagedBean surveyManagedBean = new SurveyManagedBean();
                 session.setAttribute("surveyManagedBean", surveyManagedBean);

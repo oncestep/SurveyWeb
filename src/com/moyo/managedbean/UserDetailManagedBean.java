@@ -278,6 +278,7 @@ public class UserDetailManagedBean {
                     ExternalContext extContext = facesContext.getExternalContext();
                     HttpSession session = (HttpSession) extContext.getSession(true);
                     session.setAttribute("userId", userId);
+                    session.setAttribute("type",0);
 
                     /*  初始化SurveyManagedBean调用SurveyManagedBean的showQuestion方法  */
                     SurveyManagedBean surBean = new SurveyManagedBean();

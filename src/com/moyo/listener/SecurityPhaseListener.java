@@ -19,8 +19,7 @@ public class SecurityPhaseListener implements PhaseListener {
         ExternalContext extContext = facesContext.getExternalContext();
         HttpSession session = (HttpSession) extContext.getSession(true);
 
-        Long userId = (Long) session.getAttribute("userId");
-        Long managerId = (Long) session.getAttribute("managerId");
+        Object type=session.getAttribute("type");
 
         UIViewRoot uiv = new UIViewRoot();
         String viewId = facesContext.getViewRoot().getViewId();
@@ -28,23 +27,23 @@ public class SecurityPhaseListener implements PhaseListener {
         boolean permit = ((viewId.lastIndexOf("login") != -1)
                 || (viewId.lastIndexOf("Login") != -1)
                 || (viewId.lastIndexOf("register") != -1)
-                || (viewId.lastIndexOf("Rigister") != -1)
+                || (viewId.lastIndexOf("Register") != -1)
                 || (viewId.lastIndexOf("Main") != -1)
         ) ? true : false;
 
         //  用户管理员登录界面统一情况
         if (!permit) {
-            if (userId == null) {
-                if (managerId == null) {
-                    navHandler.handleNavigation(facesContext, null, "rejected");
-                } else {
-                    navHandler.handleNavigation(facesContext, null, "managerIndex");
+            if(type==null){
+                navHandler.handleNavigation(facesContext,null,"rejected");
+            }else if ((int) type==0){
+                if(viewId.lastIndexOf("user")==-1)
+                {
+                    navHandler.handleNavigation(facesContext,null,"rejected");
                 }
-            } else {
-                if (managerId == null) {
-                    navHandler.handleNavigation(facesContext, null, "userIndex");
-                } else {
-                    navHandler.handleNavigation(facesContext, null, "userIndex");
+            }else {
+                if(viewId.lastIndexOf("user")!=-1)
+                {
+                    navHandler.handleNavigation(facesContext,null,"rejected");
                 }
             }
         }
