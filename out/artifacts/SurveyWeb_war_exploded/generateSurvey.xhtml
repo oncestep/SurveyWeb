@@ -20,14 +20,18 @@
                         Survey Title:
                     </TD>
                     <TD>
-                        <h:inputText value="#{generateSurveyManagedBean.naireName}" styleClass="in1"/>
+                        <h:inputText value="#{generateSurveyManagedBean.naireName}" styleClass="in1"
+                                     required="true"
+                                     requiredMessage="Can not be empty!"/>
                     </TD>
 
                 </TR>
                 <TR>
                     <TD>Survey Description:</TD>
                     <TD>
-                        <h:inputText value="#{generateSurveyManagedBean.description}" styleClass="in1"/>
+                        <h:inputText value="#{generateSurveyManagedBean.description}" styleClass="in1"
+                                     required="true"
+                                     requiredMessage="Can not be empty!"/>
                     </TD>
                 </TR>
                 <tr>
@@ -40,8 +44,8 @@
                         </h:selectOneMenu>
                     </td>
                 </tr>
-                <TR>
-                    <TD>
+            </TABLE>
+
 
                         <table id="questions">
                             <!--显示已插入的题目-->
@@ -61,10 +65,9 @@
                                 </h:commandButton></td>
                             </c:forEach>
                         </table>
-                    </TD>
 
-                </TR>
-            </TABLE>
+
+
             <TABLE>
                 <TR>
                     <TD>
@@ -98,7 +101,9 @@
                 </TR>
                 <TR>
                     <TD>
-                        <h:inputTextarea value="#{generateSurveyManagedBean.questionContent}" styleClass="in"/>
+                        <h:inputTextarea value="#{generateSurveyManagedBean.questionContent}" styleClass="in"
+                                         required="true"
+                                         requiredMessage="Can not be empty!"/>
                     </TD>
                 </TR>
                 <TR>
@@ -114,11 +119,11 @@
                 </TR>
                 <TR>
                     <TD>
-                        <h:inputTextarea value="#{generateSurveyManagedBean.optionContent}" styleClass="in"/>
+                        <h:inputTextarea value="#{generateSurveyManagedBean.optionContent}" styleClass="in"
+                                         required="true"
+                                         requiredMessage="Can not be empty!"/>
                     </TD>
                 </TR>
-
-
                 <TR>
                     <TD>
                         <table id="optionTable">
@@ -142,8 +147,6 @@
                     </TD>
                 </TR>
             </TABLE>
-
-
         </div>
     </h:form>
 </h:body>

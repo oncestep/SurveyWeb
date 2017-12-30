@@ -44,21 +44,22 @@
                 <h:inputText id="uid" class="inputText" value="#{userDetailManagedBean.username}"
                              pt:placeholder="Username" required="true"
                              requiredMessage="Enter ID" validatorMessage="ID Should Be 3-20 Charaters">
-                    <f:validateLength for="id" maximum="20" minimum="3"/></h:inputText>
+                    <f:validateLength for="uid" maximum="20" minimum="3"/></h:inputText>
                 <h:message for="uid" errorClass="error"/>
             </div>
             <div>
                 <h:inputSecret id="pass" class="inputText" value="#{userDetailManagedBean.password}"
                                pt:placeholder="Password" required="true"
                                requiredMessage="Enter Password" validatorMessage="Password Should Be 3-20 Charaters">
-                    <f:validateLength for="id" maximum="20" minimum="3"/>
+                    <f:validateLength for="pass" maximum="20" minimum="3"/>
                 </h:inputSecret>
                 <h:message for="pass" errorClass="error"/>
             </div>
             <div>
                 <h:inputSecret id="cpass" class="inputText" pt:placeholder="Confrim Password" required="true"
-                               requiredMessage="Please Confrim Password" onblur="checkpswd();" validatorMessage="Password Should Be 3-20 Charaters">
-                    <f:validateLength for="id" maximum="20" minimum="3"/>
+                               requiredMessage="Please Confrim Password" onblur="checkpswd();"
+                               validatorMessage="Password Should Be 3-20 Charaters">
+                    <f:validateLength for="cpass" maximum="20" minimum="3"/>
                 </h:inputSecret>
                 <h:message id="repasswordMsg" for="cpass" errorClass="error"/>
             </div>
@@ -74,6 +75,7 @@
                 <h:inputText id="mob" class="inputText" value="#{userDetailManagedBean.mobile}" required="true"
                              requiredMessage="Enter Mobile Number" pt:type="number"
                              validatorMessage="Invalid Phone Number Entered" pt:placeholder="Phone Number">
+                    <f:validateLength minimum="11" maximum="11"/>
                     <!--<f:validateRegex pattern="1[3578][0-9]{9}" for="mob"/>-->
                     <f:validateLongRange minimum="13000000000" maximum="18999999999" for="mob"/>
                 </h:inputText>
@@ -91,7 +93,7 @@
                 <h:inputText id="dob" class="inputText" value="#{userDetailManagedBean.birthYear}" pt:type="date"
                              pt:placeholder="Brithdate" required="true" requiredMessage="Enter BrithDate"
                              validatorMessage="Invalid Date of Brith Entered">
-                    <f:convertDateTime type="date"/>
+                    <f:convertDateTime type="date" pattern="yyyy-M-d"/>
                     <f:validator for="dob" validatorId="dobValidator"/>
                 </h:inputText>
                 <h:message for="dob" errorClass="error"/>

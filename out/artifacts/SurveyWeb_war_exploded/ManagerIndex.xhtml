@@ -10,104 +10,115 @@
     <!-- Copyright 2005 Macromedia, Inc. All rights reserved. -->
     <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
     <title>Untitled Document</title>
-    <link rel="stylesheet" href="resources/css1.css" type="text/css"/>
+    <!--<link rel="stylesheet" href="resources/css1.css" type="text/css"/>-->
     <style type="text/css">
-
-        .button {
-            border-radius: 40px;
-            background-color: #56536A;
-            height: 60px;
-            width: 300px;
-            color: white;
-            font-size: 20px;
+        .buttons {
+            background-color: rgba(255, 255, 255, 0.78);
+            font-family: "Times New Roman";
+            font-size: larger;
+            box-shadow: #fffefd;
+            width: auto;
+            height: 40px;
+            border-color: #fffefd;
+            border-radius: 20px;
+            margin-left: 190px;
         }
 
-        .button4 {
-            border-radius: 40px;
-            background-color: #553962;
-            height: 50px;
-            width: 200px;
-            color: #CCCCCC;
-            font-size: 16px;
-
+        #top-main-div {
+            width: 100%;
+            height: 350px;
+            margin-top: 0px;
+            opacity: 0.8;
+            padding-left: 0px;
+            background-image: url("./resources/image/timg.jpg");
+            background-size: cover;
         }
 
-        .button4A {
-            border-radius: 40px;
-            background-color: #625d61;
-            height: 50px;
-            width: 200px;
-            color: #CCCCCC;
-            font-size: 16px;
-
+        #content-div1-inner1 {
+            margin-top: 20px;
+            background-image: url("./resources/image/timg1.jpg");
+            background-size: cover;
+            width: 50%;
+            opacity: 0.8;
+            height: 300px;
+            float: left;
         }
 
-        <!--
-        .STYLE1 {
-            font-weight: bold;
-            font-style: italic;
-            background-color: gray;
+        #content-div1-inner2 {
+            color: rgba(255,255,255,0.78);
+            background-color: rgba(255, 255, 255, 0.78);
+            width: 50%;
+            height: 300px;
+            display: inline;
         }
-
-        .STYLE3 {
-            font-size: 100%
-        }
-
-        .STYLE4 {
-            font-size: 50%
-        }
-
-        .STYLE5 {
-            font-size: 24px
-        }
-
-        .STYLE6 {
-            font-size: 36px;
-        }
-
-        -->
     </style>
 </h:head>
 <!-- The structure of this file is exactly the same as 2col_leftNav.html;
      the only difference between the two is the stylesheet they use -->
-<h:body>
-    <div id="masthead">
-        <h1 id="siteName">&nbsp;</h1>
-    </div>
-    <!-- end masthead -->
-    <div id="content">
-        <div class="feature">
-            <h3 align="center" class="STYLE6">Welcome Back</h3>
-            <h3 align="center" class="STYLE6" id="username">Manager</h3>
-            <p id="button4">
-                <h:form>
-                    <h:commandButton name="goButton3" type="submit" value="Create a new Survey " styleClass="button4A"
-                                     action="generateSurvey"/>
+<h:body style="background-color: #222222">
+    <h:form>
+        <div id="top-main-div">
+            <center>
+                <h1 style="padding-top: 90px">Welcome To Manager Personal HomePage!</h1>
+                <p>You can manage your batches, create new survey and modify your personal information</p>
+            </center>
+        </div>
+        <div id="content-div1">
+            <div id="content-div1-inner1">
+            </div>
+            <div id="content-div1-inner2">
+                <center>
+                    <h3 style="padding-top: 100px">Here you can create a new Survey.</h3>
+                    <h:commandButton style="margin-left: 0px" name="goButton3" type="submit" value="Create a new Survey " styleClass="buttons"
+                                     action="generateSurvey?faces-redirect=true"/>
+                </center>
+            </div>
+        </div>
+        <div style="width: 100%">
 
-                    <h:commandButton name="goButton3" type="submit" value="Check my questionairs" styleClass="button4"
-                                     action="ManagerViewBatches"/>
-                </h:form>
-            </p>
+            <div style="width: auto;position: absolute">
+
+                <h:commandButton name="goButton3" type="submit" value="Check my questionairs" styleClass="buttons"
+                                 action="ManagerViewBatches?faces-redirect=true"/>
+                <h:commandButton name="goButton" value="Feedback" styleClass="buttons"
+                                 action="FeedbackPage?faces-redirect=true"/>
+                <h:commandButton name="goButton" value="Personal information" styleClass="buttons"
+                                 action="#{managerDetailManagedBean.showPersonalDetail}"/>
+                <h:commandButton name="goButton2" value="Log out" styleClass="buttons"
+                                 action="#{managerDetailManagedBean.managerLogout}"/>
+            </div>
+
         </div>
-    </div>
-    <!--end content -->
-    <div id="navBar">
-        <div id="search">
-            <h:form>
-                <p align="center">
-                    <h:commandButton name="goButton" value="Feedback" styleClass="button" action="FeedbackPage"/>
-                </p>
-                <p align="center">
-                    <h:commandButton name="goButton" value="Personal information" styleClass="button"
-                                     action="#{managerDetailManagedBean.showPersonalDetail}"/>
-                </p>
-                <p align="center">
-                    <h:commandButton name="goButton2" value="Log out" styleClass="button"
-                                     action="#{managerDetailManagedBean.managerLogout}"/>
-                </p>
-            </h:form>
-        </div>
-    </div>
-    <br/>
+        <!--<div id="masthead">-->
+        <!--<h1 id="siteName">&nbsp;</h1>-->
+        <!--</div>-->
+        <!--&lt;!&ndash; end masthead &ndash;&gt;-->
+        <!--<div id="content">-->
+        <!--<div class="feature">-->
+        <!--<h3 align="center" class="STYLE6">Welcome Back</h3>-->
+        <!--<h3 align="center" class="STYLE6" id="username">Manager</h3>-->
+        <!--<p id="button4">-->
+
+        <!--</p>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--&lt;!&ndash;end content &ndash;&gt;-->
+        <!--<div id="navBar">-->
+        <!--<div id="search">-->
+        <!--<h:form>-->
+        <!--<p align="center">-->
+
+        <!--</p>-->
+        <!--<p align="center">-->
+
+        <!--</p>-->
+        <!--<p align="center">-->
+
+        <!--</p>-->
+        <!--</h:form>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<br/>-->
+    </h:form>
 </h:body>
 </html>

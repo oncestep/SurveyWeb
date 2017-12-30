@@ -16,6 +16,8 @@ import javax.faces.context.FacesContext;
 import javax.faces.validator.ValidatorException;
 import javax.servlet.http.HttpSession;
 import java.sql.Date;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 @ManagedBean
 @SessionScoped
@@ -212,7 +214,7 @@ public class ManagerDetailManagedBean {
         this.name = managerEntity.getName();
         this.nickname = managerEntity.getNickName();
         this.mobile = managerEntity.getMobile();
-        return "ModifyPersonalInformation";
+        return "ModifyPersonalInformation?faces-redirect=true";
     }
 
     public void validateUserName(FacesContext fc, UIComponent c, Object value) {
@@ -262,11 +264,15 @@ public class ManagerDetailManagedBean {
         }
         return "ManagerIndex";
     }
-//    public void validateEmail(FacesContext fc,UIComponent c,Object value){
+    public void validateEmail(FacesContext fc,UIComponent c,Object value){
+        String check = "^([a-z0-9A-Z]+[-|_|\\.]?)+[a-z0-9A-Z]@([a-z0-9A-Z]+(-[a-z0-9A-Z]+)?\\.)+[a-zA-Z]{2,}$";
+        Pattern regex = Pattern.compile(check);
+        Matcher matcher = regex.matcher((CharSequence) value);
+        boolean flag = matcher.matches();
 //        String reg = "[a-zA-Z_]{1,}[0-9]{0,}@(([a-zA-z0-9]-*){1,}\\.){1,3}[a-zA-z\\-]{1,}";
-//
-//        if(!((String)value).matches(reg))
-//            throw new ValidatorException(new FacesMessage("Must enter the correct email format!"));
-//    }
+
+        if(!flag)
+            throw new ValidatorException(new FacesMessage("Must enter the correct email format!"));
+    }
 
 }
