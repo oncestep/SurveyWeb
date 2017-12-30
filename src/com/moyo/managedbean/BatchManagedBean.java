@@ -12,19 +12,24 @@ import com.moyo.beans.ParticipationEntity;
 
 import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
+import javax.faces.event.AbortProcessingException;
+import javax.faces.event.ActionListener;
 import javax.servlet.http.HttpSession;
+import java.awt.event.ActionEvent;
+import java.sql.Date;
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
 @ManagedBean
 @SessionScoped
-public class BatchManagedBean {
+public class BatchManagedBean implements ActionListener {
     private long batchId;
     private String batchName;
     private String description;
     private Timestamp createTime;
     private Long managerId;
-
     private List<BatchEntity> batchList=new ArrayList<>();
     private List<BatchEntity> batchAllList;
 
@@ -145,27 +150,14 @@ public class BatchManagedBean {
             throw e;
         }
     }
-    /**
-     * delete Batch from database
-     */
-    public void deleteBatch(){
-        try {
-            BatchDAO batchDAO = new BatchDAO();
-            ParticipationDAO participationDAO=new ParticipationDAO();
 
-            Long batchId= (Long) batchDAO.findByBatchName(batchName).get(0);
-
-            BatchEntity batchEntity = new BatchEntity();
-            ParticipationEntity participationEntity=new ParticipationEntity();
-
-            batchEntity.setBatchId(batchId);
-            participationEntity.setBatchId(batchId);
-
-            batchDAO.delete(batchEntity);
-            participationDAO.delete(participationEntity);
-        }catch (Exception e){
-            throw e;
-        }
+    @Override
+    public void processAction(javax.faces.event.ActionEvent actionEvent) throws AbortProcessingException {
+        long batchId=(long)actionEvent.getComponent().getAttributes().get("batchId");
+        BatchDAO batchDAO=new BatchDAO();
+        BatchEntity batchEntity=new BatchEntity();
+        batchEntity.setBatchId(batchId);
+        batchDAO.delete(batchEntity);
     }
 
 }

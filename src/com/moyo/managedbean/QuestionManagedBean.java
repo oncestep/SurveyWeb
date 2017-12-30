@@ -7,21 +7,32 @@ import com.moyo.dao.QuestionDAO;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
+import javax.faces.event.AbortProcessingException;
+import javax.faces.event.ActionEvent;
+import javax.faces.event.ActionListener;
+import java.util.ArrayList;
 import java.util.List;
 
 @ManagedBean
 @RequestScoped
 //@SessionScoped
-public class QuestionManagedBean {
+public class QuestionManagedBean implements ActionListener {
     private long questionId;
     private Integer type;
     private String content;
     private Long naireId;
+    private List<QuestionEntity> questionEntities = new ArrayList<>();
 
     /*  每题选项列表  */
     private List<OptionEntity> optList;
 
+    public List<QuestionEntity> getQuestionEntities() {
+        return questionEntities;
+    }
 
+    public void setQuestionEntities(List<QuestionEntity> questionEntities) {
+        this.questionEntities = questionEntities;
+    }
 
     public long getQuestionId() {
         return questionId;
@@ -83,4 +94,14 @@ public class QuestionManagedBean {
         OptionDAO optDAO = new OptionDAO();
         optDAO.addHits(optId);
     }
+
+    @Override
+    public void processAction(ActionEvent actionEvent) throws AbortProcessingException {
+        Long naireId = (Long) actionEvent.getComponent().getAttributes().get("naireId");
+        List questionEntities = new ArrayList<>();
+        QuestionDAO questionDAO = new QuestionDAO();
+        questionEntities = questionDAO.findByNaireId(naireId);
+        this.questionEntities=questionEntities;
+    }
+
 }

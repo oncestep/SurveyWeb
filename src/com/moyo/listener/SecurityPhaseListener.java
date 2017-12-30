@@ -27,6 +27,7 @@ public class SecurityPhaseListener implements PhaseListener {
                 || (viewId.lastIndexOf("Login") != -1)
                 || (viewId.lastIndexOf("register") != -1)
                 || (viewId.lastIndexOf("Rigister") != -1)
+                || (viewId.lastIndexOf("Main") != -1)
         ) ? true : false;
 
         //  用户管理员登录界面统一情况

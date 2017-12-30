@@ -2,7 +2,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
 <h:head>
     <title>Manager Login</title>
     <link href="resources/LoginandRegistercss.css" rel="stylesheet" type="text/css"/>
@@ -11,26 +12,31 @@
     <h:form>
         <div id="div0">
         </div>
-        <div id="div1">
-            <center>
-                <h1>Manager Login</h1>
-                <p>
-                    <h:inputText id="magnameL" styleClass="in" value="#{managerDetailManagedBean.username}"
-                                 required="true" requiredMessage="You must input your username!"/>
-                </p>
-                <p>
-                    <h:inputSecret id="magpwdL" styleClass="in" value="#{managerDetailManagedBean.password}"
-                                   required="true" requiredMessage="You must input your password!"/>
-                </p>
-                <p>
-                    <h:commandButton value="Login" styleClass="Loginbut"
-                                     action="#{managerDetailManagedBean.managerLogin}"/>
-                </p>
-                <p><h:outputLabel value="do not have a manager accont?"/>
-                    <h:commandLink value="Register now!" action="managerRigister"/>
-                </p>
-            </center>
-        </div>
+        <f:ajax>
+            <div id="div1">
+                <center>
+                    <h1>Manager Login</h1>
+                    <p>
+                        <h:inputText id="magnameL" styleClass="in" value="#{managerDetailManagedBean.username}"
+                                     required="true" requiredMessage="You must input your username!"/>
+                    </p>
+                    <p>
+                        <h:inputSecret id="magpwdL" styleClass="in" value="#{managerDetailManagedBean.password}"
+                                       required="true" requiredMessage="You must input your password!"/>
+                    </p>
+                    <p>
+                        <h:message for="div1" id="loginError" style="color: red"/>
+                    </p>
+                    <p>
+                        <h:commandButton value="Login" styleClass="Loginbut"
+                                         action="#{managerDetailManagedBean.managerLogin}"/>
+                    </p>
+                    <p><h:outputLabel value="do not have a manager accont?"/>
+                        <h:commandLink value="Register now!" action="managerRigister"/>
+                    </p>
+                </center>
+            </div>
+        </f:ajax>
     </h:form>
 </h:body>
 </html>

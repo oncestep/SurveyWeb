@@ -1,9 +1,11 @@
 package com.moyo.managedbean;
 
 import com.moyo.beans.*;
+import com.moyo.dao.BatchDAO;
 import com.moyo.dao.OptionDAO;
 import com.moyo.dao.QuestionDAO;
 import com.moyo.dao.SurveyDAO;
+import org.jboss.weld.context.http.Http;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
@@ -24,18 +26,58 @@ import java.util.List;
 @ManagedBean
 @SessionScoped
 public class GenerateSurveyManagedBean implements ActionListener {
+    /*  问题内容  */
     private String questionContent;
+    /*  选项内容  */
     private String optionContent;
+    /*  问题类型  */
     private Integer type;
+    /*  问卷名  */
     private String naireName;
+    /*  问卷描述  */
     private String description;
+    /*  选项列表 暂存  */
     private List<OptionEntity> options = new ArrayList<>();
+    /*    */
     private List<QuestionEntity> questions = new ArrayList<>();
+    /*  问题列表  */
     private List<InitQuestion> initQuestions = new ArrayList<>();
 
+    /*  当前管理员所有Batch列表 暂存  */
+    private List batchIds = new ArrayList<>();
+    /*  当前管理员所有Batch列表  */
+    private List<BatchEntity> batchEntityList = new ArrayList<>();
     /*  生成问卷所属Batch  */
     private Long batId;
 
+    /*  Get方法 得到当前管理员管理所有的Batch列表 */
+    public List<BatchEntity> getBatchEntityList() {
+        BatchDAO batchDAO = new BatchDAO();
+        FacesContext context = FacesContext.getCurrentInstance();
+        HttpSession session = (HttpSession) context.getExternalContext().getSession(true);
+        long batchId = (long) session.getAttribute("managerId");
+        batchIds = batchDAO.findByManagerId(batchId);
+        List<BatchEntity> batchList = new ArrayList<>();
+        for (Object bId : batchIds) {
+            BatchEntity batchEntity = (BatchEntity) bId;
+            batchList.add(batchEntity);
+        }
+        batchEntityList = batchList;
+        return batchEntityList;
+    }
+
+    public void setBatchEntityList(List<BatchEntity> batchEntityList) {
+        this.batchEntityList = batchEntityList;
+    }
+
+    public List<Long> getBatchIds() {
+
+        return batchIds;
+    }
+
+    public void setBatchIds(List<Long> batchIds) {
+        this.batchIds = batchIds;
+    }
 
     public List<InitQuestion> getInitQuestions() {
         return initQuestions;
@@ -109,6 +151,7 @@ public class GenerateSurveyManagedBean implements ActionListener {
         this.batId = batId;
     }
 
+    /*    */
     public List<OptionEntity> showOptions() {
         OptionEntity optionEntity = new OptionEntity();
         optionEntity.setContent(optionContent);
@@ -116,17 +159,20 @@ public class GenerateSurveyManagedBean implements ActionListener {
         return options;
     }
 
+    /*  删除暂存选项  */
     @Override
     public void processAction(ActionEvent actionEvent) throws AbortProcessingException {
         int index = (int) actionEvent.getComponent().getAttributes().get("optionIndex");
         options.remove(index);
     }
 
+    /*  删除暂存问题  */
     public void removeFromQuestion(ActionEvent actionEvent) {
         int index = (int) actionEvent.getComponent().getAttributes().get("questionIndex");
         initQuestions.remove(index);
     }
 
+    /*  将选项组和问题对象封装到InitQuestion对象中，将InitQuestion加入到InitQuestions列表中  */
     public void addToQuestion() {
         InitQuestion initQuestion = new InitQuestion();
         List<OptionEntity> options = new ArrayList<>();
@@ -140,12 +186,10 @@ public class GenerateSurveyManagedBean implements ActionListener {
         this.options.clear();
     }
 
+    /*  将问卷信息打包在拆包存入数据库  */
     public void addToSurvey() {
-        FacesContext context = FacesContext.getCurrentInstance();
-        HttpSession session = (HttpSession) context.getExternalContext().getSession(true);
         java.util.Date nowTime = new java.util.Date();
         Timestamp timestamp = new Timestamp(nowTime.getTime());
-//        long batchId = Long.parseLong(/*(String) session.getAttribute("batchId")*/"0");//通过前一个页面点击获取批次id并存在session中
         long batchId = batId;
         SurveyEntity surveyEntity = new SurveyEntity();
 

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html >
+<!--PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"-->
+<!--"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"-->
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:c="http://java.sun.com/jstl/core"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width,initial-scale=1" name="viewport"/>
+    <script src="./java1/js/jquery-1.8.3.min.js"></script>
+    <script src="./java1/js/highcharts.js"></script>
+    <script src="./java1/js/exporting.js"></script>
+    <script src="./java1/js/oldie.js"></script>
+    <script src="./java1/js/highcharts-zh_CN.js"></script>
+</head>
+<body>
+<c:forEach items="#{questionManagedBean.questionEntities}" var="quesItem" varStatus="quesStatus">
+    <h:outputText value="#{quesItem.content}"/><br/>
+    <script type="text/javascript">
+        var category#{quesStatus.index}=new Array();
+        var optionHits#{quesStatus.index}=new Array();
+    </script>
+    <c:forEach items="#{questionManagedBean.showAllOption(quesItem.questionId)}" var="optionItem" varStatus="opStatus">
+        <script type="text/javascript">
+            category#{quesStatus.index}.push("#{optionItem.content}");
+            optionHits#{quesStatus.index}.push(#{optionItem.hits})
+            console.log(optionHits#{quesStatus.index});
+            $(function () {
+                $('#' + '#{quesItem.questionId}').highcharts({
+                    chart: {
+                        type: 'bar'
+                    },
+                    title: {
+                        text: ""
+                    },
+                    subtitle: {
+                        text: ""
+                    },
+                    xAxis: {
+                        categories: category#{quesStatus.index},
+                        title: {
+                            text: null
+                        }
+                    },
+                    yAxis: {
+                        min: 0,
+                        title: {
+                            text: '',
+                            align: 'high'
+                        },
+                        labels: {
+                            overflow: 'justify'
+                        }
+                    },
+                    plotOptions: {
+                        bar: {
+                            dataLabels: {
+                                enabled: true,
+                                allowOverlap: true
+                            }
+                        }
+                    },
+                    legend: {
+                        layout: 'vertical',
+                        align: 'right',
+                        verticalAlign: 'top',
+                        x: -40,
+                        y: 100,
+                        floating: true,
+                        borderWidth: 1,
+                        backgroundColor: ('#FFFFFF'),
+                        shadow: true
+                    },
+                    credits: {
+                        enabled: false
+                    },
+                    series: [{
+                        name: 'Hits',
+                        data: optionHits#{quesStatus.index}
+                    }]
+                });
+            });
+        </script>
+    </c:forEach>
+    <div id="#{quesItem.questionId}" style="min-width:400px;height:400px"/>
+</c:forEach>
+</body>
+</html>

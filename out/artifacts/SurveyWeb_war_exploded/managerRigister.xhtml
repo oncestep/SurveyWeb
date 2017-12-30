@@ -9,86 +9,143 @@
     <link href="./resources/managerRegister.css" rel="stylesheet" type="text/css"/>
 </h:head>
 <h:body>
+    <h:form>
     <div id="div2"/>
     <div id="div3">
         <center>
-            <h:form>
-                <table>
+            <table>
                     <tr>
-                        <td>Manager Register</td>
+                        <td>
+                        </td>
+                        <td><h1>Manager Register</h1><br/>
+                                &nbsp;
+                        </td>
                     </tr>
                     <tr>
-                        <td>Manager User Name:</td>
+                        <td>Manager User Name:
+                        <br/>
+                                &nbsp;
+                        </td>
                         <f:ajax event="keyup" render="nameEorr">
                             <td><h:inputText id="magnameR" value="#{managerDetailManagedBean.username}"
                                              validator="#{managerDetailManagedBean.validateUserName}" styleClass="in"
                                              required="true" requiredMessage="Can not be empty!"/><br/>
-
-                                <h:message for="magnameR" id="nameEorr" style="color: red"/>
+                                &nbsp;
                             </td>
                         </f:ajax>
                     </tr>
                     <TR>
-                        <TD>Password</TD>
+                        <TD>Password:
+                        <br/>
+                                &nbsp;
+                        </TD>
                         <f:ajax event="keyup">
                             <TD><h:inputSecret id="magpwdR" value="#{managerDetailManagedBean.password}"
                                                validator="#{managerDetailManagedBean.validatePassword}" styleClass="in"
-                                               required="true" requiredMessage="Can not be empty!"/></TD>
+                                               required="true" requiredMessage="Can not be empty!"/>
+                                <br/>
+                                &nbsp;
+                                <h:message for="magpwdR" style="color: red"/>
+                            </TD>
                         </f:ajax>
                     </TR>
                     <TR>
-                        <TD>Verify Password</TD>
+                        <TD>Verify Password:
+                        <br/>
+                                &nbsp;
+                        </TD>
                         <f:ajax event="keyup" render="cPasswordEorr">
                             <TD><h:inputSecret id="magpwdRR" value="#{managerDetailManagedBean.cpassword}"
                                                validator="#{managerDetailManagedBean.validatePassword}" styleClass="in"
-                                               required="true" requiredMessage="Can not be empty!"/></TD>
+                                               required="true" requiredMessage="Can not be empty!"/><br/>
+                                &nbsp;
                             <h:message for="magpwdRR" id="cPasswordEorr" style="color: red"/>
+                            </TD>
                         </f:ajax>
                     </TR>
                     <TR>
-                        <TD>Name</TD>
+                        <TD>Name:
+                        <br/>
+                                &nbsp;
+                        </TD>
                         <TD><h:inputText id="magname" styleClass="in" value="#{managerDetailManagedBean.name}"
                                          required="true"
                                          requiredMessage="Can not be empty!"/>
+                             <br/>
+                                &nbsp;
+                                <h:message for="magname" style="color: red"/>
                         </TD>
                     </TR>
                     <TR>
-                        <TD>Gender</TD>
+                        <TD>Gender:
+                        <br/>
+                                &nbsp;
+                        </TD>
                         <TD><h:selectOneRadio id="maggender" title="Gender Select" layout="lineDirection"
                                               value="#{managerDetailManagedBean.wGender}">
                             <f:selectItem id="sil1" itemLabel="male" itemValue="male"/>
                             <f:selectItem id="sil2" itemLabel="female" itemValue="female"/>
-                        </h:selectOneRadio></TD>
-                    </TR>
-                    <TR>
-                        <TD>Birthday</TD>
-                        <TD><h:inputText id="magbirthday" value="#{managerDetailManagedBean.birthYear}" styleClass="in"
-                                         converterMessage="please provide date of birth">
-                            <f:convertDateTime pattern="yyyy-mm-dd"/>
-                        </h:inputText></TD>
-                    </TR>
-                    <TR>
-                        <TD>Nickname</TD>
-                        <TD><h:inputText id="magnickname" styleClass="in" value="#{managerDetailManagedBean.nickname}"
-                                         required="true"/></TD>
-                    </TR>
-                    <TR>
-                        <TD>Phone Number</TD>
-                        <TD><h:inputText id="magpn" styleClass="in" maxlength="11"
-                                         value="#{managerDetailManagedBean.mobile}"/>
+                        </h:selectOneRadio>
+                                <br/>
+                                &nbsp;
                         </TD>
                     </TR>
                     <TR>
-                        <TD>Email</TD>
+                        <TD>Birthday:
+                            <br/>
+                                &nbsp;
+                        </TD>
+                        <TD><h:inputText id="magbirthday" value="#{managerDetailManagedBean.birthYear}" styleClass="in"
+                                         converterMessage="please provide date of birth" required="true" requiredMessage="Can not be empty!">
+                            <f:convertDateTime pattern="yyyy-M-d"/>
+                        </h:inputText>
+                             <br/>
+                                &nbsp;
+                                <h:message for="magbirthday" style="color: red"/>
+                        </TD>
+                    </TR>
+                    <TR>
+                        <TD>Nickname:
+                        <br/>
+                                &nbsp;
+                        </TD>
+                        <TD><h:inputText id="magnickname" styleClass="in" value="#{managerDetailManagedBean.nickname}"
+                                         required="true" requiredMessage="Can not be empty!"/>
+                             <br/>
+                                &nbsp;
+                                <h:message for="magnickname" style="color: red"/>
+                        </TD>
+                    </TR>
+                    <TR>
+                        <TD>Phone Number:
+                            <br/>
+                                &nbsp;</TD>
+                        <TD><h:inputText id="magpn" styleClass="in" maxlength="11"
+                                         value="#{managerDetailManagedBean.mobile}"
+                                         required="true" requiredMessage="Can not be empty!"/>
+                            <br/>
+                            &nbsp;
+                            <h:message for="magpn" style="color: red"/>
+                        </TD>
+                    </TR>
+                    <TR>
+                        <TD>Email:
+                        <br/>
+                                &nbsp;
+                        </TD>
                         <f:ajax event="keyup" render="emailEorr">
                             <TD><h:inputText id="magemail" value="#{managerDetailManagedBean.email}" styleClass="in"
 
                                              required="true"
                                              requiredMessage="Can not be empty!"/>
+                                <br/>
+                                &nbsp;
                                 <h:message for="magemail" id="emailEorr" style="color: red"/></TD>
                         </f:ajax>
                     </TR>
                     <TR>
+                        <td>
+                        </td>
                         <td>
                             <h:commandButton value="Register" styleClass="but"
                                              action="#{managerDetailManagedBean.managerRegister}"/>
@@ -96,8 +153,9 @@
                     </TR>
 
                 </table>
-            </h:form>
         </center>
-    </div>
+                </div>
+
+    </h:form>
 </h:body>
 </html>

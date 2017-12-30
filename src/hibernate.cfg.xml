@@ -13,7 +13,6 @@
         <property name="connection.password">123456</property>
         <property name="show_sql">true</property>
         <property name="format_sql">true</property>
-
         <mapping resource="com/moyo/beans/AnswerEntity.hbm.xml"/>
         <mapping class="com.moyo.beans.AnswerEntity"/>
         <mapping resource="com/moyo/beans/BatchEntity.hbm.xml"/>

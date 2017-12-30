@@ -1,0 +1,76 @@
+.body{
+    background: linear-gradient(to right, #29323c, #485563);
+    height:100%;
+    width: 100%;
+}
+.title-div{
+    margin: auto;
+}
+.title{
+    margin: 150px auto 0px auto;
+    color: whitesmoke;
+    text-align: center;
+    box-shadow:0px 5px 5px 5px rgba(0,0,0,0.5);
+    padding: 10px;
+}
+.mainbody{
+    margin: 50px auto auto auto;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: dimgrey;
+    box-shadow:10px 10px 10px 0px rgba(0,0,0,0.5);
+    width:839px;
+}
+.img{
+    margin:0px 8px 0px 0px;
+    width: 20px;
+    height:20px;
+}
+.username{
+    background-color:lightslategrey;
+    color:whitesmoke;
+    padding-left: 15px;
+    padding-right: 15px;
+    width:auto;
+    border-radius: 10px;
+    font-size: 20px;
+    word-break:break-all;
+}
+.questionnairename{
+    background-color:lightslategrey;
+    color:whitesmoke;
+    font-size: 20px;
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    word-break:break-all;
+}
+
+.feedback{
+    background-color:lightslategrey;
+    color:whitesmoke;
+    font-size: 20px;
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width:auto;
+    word-break:break-all;
+}
+.button-div{
+    margin-top:50px;
+    text-align: center;
+}
+.button{
+    background-color: dimgrey;
+    margin: auto;
+    color:#979797;
+    text-decoration:none;
+
+    box-shadow:5px 5px 5px 0px rgba(0,0,0,0.5);
+    border: 1px solid black;
+    border-radius: 3px;
+    font-size:24px;
+}
+.button:hover{
+    background-color: whitesmoke;
+}
