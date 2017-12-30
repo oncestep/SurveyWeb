@@ -46,6 +46,7 @@
                              requiredMessage="Enter ID" validatorMessage="ID Should Be 3-20 Charaters">
                     <f:validateLength for="uid" maximum="20" minimum="3"/></h:inputText>
                 <h:message errorClass="error" for="uid"/>
+
             </div>
             <div>
                 <h:inputSecret id="pass" class="inputText" value="#{userDetailManagedBean.password}"
@@ -60,6 +61,7 @@
                                requiredMessage="Please Confrim Password" onblur="checkpswd();"
                                validatorMessage="Password Should Be 3-20 Charaters">
                     <f:validateLength maximum="20" minimum="3" for="cpass"/>
+                    <f:validateLength for="cpass" maximum="20" minimum="3"/>
                 </h:inputSecret>
                 <h:message id="repasswordMsg" for="cpass" errorClass="error"/>
             </div>
@@ -73,13 +75,13 @@
             </div>
 
             <!--<div>-->
-                <!--<h:selectOneMenu id="gender" class="inputText" value="#{userDetailManagedBean.gender}"-->
-                             <!--pt:placeholder="Gender" required="true"-->
-                             <!--requiredMessage="Enter Gender" validatorMessage="Choose Your Gender">-->
-                    <!--<f:selectItem itemValue="0" itemLabel="Man" class="inputText"/>-->
-                    <!--<f:selectItem itemValue="1" itemLabel="Woman" class="inputText"/>-->
-                <!--</h:selectOneMenu>-->
-                <!--<h:message for="gender" errorClass="error"/>-->
+            <!--<h:selectOneMenu id="gender" class="inputText" value="#{userDetailManagedBean.gender}"-->
+            <!--pt:placeholder="Gender" required="true"-->
+            <!--requiredMessage="Enter Gender" validatorMessage="Choose Your Gender">-->
+            <!--<f:selectItem itemValue="0" itemLabel="Man" class="inputText"/>-->
+            <!--<f:selectItem itemValue="1" itemLabel="Woman" class="inputText"/>-->
+            <!--</h:selectOneMenu>-->
+            <!--<h:message for="gender" errorClass="error"/>-->
             <!--</div>-->
 
             <div>
@@ -103,6 +105,7 @@
                 <h:inputText id="mob" class="inputText" value="#{userDetailManagedBean.mobile}" required="true"
                              requiredMessage="Enter Mobile Number" pt:type="number"
                              validatorMessage="Invalid Phone Number Entered" pt:placeholder="Phone Number">
+                    <f:validateLength minimum="11" maximum="11"/>
                     <!--<f:validateRegex pattern="1[3578][0-9]{9}" for="mob"/>-->
                     <f:validateLongRange minimum="13000000000" maximum="18999999999" for="mob"/>
                 </h:inputText>
@@ -116,6 +119,7 @@
                 </h:inputText>
                 <h:message for="emile" errorClass="error"/>
             </div>
+
 
             <h:commandButton class="cbutton" value="Create Account"
                              action="#{userDetailManagedBean.userRegister}"></h:commandButton>

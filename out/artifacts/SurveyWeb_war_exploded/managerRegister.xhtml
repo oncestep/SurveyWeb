@@ -31,6 +31,7 @@
                                              validator="#{managerDetailManagedBean.validateUserName}" styleClass="in"
                                              required="true" requiredMessage="Can not be empty!"/><br/>
                                 &nbsp;
+                                <h:message id="nameEorr" for="magnameR" style="color: red"/>
                             </td>
                         </f:ajax>
                     </tr>
@@ -96,7 +97,7 @@
                                 &nbsp;
                         </TD>
                         <TD><h:inputText id="magbirthday" value="#{managerDetailManagedBean.birthYear}" styleClass="in"
-                                         converterMessage="please provide date of birth" required="true" requiredMessage="Can not be empty!">
+                                         converterMessage="please provide date of birth.For Example:1999-01-01" required="true" requiredMessage="Can not be empty!">
                             <f:convertDateTime pattern="yyyy-M-d"/>
                         </h:inputText>
                              <br/>
@@ -135,7 +136,7 @@
                         </TD>
                         <f:ajax event="keyup" render="emailEorr">
                             <TD><h:inputText id="magemail" value="#{managerDetailManagedBean.email}" styleClass="in"
-
+                                             validator="#{managerDetailManagedBean.validateEmail}"
                                              required="true"
                                              requiredMessage="Can not be empty!"/>
                                 <br/>
