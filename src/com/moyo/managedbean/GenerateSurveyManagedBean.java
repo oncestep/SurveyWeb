@@ -26,31 +26,31 @@ import java.util.List;
 @ManagedBean
 @SessionScoped
 public class GenerateSurveyManagedBean implements ActionListener {
-    /*  问题内容  */
+    //  问题内容
     private String questionContent;
-    /*  选项内容  */
+    //  选项内容
     private String optionContent;
-    /*  问题类型  */
+    //  问题类型
     private Integer type;
-    /*  问卷名  */
+    //  问卷名
     private String naireName;
-    /*  问卷描述  */
+    //  问卷描述
     private String description;
-    /*  选项列表 暂存  */
+    //  选项列表 暂存
     private List<OptionEntity> options = new ArrayList<>();
-    /*    */
+    //  未使用
     private List<QuestionEntity> questions = new ArrayList<>();
-    /*  问题列表  */
+    //  问题列表
     private List<InitQuestion> initQuestions = new ArrayList<>();
 
-    /*  当前管理员所有Batch列表 暂存  */
+    //  当前管理员所有Batch列表 暂存
     private List batchIds = new ArrayList<>();
-    /*  当前管理员所有Batch列表  */
+    //  当前管理员所有Batch列表
     private List<BatchEntity> batchEntityList = new ArrayList<>();
-    /*  生成问卷所属Batch  */
+    //  生成问卷所属Batch
     private Long batId;
 
-    /*  Get方法 得到当前管理员管理所有的Batch列表 */
+    //  Get方法 得到当前管理员管理所有的Batch列表
     public List<BatchEntity> getBatchEntityList() {
         BatchDAO batchDAO = new BatchDAO();
         FacesContext context = FacesContext.getCurrentInstance();
@@ -151,7 +151,7 @@ public class GenerateSurveyManagedBean implements ActionListener {
         this.batId = batId;
     }
 
-    /*    */
+    /*  新增选项  */
     public List<OptionEntity> showOptions() {
         OptionEntity optionEntity = new OptionEntity();
         optionEntity.setContent(optionContent);
@@ -187,7 +187,7 @@ public class GenerateSurveyManagedBean implements ActionListener {
     }
 
     /*  将问卷信息打包在拆包存入数据库  */
-    public void addToSurvey() {
+    public String addToSurvey() {
         java.util.Date nowTime = new java.util.Date();
         Timestamp timestamp = new Timestamp(nowTime.getTime());
         long batchId = batId;
@@ -221,5 +221,17 @@ public class GenerateSurveyManagedBean implements ActionListener {
                 optionDAO.save(optionItem);
             }
         }
+
+        //清空缓存
+        questionContent = null;
+        optionContent = null;
+        type = null;
+        naireName = null;
+        description = null;
+        options.clear();
+        initQuestions.clear();
+
+        //控制跳转
+        return "ManagerIndex.xhtml?faces-redirect=true";
     }
 }

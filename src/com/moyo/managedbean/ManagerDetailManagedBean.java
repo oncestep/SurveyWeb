@@ -168,26 +168,34 @@ public class ManagerDetailManagedBean {
      * Manager Login Method
      */
     public String managerLogin() {
+        // 验证是否为空
+        if (username == null || password == null) {
+            return null;
+        }
+
         ManagerDetailDAO managerDetailDAO = new ManagerDetailDAO();
-        ManagerDetailEntity managerDetailEntity = (ManagerDetailEntity) managerDetailDAO.findByUsername(username).get(0);
         try {
+            ManagerDetailEntity managerDetailEntity = (ManagerDetailEntity) managerDetailDAO.findByUsername(username).get(0);
             String endPassword = EncodeMD5.encode(password);
             if (managerDetailEntity.getPassword().equals(endPassword)) {
                 HttpSession session = getHttpSession();
-                if(session.getAttribute("managerId")!=null){
-                    session.setAttribute("managerId",null);
+                if (session.getAttribute("managerId") != null) {
+                    session.setAttribute("managerId", null);
                 }
                 session.setAttribute("managerId", managerDetailEntity.getManagerId());
-                session.setAttribute("type",1);
+                session.setAttribute("type", 1);
 
                 /*  手动初始化surveyManagedBean  */
                 SurveyManagedBean surveyManagedBean = new SurveyManagedBean();
                 session.setAttribute("surveyManagedBean", surveyManagedBean);
-                return "true";//if login success
+
+                //if login success
+                return "true";
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            return null;
         }
+
         return "false";
     }
 
@@ -254,7 +262,7 @@ public class ManagerDetailManagedBean {
             ManagerDetailEntity manager = getEntity();
 
             HttpSession session = getHttpSession();
-            manager.setManagerId((long)session.getAttribute("managerId"));
+            manager.setManagerId((long) session.getAttribute("managerId"));
             if (manager != null) {
                 managerDetailDAO.merge(manager);
             }
@@ -263,11 +271,5 @@ public class ManagerDetailManagedBean {
         }
         return "ManagerIndex";
     }
-//    public void validateEmail(FacesContext fc,UIComponent c,Object value){
-//        String reg = "[a-zA-Z_]{1,}[0-9]{0,}@(([a-zA-z0-9]-*){1,}\\.){1,3}[a-zA-z\\-]{1,}";
-//
-//        if(!((String)value).matches(reg))
-//            throw new ValidatorException(new FacesMessage("Must enter the correct email format!"));
-//    }
 
 }

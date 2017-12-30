@@ -126,7 +126,7 @@
 
         $(document).ready(function () {
             $('.tag').each(function (i) {
-                switch (i % 6) {
+                switch (i % 12) {
                     case 0:
                         $(this).addClass("ti-server");
                         $(this).parent().addClass("icon-warning");
@@ -147,9 +147,31 @@
                         $(this).addClass("ti-money");
                         $(this).parent().addClass("icon-warning");
                         break;
-                    default:
+                    case 5:
                         $(this).addClass("ti-drupal");
-                        $(this).parent().addClass("icon-waring");
+                        break;
+                    case 6:
+                        $(this).addClass("ti-ruler-pencil");
+                        $(this).parent().addClass("icon-success");
+                        break;
+                    case 7:
+                        $(this).addClass("ti-medall");
+                        $(this).parent().addClass("icon-danger");
+                        break;
+                    case 8:
+                        $(this).addClass("ti-comments");
+                        $(this).parent().addClass("icon-info");
+                        break;
+                    case 9:
+                        $(this).addClass("ti-music-alt");
+                        break;
+                    case 10:
+                        $(this).addClass("ti-cup");
+                        $(this).parent().addClass("icon-warning");
+                        break;
+                    default:
+                        $(this).addClass("ti-pie-chart");
+                        $(this).parent().addClass("icon-success");
                 }
             });
 

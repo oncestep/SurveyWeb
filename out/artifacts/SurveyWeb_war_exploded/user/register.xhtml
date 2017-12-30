@@ -44,21 +44,22 @@
                 <h:inputText id="uid" class="inputText" value="#{userDetailManagedBean.username}"
                              pt:placeholder="Username" required="true"
                              requiredMessage="Enter ID" validatorMessage="ID Should Be 3-20 Charaters">
-                    <f:validateLength for="id" maximum="20" minimum="3"/></h:inputText>
-                <h:message for="uid" errorClass="error"/>
+                    <f:validateLength for="uid" maximum="20" minimum="3"/></h:inputText>
+                <h:message errorClass="error" for="uid"/>
             </div>
             <div>
                 <h:inputSecret id="pass" class="inputText" value="#{userDetailManagedBean.password}"
                                pt:placeholder="Password" required="true"
                                requiredMessage="Enter Password" validatorMessage="Password Should Be 3-20 Charaters">
-                    <f:validateLength for="id" maximum="20" minimum="3"/>
+                    <f:validateLength for="pass" maximum="20" minimum="3"/>
                 </h:inputSecret>
-                <h:message for="pass" errorClass="error"/>
+                <h:message errorClass="error" for="pass"/>
             </div>
             <div>
                 <h:inputSecret id="cpass" class="inputText" pt:placeholder="Confrim Password" required="true"
-                               requiredMessage="Please Confrim Password" onblur="checkpswd();" validatorMessage="Password Should Be 3-20 Charaters">
-                    <f:validateLength for="id" maximum="20" minimum="3"/>
+                               requiredMessage="Please Confrim Password" onblur="checkpswd();"
+                               validatorMessage="Password Should Be 3-20 Charaters">
+                    <f:validateLength maximum="20" minimum="3" for="cpass"/>
                 </h:inputSecret>
                 <h:message id="repasswordMsg" for="cpass" errorClass="error"/>
             </div>
@@ -69,6 +70,34 @@
                     <f:validateLength maximum="20" for="rname"/>
                 </h:inputText>
                 <h:message for="rname" errorClass="error"/>
+            </div>
+
+            <!--<div>-->
+                <!--<h:selectOneMenu id="gender" class="inputText" value="#{userDetailManagedBean.gender}"-->
+                             <!--pt:placeholder="Gender" required="true"-->
+                             <!--requiredMessage="Enter Gender" validatorMessage="Choose Your Gender">-->
+                    <!--<f:selectItem itemValue="0" itemLabel="Man" class="inputText"/>-->
+                    <!--<f:selectItem itemValue="1" itemLabel="Woman" class="inputText"/>-->
+                <!--</h:selectOneMenu>-->
+                <!--<h:message for="gender" errorClass="error"/>-->
+            <!--</div>-->
+
+            <div>
+                <h:inputText id="dob" class="inputText" value="#{userDetailManagedBean.birthYear}" pt:type="date"
+                             pt:placeholder="Brithdate" required="true" requiredMessage="Enter BrithDate"
+                             validatorMessage="Invalid Date of Brith Entered">
+                    <f:convertDateTime pattern="yyyy-M-d"/>
+                    <f:validator for="dob" validatorId="dobValidator"/>
+                </h:inputText>
+                <h:message for="dob" errorClass="error"/>
+            </div>
+            <div>
+                <h:inputText id="nname" class="inputText" value="#{userDetailManagedBean.nickname}"
+                             pt:placeholder=" Nick Name" required="true"
+                             requiredMessage="Enter Name" validatorMessage="Name Cannot be More than 20 Characters">
+                    <f:validateLength maximum="20" for="nname"/>
+                </h:inputText>
+                <h:message for="nname" errorClass="error"/>
             </div>
             <div>
                 <h:inputText id="mob" class="inputText" value="#{userDetailManagedBean.mobile}" required="true"
@@ -87,23 +116,6 @@
                 </h:inputText>
                 <h:message for="emile" errorClass="error"/>
             </div>
-            <div>
-                <h:inputText id="dob" class="inputText" value="#{userDetailManagedBean.birthYear}" pt:type="date"
-                             pt:placeholder="Brithdate" required="true" requiredMessage="Enter BrithDate"
-                             validatorMessage="Invalid Date of Brith Entered">
-                    <f:convertDateTime type="date"/>
-                    <f:validator for="dob" validatorId="dobValidator"/>
-                </h:inputText>
-                <h:message for="dob" errorClass="error"/>
-            </div>
-            <div>
-                <h:inputText id="nname" class="inputText" value="#{userDetailManagedBean.nickname}"
-                             pt:placeholder=" Nick Name" required="true"
-                             requiredMessage="Enter Name" validatorMessage="Name Cannot be More than 20 Characters">
-                    <f:validateLength maximum="20" for="nname"/>
-                </h:inputText>
-                <h:message for="nname" errorClass="error"/>
-            </div>
 
             <h:commandButton class="cbutton" value="Create Account"
                              action="#{userDetailManagedBean.userRegister}"></h:commandButton>
@@ -115,11 +127,8 @@
         <script src="../java1/js/jquery.min.js"></script>
 
         <!--背景图片自动更换-->
-
         <script src="../java1/js/supersized.3.2.7.min.js"></script>
-
         <script src="../java1/js/supersized-init.js"></script>
-
     </div>
 </h:body>
 </html>

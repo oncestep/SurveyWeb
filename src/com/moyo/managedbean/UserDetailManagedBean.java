@@ -1,7 +1,5 @@
 package com.moyo.managedbean;
 
-import com.moyo.beans.SurveyEntity;
-
 import com.moyo.beans.UserDetailEntity;
 import com.moyo.dao.UserDetailDAO;
 import com.moyo.util.EncodeMD5;
@@ -167,43 +165,6 @@ public class UserDetailManagedBean {
 
         return entity;
     }
-
-
-
-//    public String userLogin() {
-//        UserDetailDAO userDAO = new UserDetailDAO();
-//        UserDetailEntity user = (UserDetailEntity) userDAO.findByUsername(username).get(0);
-//        try {
-//            String encPassword = EncodeMD5.encode(password);
-//            if (encPassword.equals(user.getPassword())) {
-//                FacesContext context = FacesContext.getCurrentInstance();
-//                HttpSession session = (HttpSession) context.getExternalContext().getSession(true);
-//                session.setAttribute("userID", user.getUserId());
-//                return "index";
-//            }
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//        return "userRegister";
-//    }
-//
-//    public void userLogout() {
-//        //清除session
-//        FacesContext facesContext = FacesContext.getCurrentInstance();
-//        ExternalContext extContext = facesContext.getExternalContext();
-//        HttpSession session = (HttpSession) extContext.getSession(true);
-//        session.setAttribute("userId", null);
-//
-//        //初始化Bean
-//        username = null;
-//        password = null;
-//        name = null;
-//        gender = null;
-//        birthYear = null;
-//        nickname = null;
-//        mobile = null;
-//        email = null;
-//    }
 
     public void insert() {
         try {

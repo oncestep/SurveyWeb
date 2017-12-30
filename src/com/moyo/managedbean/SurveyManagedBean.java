@@ -44,7 +44,6 @@ public class SurveyManagedBean implements ActionListener {
     private List<SurveyEntity> surveyList = new ArrayList<>();
 
 
-
     public List<SurveyEntity> getSurveyList() {
         return surveyList;
     }
@@ -118,7 +117,7 @@ public class SurveyManagedBean implements ActionListener {
     }
 
 
-    /*  输出当前用户所需填写问卷    */
+    /*  输出当前用户所需填写问卷  */
     public void showAllSurvey(long userId) {
         SurveyDAO surDAO = new SurveyDAO();
         ParticipationDAO parDAO = new ParticipationDAO();

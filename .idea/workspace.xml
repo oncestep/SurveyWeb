@@ -7,160 +7,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a04f15fb-d8e2-4b3a-aa06-526d3549a914" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/beans/FeedbackItem.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/beans/FeedbackItem.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/generateSurvey.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/genernateSurvey.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/FeedbackPage.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/ViewStatistics.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/java1/js/exporting.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/java1/js/highcharts-zh_CN.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/java1/js/highcharts.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/java1/js/jquery-1.8.3.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/java1/js/oldie.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/resources/FeedbackPage.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/resources/genernateSurvey.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/userRegister.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/moyo/beans/FeedbackItem.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/FeedbackPage.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/ViewStatistics.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/java1/js/exporting.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/java1/js/highcharts-zh_CN.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/java1/js/highcharts.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/java1/js/jquery-1.8.3.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/java1/js/oldie.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/FeedbackPage.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/genernateSurvey.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/userRegister.xhtml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/managedbean/test$ques.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/managedbean/test.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/demo.xhtml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/index.xhtml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/managedbean/test$ques.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/managedbean/test.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/moyo/managedbean/test.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/demo.xhtml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/index.xhtml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/Main.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/AJAX/RegisterManageBean1.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/AJAX/RegisterManageBean1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/beans/AnswerEntity.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/beans/AnswerEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/beans/BatchEntity.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/beans/BatchEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/beans/FeedbackEntity.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/beans/FeedbackEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/beans/InitQuestion.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/beans/InitQuestion.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/beans/InitSurvey.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/beans/InitSurvey.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/beans/ManagerDetailEntity.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/beans/ManagerDetailEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/beans/OptionEntity.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/beans/OptionEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/beans/ParticipationEntity.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/beans/ParticipationEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/beans/QuestionEntity.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/beans/QuestionEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/beans/SurveyEntity.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/beans/SurveyEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/beans/TipEntity.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/beans/TipEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/beans/UserDetailEntity.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/beans/UserDetailEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/dao/AnswerDAO.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/dao/AnswerDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/dao/BatchDAO.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/dao/BatchDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/dao/FeedbackDAO.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/dao/FeedbackDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/dao/ManagerDetailDAO.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/dao/ManagerDetailDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/dao/OptionDAO.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/dao/OptionDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/dao/ParticipationDAO.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/dao/ParticipationDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/dao/QuestionDAO.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/dao/QuestionDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/dao/SurveyDAO.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/dao/SurveyDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/dao/TipDAO.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/dao/TipDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/dao/UserDetailDAO.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/dao/UserDetailDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/listener/MultiplySelectListener.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/listener/MultiplySelectListener.class" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generateSurvey.xhtml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/genernateSurvey.css" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/listener/SecurityPhaseListener.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/listener/SecurityPhaseListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/listener/SingleSelectListener.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/listener/SingleSelectListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/managedbean/AnswerManagedBean.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/managedbean/AnswerManagedBean.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/managedbean/BatchManagedBean.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/managedbean/BatchManagedBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/managedbean/FeedbackManagedBean.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/managedbean/FeedbackManagedBean.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/managedbean/GenerateSurveyManagedBean.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/managedbean/GenerateSurveyManagedBean.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/managedbean/ManagerDetailManagedBean.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/managedbean/ManagerDetailManagedBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/managedbean/OptionManagedBean.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/managedbean/OptionManagedBean.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/managedbean/ParticipationManagedBean.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/managedbean/ParticipationManagedBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/managedbean/QuestionManagedBean.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/managedbean/QuestionManagedBean.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/managedbean/SurveyManagedBean.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/managedbean/SurveyManagedBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/managedbean/TipManagedBean.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/managedbean/TipManagedBean.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/managedbean/UserDetailManagedBean.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/managedbean/UserDetailManagedBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/sessionfactory/SF.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/sessionfactory/SF.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/util/EncodeMD5.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/util/EncodeMD5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/validator/DobValidator.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/validator/DobValidator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/Main.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/AJAX/RegisterManageBean1.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/AJAX/RegisterManageBean1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/beans/AnswerEntity.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/beans/AnswerEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/beans/BatchEntity.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/beans/BatchEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/beans/FeedbackEntity.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/beans/FeedbackEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/beans/InitQuestion.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/beans/InitQuestion.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/beans/InitSurvey.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/beans/InitSurvey.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/beans/ManagerDetailEntity.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/beans/ManagerDetailEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/beans/OptionEntity.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/beans/OptionEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/beans/ParticipationEntity.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/beans/ParticipationEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/beans/QuestionEntity.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/beans/QuestionEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/beans/SurveyEntity.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/beans/SurveyEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/beans/TipEntity.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/beans/TipEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/beans/UserDetailEntity.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/beans/UserDetailEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/dao/AnswerDAO.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/dao/AnswerDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/dao/BatchDAO.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/dao/BatchDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/dao/FeedbackDAO.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/dao/FeedbackDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/dao/ManagerDetailDAO.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/dao/ManagerDetailDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/dao/OptionDAO.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/dao/OptionDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/dao/ParticipationDAO.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/dao/ParticipationDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/dao/QuestionDAO.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/dao/QuestionDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/dao/SurveyDAO.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/dao/SurveyDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/dao/TipDAO.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/dao/TipDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/dao/UserDetailDAO.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/dao/UserDetailDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/listener/MultiplySelectListener.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/listener/MultiplySelectListener.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/listener/SecurityPhaseListener.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/listener/SecurityPhaseListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/listener/SingleSelectListener.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/listener/SingleSelectListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/managedbean/AnswerManagedBean.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/managedbean/AnswerManagedBean.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/managedbean/BatchManagedBean.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/managedbean/BatchManagedBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/managedbean/FeedbackManagedBean.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/managedbean/FeedbackManagedBean.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/managedbean/GenerateSurveyManagedBean.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/managedbean/GenerateSurveyManagedBean.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/managedbean/ManagerDetailManagedBean.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/managedbean/ManagerDetailManagedBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/managedbean/OptionManagedBean.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/managedbean/OptionManagedBean.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/managedbean/ParticipationManagedBean.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/managedbean/ParticipationManagedBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/managedbean/QuestionManagedBean.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/managedbean/QuestionManagedBean.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/managedbean/SurveyManagedBean.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/managedbean/SurveyManagedBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/managedbean/TipManagedBean.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/managedbean/TipManagedBean.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/managedbean/UserDetailManagedBean.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/managedbean/UserDetailManagedBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/sessionfactory/SF.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/sessionfactory/SF.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/util/EncodeMD5.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/util/EncodeMD5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/validator/DobValidator.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/validator/DobValidator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Hibernate_4_2_2_4_2_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Hibernate_4_2_2_4_2_2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/sqljdbc41.xml" afterPath="$PROJECT_DIR$/.idea/libraries/sqljdbc41.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SurveyWeb.iml" afterPath="$PROJECT_DIR$/SurveyWeb.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/Main.xhtml" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/Main.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/ManagerIndex.xhtml" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/ManagerIndex.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/ManagerViewBatches.xhtml" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/ManagerViewBatches.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/hibernate.cfg.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/faces-config.xml" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/faces-config.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/generateSurvey.xhtml" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/generateSurvey.xhtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/managerLogin.xhtml" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/managerLogin.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/managerRigister.xhtml" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/managerRigister.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/resources/managerRegister.css" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/resources/managerRegister.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/resources/userRegister.css" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/resources/userRegister.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/resources/genernateSurvey.css" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/resources/genernateSurvey.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/user/index.xhtml" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/user/index.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/user/register.xhtml" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/user/register.xhtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/user/user.xhtml" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/user/user.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/hibernate.cfg.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/moyo/dao/UserDetailDAO.java" afterPath="$PROJECT_DIR$/src/com/moyo/dao/UserDetailDAO.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/moyo/listener/SecurityPhaseListener.java" afterPath="$PROJECT_DIR$/src/com/moyo/listener/SecurityPhaseListener.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/moyo/managedbean/BatchManagedBean.java" afterPath="$PROJECT_DIR$/src/com/moyo/managedbean/BatchManagedBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/moyo/managedbean/FeedbackManagedBean.java" afterPath="$PROJECT_DIR$/src/com/moyo/managedbean/FeedbackManagedBean.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/moyo/managedbean/GenerateSurveyManagedBean.java" afterPath="$PROJECT_DIR$/src/com/moyo/managedbean/GenerateSurveyManagedBean.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/moyo/managedbean/ManagerDetailManagedBean.java" afterPath="$PROJECT_DIR$/src/com/moyo/managedbean/ManagerDetailManagedBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/moyo/managedbean/QuestionManagedBean.java" afterPath="$PROJECT_DIR$/src/com/moyo/managedbean/QuestionManagedBean.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/moyo/managedbean/ParticipationManagedBean.java" afterPath="$PROJECT_DIR$/src/com/moyo/managedbean/ParticipationManagedBean.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/moyo/managedbean/SurveyManagedBean.java" afterPath="$PROJECT_DIR$/src/com/moyo/managedbean/SurveyManagedBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/src/hibernate.cfg.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/Main.xhtml" afterPath="$PROJECT_DIR$/web/Main.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/ManagerIndex.xhtml" afterPath="$PROJECT_DIR$/web/ManagerIndex.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/ManagerViewBatches.xhtml" afterPath="$PROJECT_DIR$/web/ManagerViewBatches.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/moyo/managedbean/UserDetailManagedBean.java" afterPath="$PROJECT_DIR$/src/com/moyo/managedbean/UserDetailManagedBean.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/faces-config.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/faces-config.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/generateSurvey.xhtml" afterPath="$PROJECT_DIR$/web/generateSurvey.xhtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/managerLogin.xhtml" afterPath="$PROJECT_DIR$/web/managerLogin.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/managerRigister.xhtml" afterPath="$PROJECT_DIR$/web/managerRigister.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/resources/managerRegister.css" afterPath="$PROJECT_DIR$/web/resources/managerRegister.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/resources/userRegister.css" afterPath="$PROJECT_DIR$/web/resources/userRegister.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/resources/genernateSurvey.css" afterPath="$PROJECT_DIR$/web/resources/genernateSurvey.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/user/index.xhtml" afterPath="$PROJECT_DIR$/web/user/index.xhtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/user/register.xhtml" afterPath="$PROJECT_DIR$/web/user/register.xhtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/user/user.xhtml" afterPath="$PROJECT_DIR$/web/user/user.xhtml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/managerRigister.xhtml" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/managerRegister.xhtml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/managerRigister.xhtml" afterPath="$PROJECT_DIR$/web/managerRegister.xhtml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -172,43 +58,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="generateSurvey.xhtml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/generateSurvey.xhtml">
+      <file leaf-file-name="managerLogin.xhtml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/managerLogin.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-391">
-              <caret line="186" column="98" lean-forward="false" selection-start-line="186" selection-start-column="85" selection-end-line="186" selection-end-column="98" />
+            <state relative-caret-position="345">
+              <caret line="29" column="23" lean-forward="true" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GenerateSurveyManagedBean.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/moyo/managedbean/GenerateSurveyManagedBean.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="154" column="28" lean-forward="false" selection-start-line="154" selection-start-column="28" selection-end-line="154" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>删除</find>
-      <find>Delete</find>
-      <find>removeFromQuestion</find>
-      <find>div1</find>
-      <find>showOptions</find>
-      <find>optionContent</find>
-      <find>optionTable</find>
-      <find>batchIds</find>
       <find>questions</find>
-      <find>questionIn</find>
-      <find>AddtoQuestion</find>
+      <find>main</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -223,11 +95,25 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/hibernate.cfg.xml" />
-        <option value="$PROJECT_DIR$/src/com/moyo/listener/SecurityPhaseListener.java" />
-        <option value="$PROJECT_DIR$/src/com/moyo/managedbean/ManagerDetailManagedBean.java" />
-        <option value="$PROJECT_DIR$/web/user/user.xhtml" />
         <option value="$PROJECT_DIR$/web/generateSurvey.xhtml" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/faces-config.xml" />
+        <option value="$PROJECT_DIR$/web/resources/managerRegister.css" />
+        <option value="$PROJECT_DIR$/web/managerLogin.xhtml" />
+        <option value="$PROJECT_DIR$/src/com/moyo/managedbean/ManagerDetailManagedBean.java" />
+        <option value="$PROJECT_DIR$/web/managerRegister.xhtml" />
         <option value="$PROJECT_DIR$/src/com/moyo/managedbean/GenerateSurveyManagedBean.java" />
+        <option value="$PROJECT_DIR$/src/com/moyo/managedbean/BatchManagedBean.java" />
+        <option value="$PROJECT_DIR$/src/com/moyo/managedbean/UserDetailManagedBean.java" />
+        <option value="$PROJECT_DIR$/src/com/moyo/managedbean/SurveyManagedBean.java" />
+        <option value="$PROJECT_DIR$/web/user/user.xhtml" />
+        <option value="$PROJECT_DIR$/src/com/moyo/managedbean/ParticipationManagedBean.java" />
+        <option value="$PROJECT_DIR$/web/user/index.xhtml" />
+        <option value="$PROJECT_DIR$/web/user/register.xhtml" />
+        <option value="$PROJECT_DIR$/src/com/moyo/listener/SecurityPhaseListener.java" />
+        <option value="$PROJECT_DIR$/web/java1/css/text.css" />
+        <option value="$PROJECT_DIR$/web/java1/css/themeBlack.css" />
+        <option value="$PROJECT_DIR$/web/test.xhtml" />
+        <option value="$PROJECT_DIR$/web/login.xhtml" />
       </list>
     </option>
   </component>
@@ -245,8 +131,8 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="55" />
-    <option name="y" value="2" />
+    <option name="x" value="-31" />
+    <option name="y" value="12" />
     <option name="width" value="1316" />
     <option name="height" value="773" />
   </component>
@@ -265,7 +151,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -276,6 +163,11 @@
             <path>
               <item name="SurveyWeb" type="b2602c69:ProjectViewProjectNode" />
               <item name="SurveyWeb" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SurveyWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SurveyWeb" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -283,42 +175,49 @@
               <item name="SurveyWeb" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="moyo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SurveyWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SurveyWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="moyo" type="462c0819:PsiDirectoryNode" />
-              <item name="beans" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SurveyWeb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SurveyWeb" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="moyo" type="462c0819:PsiDirectoryNode" />
-              <item name="managedbean" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SurveyWeb" type="b2602c69:ProjectViewProjectNode" />
               <item name="SurveyWeb" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="SurveyWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SurveyWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="java1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SurveyWeb" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SurveyWeb" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
-      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="D:/jar包/sqljdbc41.jar!/" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Compare/SurveyWeb" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Project_JSF\SurveyWeb\web" />
+      <recent name="D:\Project_JSF\SurveyWeb\web\WEB-INF" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Project_JSF\SurveyWeb\web" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -505,43 +404,44 @@
       <workItem from="1514524719010" duration="9291000" />
       <workItem from="1514549048786" duration="427000" />
       <workItem from="1514549525008" duration="7950000" />
-      <workItem from="1514596367377" duration="791000" />
+      <workItem from="1514596367377" duration="9675000" />
+      <workItem from="1514615870133" duration="5912000" />
+      <workItem from="1514622049188" duration="3216000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18459000" />
+    <option name="totallyTimeSpent" value="36471000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1320" height="784" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40030912" sideWeight="0.5031746" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921174" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40030912" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4064915" sideWeight="0.4968254" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921174" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41576508" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921174" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4049459" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21587302" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22619048" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -549,40 +449,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921174" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39876354" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921174" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41576508" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -594,28 +460,63 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/moyo/managedbean/GenerateSurveyManagedBean.java</url>
-          <line>155</line>
-          <properties />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/moyo/managedbean/UserDetailManagedBean.java</url>
-          <line>149</line>
+          <line>147</line>
           <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/moyo/managedbean/UserDetailManagedBean.java</url>
-          <line>311</line>
+          <line>272</line>
           <properties />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/moyo/managedbean/ParticipationManagedBean.java</url>
+          <line>97</line>
+          <properties />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="3" />
+      <option name="time" value="7" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/web/user/question.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/test.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2618">
+          <caret line="154" column="30" lean-forward="true" selection-start-line="154" selection-start-column="30" selection-end-line="154" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/moyo/managedbean/GenerateSurveyManagedBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3536">
+          <caret line="208" column="53" lean-forward="false" selection-start-line="208" selection-start-column="53" selection-end-line="208" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/moyo/managedbean/ManagerDetailManagedBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2975">
+          <caret line="175" column="0" lean-forward="false" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/generateSurvey.xhtml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3162">
@@ -667,71 +568,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/moyo/listener/SecurityPhaseListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="32" column="25" lean-forward="true" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-11235">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://D:/GlassFish Server 4.1.1/glassfish4/glassfish/modules/javax.faces.jar!/com/sun/faces/el/DemuxCompositeELResolver.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="121">
           <caret line="102" column="0" lean-forward="false" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/moyo/managedbean/ManagerDetailManagedBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="146" column="52" lean-forward="false" selection-start-line="146" selection-start-column="44" selection-end-line="146" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/user/user.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2244">
-          <caret line="132" column="0" lean-forward="false" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/GlassFish Server 4.1.1/glassfish4/glassfish/modules/weld-osgi-bundle.jar!/org/jboss/weld/el/WeldMethodExpression.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/GlassFish Server 4.1.1/glassfish4/glassfish/modules/weld-osgi-bundle.jar!/org/jboss/weld/util/el/ForwardingMethodExpression.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hibernate.cfg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="6" column="99" lean-forward="false" selection-start-line="6" selection-start-column="76" selection-end-line="6" selection-end-column="99" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/moyo/managedbean/UserDetailManagedBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="149" column="0" lean-forward="false" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -750,14 +590,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generateSurvey.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="96" column="92" lean-forward="false" selection-start-line="96" selection-start-column="81" selection-end-line="96" selection-end-column="92" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/generateSurvey.xhtml" />
     <entry file="jar://D:/GlassFish Server 4.1.1/glassfish4/glassfish/modules/weld-osgi-bundle.jar!/org/jboss/weld/el/WeldValueExpression.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -769,7 +602,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="12" column="23" lean-forward="true" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -777,24 +609,234 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="6" column="31" lean-forward="false" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/faces-config.xml">
+      <provider editor-type-id="com.intellij.jsf.yfilesGraph.editor.FacesNavigationFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-153">
+          <caret line="30" column="25" lean-forward="false" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/resources/managerRegister.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="44" column="20" lean-forward="false" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/generateSurvey.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="7" column="46" lean-forward="false" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hibernate.cfg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="15" column="65" lean-forward="true" selection-start-line="15" selection-start-column="65" selection-end-line="15" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/GlassFish Server 4.1.1/glassfish4/glassfish/modules/weld-osgi-bundle.jar!/org/jboss/weld/el/WeldMethodExpression.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/moyo/dao/ManagerDetailDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="485">
+          <caret line="117" column="16" lean-forward="false" selection-start-line="117" selection-start-column="16" selection-end-line="117" selection-end-column="16" />
+          <folding>
+            <element signature="e#3601#3602#0" expanded="false" />
+            <element signature="e#3652#3653#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/GlassFish Server 4.1.1/glassfish4/glassfish/modules/weld-osgi-bundle.jar!/org/jboss/weld/util/el/ForwardingMethodExpression.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/managerRegister.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="147" column="70" lean-forward="false" selection-start-line="147" selection-start-column="70" selection-end-line="147" selection-end-column="70" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/moyo/managedbean/GenerateSurveyManagedBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="154" column="28" lean-forward="false" selection-start-line="154" selection-start-column="28" selection-end-line="154" selection-end-column="28" />
+        <state relative-caret-position="2584">
+          <caret line="208" column="53" lean-forward="false" selection-start-line="208" selection-start-column="53" selection-end-line="208" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/generateSurvey.xhtml">
+    <entry file="file://$PROJECT_DIR$/src/com/moyo/managedbean/ManagerDetailManagedBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-391">
-          <caret line="186" column="98" lean-forward="false" selection-start-line="186" selection-start-column="85" selection-end-line="186" selection-end-column="98" />
+        <state relative-caret-position="1331">
+          <caret line="175" column="0" lean-forward="false" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/moyo/managedbean/BatchManagedBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1209">
+          <caret line="126" column="25" lean-forward="false" selection-start-line="126" selection-start-column="25" selection-end-line="126" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/moyo/managedbean/SurveyManagedBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="138" column="26" lean-forward="false" selection-start-line="138" selection-start-column="26" selection-end-line="138" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/user/user.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-578">
+          <caret line="20" column="8" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/moyo/managedbean/ParticipationManagedBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="102" column="0" lean-forward="false" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/user/survey.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1916">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/user/index.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="172" column="54" lean-forward="false" selection-start-line="172" selection-start-column="54" selection-end-line="172" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/moyo/validator/DobValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/moyo/managedbean/UserDetailManagedBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="147" column="0" lean-forward="false" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/user/register.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="86" column="38" lean-forward="false" selection-start-line="86" selection-start-column="38" selection-end-line="86" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/moyo/listener/SecurityPhaseListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="33" column="27" lean-forward="true" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/resources/css1.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/java1/css/text.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2975">
+          <caret line="38" column="6" lean-forward="true" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/java1/css/themeBlack.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/test.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="25" column="43" lean-forward="true" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/user/question.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-612">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/login.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="45" column="12" lean-forward="true" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/managerLogin.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="29" column="23" lean-forward="true" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
           <folding />
         </state>
       </provider>

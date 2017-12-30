@@ -31,7 +31,6 @@ public class BatchManagedBean implements ActionListener {
     private Timestamp createTime;
     private Long managerId;
     private List<BatchEntity> batchList=new ArrayList<>();
-    private List<BatchEntity> batchAllList;
 
 
     public long getBatchId() {
@@ -78,15 +77,6 @@ public class BatchManagedBean implements ActionListener {
         this.batchList = batchList;
     }
 
-    public List<BatchEntity> getBatchAllList() {
-        BatchDAO batDAO = new BatchDAO();
-        batchAllList = batDAO.findAll();
-        return batchAllList;
-    }
-
-    public void setBatchAllList(List<BatchEntity> batchAllList) {
-        this.batchAllList = batchAllList;
-    }
 
     /*  查询当前用户未加入的所有批次  */
     public List<BatchEntity> showElseBatch(long userId) {

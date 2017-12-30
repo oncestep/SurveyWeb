@@ -97,7 +97,12 @@ public class ParticipationManagedBean {
         participation.setPartTime(time);
         parDAO.save(participation);
 
-        return "user/index.xhtml";
+        HttpSession session = getHttpSession();
+        SurveyManagedBean surveyManagedBean = (SurveyManagedBean) session.getAttribute("surveyManagedBean");
+        surveyManagedBean.setSurList(null);
+        surveyManagedBean.showAllSurvey(userId);
+
+        return "/user/index.xhtml";
     }
 
     private HttpSession getHttpSession(){
