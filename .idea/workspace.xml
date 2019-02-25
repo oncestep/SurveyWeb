@@ -7,87 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a04f15fb-d8e2-4b3a-aa06-526d3549a914" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/java1/img/profile.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/java1/img/users/image1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/java1/img/users/image10.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/java1/img/users/image11.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/java1/img/users/image12.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/java1/img/users/image2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/java1/img/users/image3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/java1/img/users/image4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/java1/img/users/image5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/java1/img/users/image6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/java1/img/users/image7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/java1/img/users/image8.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/java1/img/users/image9.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/resources/image/homePage.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/java1/css/animate.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/manager/Main.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/manager/ManagerIndex.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/manager/ModifyPersonalInformation.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/manager/ViewStatistics.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/manager/generateSurvey.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/manager/managerLogin.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/manager/managerRegister.xhtml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/ManagerViewBatches.xhtml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/java1/img/face-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/resources/css1.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/resources/image/3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/resources/image/timg.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/resources/image/timg1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/userRegister.xhtml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/resources/css1.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/resources/image/3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/resources/image/timg.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/resources/image/timg1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/userRegister.xhtml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/managedbean/ManagerDetailManagedBean.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/managedbean/ManagerDetailManagedBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/managedbean/SurveyManagedBean.class" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/classes/com/moyo/managedbean/SurveyManagedBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/managedbean/ManagerDetailManagedBean.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/managedbean/ManagerDetailManagedBean.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/managedbean/SurveyManagedBean.class" afterPath="$PROJECT_DIR$/out/production/SurveyWeb/com/moyo/managedbean/SurveyManagedBean.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/homepage.JPG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/新建文本文档.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/FeedbackPage.xhtml" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/FeedbackPage.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/Main.xhtml" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/Main.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/ManagerIndex.xhtml" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/ManagerIndex.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/ModifyPersonalInformation.xhtml" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/ModifyPersonalInformation.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/ViewStatistics.xhtml" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/ViewStatistics.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/faces-config.xml" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/faces-config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/generateSurvey.xhtml" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/generateSurvey.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/java1/css/userStyle.css" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/java1/css/userStyle.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/java1/js/highcharts-zh_CN.js" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/java1/js/highcharts-zh_CN.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/managerLogin.xhtml" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/managerLogin.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/managerRegister.xhtml" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/managerRegister.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/resources/Main.css" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/resources/Main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/user/index.xhtml" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/user/index.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/user/login.xhtml" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/user/login.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/user/question.xhtml" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/user/question.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/user/register.xhtml" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/user/register.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/user/survey.xhtml" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/user/survey.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/user/user.xhtml" afterPath="$PROJECT_DIR$/out/artifacts/SurveyWeb_war_exploded/user/user.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/moyo/managedbean/ManagerDetailManagedBean.java" afterPath="$PROJECT_DIR$/src/com/moyo/managedbean/ManagerDetailManagedBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/moyo/managedbean/SurveyManagedBean.java" afterPath="$PROJECT_DIR$/src/com/moyo/managedbean/SurveyManagedBean.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/FeedbackPage.xhtml" afterPath="$PROJECT_DIR$/web/FeedbackPage.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/Main.xhtml" afterPath="$PROJECT_DIR$/web/Main.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/ManagerIndex.xhtml" afterPath="$PROJECT_DIR$/web/ManagerIndex.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/ModifyPersonalInformation.xhtml" afterPath="$PROJECT_DIR$/web/ModifyPersonalInformation.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/ViewStatistics.xhtml" afterPath="$PROJECT_DIR$/web/ViewStatistics.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/faces-config.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/faces-config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/generateSurvey.xhtml" afterPath="$PROJECT_DIR$/web/generateSurvey.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/java1/css/userStyle.css" afterPath="$PROJECT_DIR$/web/java1/css/userStyle.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/java1/js/highcharts-zh_CN.js" afterPath="$PROJECT_DIR$/web/java1/js/highcharts-zh_CN.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/managerLogin.xhtml" afterPath="$PROJECT_DIR$/web/managerLogin.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/managerRegister.xhtml" afterPath="$PROJECT_DIR$/web/managerRegister.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/resources/Main.css" afterPath="$PROJECT_DIR$/web/resources/Main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/user/index.xhtml" afterPath="$PROJECT_DIR$/web/user/index.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/user/login.xhtml" afterPath="$PROJECT_DIR$/web/user/login.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/user/question.xhtml" afterPath="$PROJECT_DIR$/web/user/question.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/user/register.xhtml" afterPath="$PROJECT_DIR$/web/user/register.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/user/survey.xhtml" afterPath="$PROJECT_DIR$/web/user/survey.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/user/user.xhtml" afterPath="$PROJECT_DIR$/web/user/user.xhtml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/ManagerViewBatches.xhtml" afterPath="$PROJECT_DIR$/web/manager/ManagerViewBatches.xhtml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/java1/img/face-2.jpg" afterPath="$PROJECT_DIR$/web/java1/img/profile-manager.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -98,7 +21,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -211,6 +134,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -224,8 +149,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -484,11 +407,12 @@
       <workItem from="1545738048176" duration="300000" />
       <workItem from="1546418798474" duration="213000" />
       <workItem from="1546431128498" duration="1355000" />
+      <workItem from="1551099905558" duration="660000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="159684000" />
+    <option name="totallyTimeSpent" value="160344000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -515,15 +439,16 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39258114" sideWeight="0.4968254" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921174" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921174" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921174" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48377126" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921174" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48377126" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921174" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19381599" sideWeight="0.2580645" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18015873" sideWeight="0.7419355" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18253969" sideWeight="0.7419355" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -531,7 +456,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921174" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921174" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
     </layout>
@@ -627,13 +551,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/manager/FeedbackPage.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/resources/css1.css" />
     <entry file="file://$PROJECT_DIR$/web/resources/FeedbackPage.css">
       <provider selected="true" editor-type-id="text-editor">
@@ -910,7 +827,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
           <caret line="40" column="30" lean-forward="false" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -918,7 +834,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="24" column="58" lean-forward="false" selection-start-line="24" selection-start-column="58" selection-end-line="24" selection-end-column="58" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -933,7 +848,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1530">
           <caret line="114" column="41" lean-forward="false" selection-start-line="114" selection-start-column="41" selection-end-line="114" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -954,6 +868,14 @@
           <folding>
             <element signature="e#1599#1613#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/新建文本文档.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
