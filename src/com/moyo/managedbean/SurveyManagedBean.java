@@ -15,9 +15,12 @@ import com.moyo.listener.SingleSelectListener;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import javax.faces.context.ExternalContext;
+import javax.faces.context.FacesContext;
 import javax.faces.event.AbortProcessingException;
 import javax.faces.event.ActionEvent;
 import javax.faces.event.ActionListener;
+import javax.servlet.http.HttpSession;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -34,8 +37,11 @@ public class SurveyManagedBean implements ActionListener {
     private Long batchId;
     private String batchName;
 
-    /*  当前用户所有问卷列表 */
+    /*  当前用户所有活跃的问卷列表 */
     private List<SurveyEntity> surList;
+
+    /*  当前用户可以反馈的问卷列表(回答过)  */
+    private List<SurveyEntity> feedBackSurvey;
 
     /*  指定问卷所有问题列表    */
     private List<QuestionEntity> queList;
@@ -43,6 +49,33 @@ public class SurveyManagedBean implements ActionListener {
     /*  管理员指定批次下的所有问卷  */
     private List<SurveyEntity> surveyList = new ArrayList<>();
 
+    /*  获取当前用户可以反馈的问卷列表(Get方法)  */
+    public List<SurveyEntity> getFeedBackSurvey() {
+        AnswerDAO ansDAO = new AnswerDAO();
+        SurveyDAO surDAO = new SurveyDAO();
+        List<SurveyEntity> tempList = new ArrayList<SurveyEntity>();
+        SurveyEntity tempSurvey = new SurveyEntity();
+
+        FacesContext facesContext = FacesContext.getCurrentInstance();
+        ExternalContext extContext = facesContext.getExternalContext();
+        HttpSession session = (HttpSession) extContext.getSession(true);
+        long userId = (long) session.getAttribute("userId");
+
+        List<AnswerEntity> answerList = ansDAO.findByUserId(userId);
+        for (AnswerEntity answer : answerList) {
+            tempSurvey = surDAO.findById(answer.getNaireId());
+            if (tempSurvey != null) {
+                tempList.add(tempSurvey);
+            }
+        }
+        feedBackSurvey = tempList;
+
+        return feedBackSurvey;
+    }
+
+    public void setFeedBackSurvey(List<SurveyEntity> feedBackSurvey) {
+        this.feedBackSurvey = feedBackSurvey;
+    }
 
     public List<SurveyEntity> getSurveyList() {
         return surveyList;
@@ -224,18 +257,30 @@ public class SurveyManagedBean implements ActionListener {
     public void deleteSurvey(ActionEvent action) {
         SurveyDAO surveyDAO = new SurveyDAO();
         Long surveyId = (Long) action.getComponent().getAttributes().get("surveyId");
+
+        //找到问卷所属批次Id
+        SurveyEntity survey = surveyDAO.findById(surveyId);
+        long batchId = survey.getBatchId();
+
+        //删除问卷
         SurveyEntity surveyEntity = new SurveyEntity();
         surveyEntity.setNaireId(surveyId);
         surveyDAO.delete(surveyEntity);
+
+        //刷新管理者指定批次下所有问卷
+        if (surveyList.isEmpty() == false) {
+            surveyList.clear();
+        }
+        surveyList = allSurveyList(batchId);
     }
 
     @Override
     public void processAction(ActionEvent actionEvent) throws AbortProcessingException {
-        Long batchId= (Long) actionEvent.getComponent().getAttributes().get("batchId");
-        surveyList=allSurveyList(batchId);
-        if(surveyList.isEmpty() == false){
+        Long batchId = (Long) actionEvent.getComponent().getAttributes().get("batchId");
+
+        if (surveyList.isEmpty() == false) {
             surveyList.clear();
         }
-        surveyList=allSurveyList(batchId);
+        surveyList = allSurveyList(batchId);
     }
 }

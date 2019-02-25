@@ -6,7 +6,7 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:c="http://java.sun.com/jstl/core">
 <h:head>
-    <title>调查问卷</title>
+    <title>ANSWER SURVEY</title>
     <link type="text/css" href="../java1/css/surcss.css" rel="stylesheet"/>
     <link type="text/css" href="../java1/css/themify-icons.css" rel="stylesheet"/>
     <link type="text/css" href="../java1/css/text.css" rel="stylesheet"/>
@@ -42,13 +42,13 @@
                     <li>
                         <a href="user.xhtml?faces-redirect=true">
                             <i class="ti-user"></i>
-                            <p>User</p>
+                            <p>User Personnel</p>
                         </a>
                     </li>
                     <li>
                         <a href="question.xhtml?faces-redirect=true">
                             <i class="ti-comment-alt"></i>
-                            <p>Feedback</p>
+                            <p>Feedback Sending</p>
                         </a>
                     </li>
                 </ul>
@@ -77,7 +77,7 @@
                 </div>
             </nav>
             </h:form>
-            <h:form class="register">
+            <h:form class="register" style="height: auto;">
                 <i class="ti-pencil-alt" style="font-size: 40px"/>
                 <h1>#{surveyManagedBean.naireName}</h1>
                 <h3>Question Desciption: #{surveyManagedBean.description}</h3>
@@ -93,7 +93,7 @@
                     <c:if test="#{question.type == 2}">
                         <span class="ques tag"></span>
                         <h:outputText value="#{question.content}" class="ques"/>
-                        <h:selectOneRadio value="singleSelection" class="ans">
+                        <h:selectOneRadio value="singleSelection" class="ans" required="true">
                             <f:valueChangeListener type="com.moyo.listener.SingleSelectListener"/>
 
                             <c:forEach items="#{questionManagedBean.showAllOption(question.questionId)}" var="option">
@@ -108,7 +108,7 @@
                         <br/>
                         <span class="ques tag"></span>
                         <h:outputText value="#{question.content}" class="ques"/>
-                        <h:selectManyCheckbox value="#{multiplySelection}" class="ans">
+                        <h:selectManyCheckbox value="#{multiplySelection}" class="ans" required="true">
                             <f:valueChangeListener type="com.moyo.listener.MultiplySelectListener"/>
 
                             <c:forEach items="#{questionManagedBean.showAllOption(question.questionId)}" var="option">

@@ -3,161 +3,133 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <h:head>
-    <title>Manager Register</title>
-    <link href="./resources/managerRegister.css" rel="stylesheet" type="text/css"/>
+    <title>MANAGER REGISTER</title>
+    <link type="text/css" href="./java1/css/style.css" rel="stylesheet"/>
+    <script type="text/javascript">
+        function checkpswd() {
+            //获取密码，确认密码及确认密码后提示信息
+            var pswd = document.getElementById("registerForm:pass");
+            var repswd = document.getElementById("registerForm:cpass");
+            var repasswd = document.getElementById("registerForm:repasswordMsg");
+
+            //判断密码是否一致
+            if (pswd.value !== repswd.value) {
+                //设置提示信息为，密码不一致
+                repasswd.style.color = "red";
+                if (window.navigator.userAgent.toLowerCase().indexOf('firefox' != -1)) {
+                    repasswd.textContent = "Wrong Password";
+                } else {
+                    repasswd.innerText = "Wrong Password";
+                }
+            } else {
+                repasswd.innerText = null;
+            }
+        }
+    </script>
 </h:head>
-<h:body>
-    <h:form>
-    <div id="div2"/>
-    <div id="div3">
-        <center>
-            <table>
-                    <tr>
-                        <td>
-                        </td>
-                        <td><h1>Manager Register</h1><br/>
-                                &nbsp;
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Manager User Name:
-                        <br/>
-                                &nbsp;
-                        </td>
-                        <f:ajax event="keyup" render="nameEorr">
-                            <td><h:inputText id="magnameR" value="#{managerDetailManagedBean.username}"
-                                             validator="#{managerDetailManagedBean.validateUserName}" styleClass="in"
-                                             required="true" requiredMessage="Can not be empty!"/><br/>
-                                &nbsp;
-                                <h:message id="nameEorr" for="magnameR" style="color: red"/>
-                            </td>
-                        </f:ajax>
-                    </tr>
-                    <TR>
-                        <TD>Password:
-                        <br/>
-                                &nbsp;
-                        </TD>
-                        <f:ajax event="keyup">
-                            <TD><h:inputSecret id="magpwdR" value="#{managerDetailManagedBean.password}"
-                                               validator="#{managerDetailManagedBean.validatePassword}" styleClass="in"
-                                               required="true" requiredMessage="Can not be empty!"/>
-                                <br/>
-                                &nbsp;
-                                <h:message for="magpwdR" style="color: red"/>
-                            </TD>
-                        </f:ajax>
-                    </TR>
-                    <TR>
-                        <TD>Verify Password:
-                        <br/>
-                                &nbsp;
-                        </TD>
-                        <f:ajax event="keyup" render="cPasswordEorr">
-                            <TD><h:inputSecret id="magpwdRR" value="#{managerDetailManagedBean.cpassword}"
-                                               validator="#{managerDetailManagedBean.validatePassword}" styleClass="in"
-                                               required="true" requiredMessage="Can not be empty!"/><br/>
-                                &nbsp;
-                            <h:message for="magpwdRR" id="cPasswordEorr" style="color: red"/>
-                            </TD>
-                        </f:ajax>
-                    </TR>
-                    <TR>
-                        <TD>Name:
-                        <br/>
-                                &nbsp;
-                        </TD>
-                        <TD><h:inputText id="magname" styleClass="in" value="#{managerDetailManagedBean.name}"
-                                         required="true"
-                                         requiredMessage="Can not be empty!"/>
-                             <br/>
-                                &nbsp;
-                                <h:message for="magname" style="color: red"/>
-                        </TD>
-                    </TR>
-                    <TR>
-                        <TD>Gender:
-                        <br/>
-                                &nbsp;
-                        </TD>
-                        <TD><h:selectOneRadio id="maggender" title="Gender Select" layout="lineDirection"
-                                              value="#{managerDetailManagedBean.wGender}">
-                            <f:selectItem id="sil1" itemLabel="male" itemValue="male"/>
-                            <f:selectItem id="sil2" itemLabel="female" itemValue="female"/>
-                        </h:selectOneRadio>
-                                <br/>
-                                &nbsp;
-                        </TD>
-                    </TR>
-                    <TR>
-                        <TD>Birthday:
-                            <br/>
-                                &nbsp;
-                        </TD>
-                        <TD><h:inputText id="magbirthday" value="#{managerDetailManagedBean.birthYear}" styleClass="in"
-                                         converterMessage="please provide date of birth.For Example:1999-01-01" required="true" requiredMessage="Can not be empty!">
-                            <f:convertDateTime pattern="yyyy-M-d"/>
-                        </h:inputText>
-                             <br/>
-                                &nbsp;
-                                <h:message for="magbirthday" style="color: red"/>
-                        </TD>
-                    </TR>
-                    <TR>
-                        <TD>Nickname:
-                        <br/>
-                                &nbsp;
-                        </TD>
-                        <TD><h:inputText id="magnickname" styleClass="in" value="#{managerDetailManagedBean.nickname}"
-                                         required="true" requiredMessage="Can not be empty!"/>
-                             <br/>
-                                &nbsp;
-                                <h:message for="magnickname" style="color: red"/>
-                        </TD>
-                    </TR>
-                    <TR>
-                        <TD>Phone Number:
-                            <br/>
-                                &nbsp;</TD>
-                        <TD><h:inputText id="magpn" styleClass="in" maxlength="11"
-                                         value="#{managerDetailManagedBean.mobile}"
-                                         required="true" requiredMessage="Can not be empty!"/>
-                            <br/>
-                            &nbsp;
-                            <h:message for="magpn" style="color: red"/>
-                        </TD>
-                    </TR>
-                    <TR>
-                        <TD>Email:
-                        <br/>
-                                &nbsp;
-                        </TD>
-                        <f:ajax event="keyup" render="emailEorr">
-                            <TD><h:inputText id="magemail" value="#{managerDetailManagedBean.email}" styleClass="in"
-                                             validator="#{managerDetailManagedBean.validateEmail}"
-                                             required="true"
-                                             requiredMessage="Can not be empty!"/>
-                                <br/>
-                                &nbsp;
-                                <h:message for="magemail" id="emailEorr" style="color: red"/></TD>
-                        </f:ajax>
-                    </TR>
-                    <TR>
-                        <td>
-                            <a href="managerLogin.xhtml">Back to Login</a>
-                        </td>
-                        <td>
-                            <h:commandButton value="Register" styleClass="but"
-                                             action="#{managerDetailManagedBean.managerRegister}"/>
-                        </td>
-                    </TR>
+<h:body style="background-color: #333333;">
 
-                </table>
-        </center>
-                </div>
+    <div class="register-container">
+        <h1>Manager Register</h1>
 
-    </h:form>
+        <div class="connect">
+            <p>Welcome</p>
+        </div>
+
+        <h:form id="registerForm">
+            <div>
+                <h:inputText id="mid" class="inputText" value="#{managerDetailManagedBean.username}"
+                             pt:placeholder="Manager Username" required="true"
+                             requiredMessage="Enter ID" validatorMessage="ID Should Be 3-20 Charaters">
+                    <f:validateLength for="mid" maximum="20" minimum="3"/></h:inputText>
+                <h:message errorClass="error" for="mid"/>
+            </div>
+            <div>
+                <h:inputSecret id="pass" class="inputText" value="#{managerDetailManagedBean.password}"
+                               pt:placeholder="Password" required="true"
+                               requiredMessage="Enter Password" validatorMessage="Password Should Be 3-20 Charaters">
+                    <f:validateLength for="pass" maximum="20" minimum="3"/>
+                </h:inputSecret>
+                <h:message errorClass="error" for="pass"/>
+            </div>
+            <div>
+                <h:inputSecret id="cpass" class="inputText" pt:placeholder="Confrim Password" required="true"
+                               requiredMessage="Please Confrim Password" onblur="checkpswd();"
+                               validatorMessage="Password Should Be 3-20 Charaters">
+                    <f:validateLength maximum="20" minimum="3" for="cpass"/>
+                </h:inputSecret>
+                <h:message id="repasswordMsg" for="cpass" errorClass="error"/>
+            </div>
+            <div>
+                <h:inputText id="rname" class="inputText" value="#{managerDetailManagedBean.name}"
+                             pt:placeholder="Manager Real Name" required="true"
+                             requiredMessage="Enter Name" validatorMessage="Name Cannot be More than 20 Characters">
+                    <f:validateLength maximum="20" for="rname"/>
+                    <f:validateRegex pattern="^([\u4e00-\u9fa5]+|([a-zA-Z]+\s?)+)$" for="rname"/>
+                </h:inputText>
+                <h:message for="rname" errorClass="error"/>
+            </div>
+
+            <!--<div>-->
+            <!--<h:selectOneMenu id="gender" class="inputText" value="#{userDetailManagedBean.gender}"-->
+            <!--pt:placeholder="Gender" required="true"-->
+            <!--requiredMessage="Enter Gender" validatorMessage="Choose Your Gender">-->
+            <!--<f:selectItem itemValue="0" itemLabel="Man" class="inputText"/>-->
+            <!--<f:selectItem itemValue="1" itemLabel="Woman" class="inputText"/>-->
+            <!--</h:selectOneMenu>-->
+            <!--<h:message for="gender" errorClass="error"/>-->
+            <!--</div>-->
+
+            <div>
+                <h:inputText id="dob" class="inputText" value="#{managerDetailManagedBean.birthYear}" pt:type="date"
+                             pt:placeholder="Brithdate" required="true" requiredMessage="Enter BrithDate"
+                             validatorMessage="Invalid Date of Brith Entered">
+                    <f:convertDateTime pattern="yyyy-M-d"/>
+                    <f:validator for="dob" validatorId="dobValidator"/>
+                </h:inputText>
+                <h:message for="dob" errorClass="error"/>
+            </div>
+            <div>
+                <h:inputText id="nname" class="inputText" value="#{managerDetailManagedBean.nickname}"
+                             pt:placeholder="Nick Name" required="true"
+                             requiredMessage="Enter Name" validatorMessage="Name Cannot be More than 20 Characters">
+                    <f:validateLength maximum="20" for="nname"/>
+                </h:inputText>
+                <h:message for="nname" errorClass="error"/>
+            </div>
+            <div>
+                <h:inputText id="mob" class="inputText" value="#{managerDetailManagedBean.mobile}" required="true"
+                             requiredMessage="Enter Mobile Number" pt:type="number"
+                             validatorMessage="Invalid Phone Number Entered" pt:placeholder="Phone Number">
+                    <f:validateLength minimum="11" maximum="11"/>
+                    <!--<f:validateRegex pattern="1[3578][0-9]{9}" for="mob"/>-->
+                    <f:validateLongRange minimum="13000000000" maximum="18999999999" for="mob"/>
+                </h:inputText>
+                <h:message for="mob" errorClass="error"/>
+            </div>
+            <div>
+                <h:inputText id="emile" class="inputText" value="#{managerDetailManagedBean.email}"
+                             pt:placeholder="Email"
+                             required="true"
+                             requiredMessage="Enter Email" validatorMessage="Invalid Email Entered">
+                    <f:validateLength maximum="45" for="emile"/>
+                    <f:validateRegex pattern="^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$" for="emile"/>
+                </h:inputText>
+                <h:message for="emile" errorClass="error"/>
+            </div>
+
+            <h:commandButton class="cbutton" value="Create Account"
+                             action="#{managerDetailManagedBean.managerRegister}"></h:commandButton>
+        </h:form>
+        <a href="managerLogin.xhtml">
+            <button type="button" class="register-tis">Allready have an account?</button>
+        </a><br/><br/><br/>
+
+        <script src="./java1/js/jquery.min.js"></script>
+    </div>
 </h:body>
 </html>
+

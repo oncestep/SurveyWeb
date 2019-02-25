@@ -3,41 +3,57 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <h:head>
-    <title>Manager Login</title>
-    <link href="resources/LoginandRegistercss.css" rel="stylesheet" type="text/css"/>
+    <title>MANAGER LOGIN</title>
+    <link type="text/css" href="./java1/css/style.css" rel="stylesheet"/>
 </h:head>
-<h:body>
-    <h:form>
-        <div id="div0">
+<h:body style="background-color: #333333">
+
+    <div class="login-container">
+        <h1>Manager Login</h1>
+
+        <div class="connect">
+            <p>Login to Manager Your Survey.</p>
         </div>
-        <f:ajax>
-            <div id="div1">
-                <center>
-                    <h1>Manager Login</h1>
-                    <p>
-                        <h:inputText id="magnameL" styleClass="in" value="#{managerDetailManagedBean.username}"
-                                     required="true" requiredMessage="You must input your username!"/>
-                    </p>
-                    <p>
-                        <h:inputSecret id="magpwdL" styleClass="in" value="#{managerDetailManagedBean.password}"
-                                       required="true" requiredMessage="You must input your password!"/>
-                    </p>
-                    <p>
-                        <h:message for="div1" id="loginError" style="color: red"/>
-                    </p>
-                    <p>
-                        <h:commandButton value="Login" styleClass="Loginbut"
-                                         action="#{managerDetailManagedBean.managerLogin}"/>
-                    </p>
-                    <p><h:outputLabel value="do not have a manager accont?"/>
-                        <h:commandLink value="Register now!" action="managerRegister?faces-redirect=true"/>
-                    </p>
-                </center>
+
+        <h:form id="loginForm">
+            <div>
+                <h:inputText id="mid" class="inputText" value="#{managerDetailManagedBean.username}"
+                             pt:placeholder="Enter Your Username"
+                             required="true" requiredMessage="Enter Manager Username"
+                             validatorMessage="ID Should Be 3-20 Charaters">
+                    <f:validateLength for="mid" maximum="20" minimum="3"/>
+                </h:inputText>
+                <h:message for="mid" errorClass="error"/>
             </div>
-        </f:ajax>
-    </h:form>
+            <div>
+                <h:inputSecret id="pass" class="inputText" value="#{managerDetailManagedBean.password}"
+                               pt:placeholder="Enter Your Password"
+                               required="true" requiredMessage="Enter Your Password"
+                               validatorMessage="Password Should Be 3-20 Charaters">
+                    <f:validateLength for="pass" maximum="20" minimum="3"/>
+                </h:inputSecret>
+                <h:message for="pass" errorClass="error"/>
+            </div>
+            <h:commandButton class="cbutton" value="Login"
+                             action="#{managerDetailManagedBean.managerLogin}">
+            </h:commandButton>
+        </h:form>
+
+        <a href="managerRegister.xhtml">
+            <button type="button" class="register-tis">Don't have an account?</button>
+        </a><br/>
+
+        <a href="Main.xhtml">
+            <button type="button" class="register-tis">Back to Index</button>
+        </a>
+
+    </div>
+
+    <script src="./java1/js/jquery.min.js"></script>
+
 </h:body>
 </html>
 

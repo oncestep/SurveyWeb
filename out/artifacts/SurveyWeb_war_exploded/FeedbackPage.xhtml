@@ -1,63 +1,131 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:c="http://java.sun.com/jstl/core"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
-<h:head>
-    <link href="./resources/FeedbackPage.css" rel="stylesheet" type="text/css"/>
-</h:head>
-<h:body styleClass="body">
-    <h:form>
-        <c:forEach items="#{feedbackManagedBean.feedbackItems}" var="feedback">
-            <div class="title-div">
-                <h1 class="title">Feedback of <h:outputLabel value="#{feedback.naireName}"/></h1>
-            </div>
-            <div class="mainbody">
-                <table>
-                    <tr>
-                        <td>
-                            <div>
-                                <span class="username">
-                                    <h:graphicImage styleClass="img"/>
-                                    <h:outputLabel value="UserName: "/>
-                                    <h:outputLabel value="#{feedback.userName}"/>
-                                </span>
-                            </div>
-                        </td>
-                    </tr>
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+<head>
+    <title>FEEDBACK CHECK</title>
 
-                    <tr>
-                        <td>
-                            <div>
-                                <span class="questionnairename">
-                                    <h:graphicImage styleClass="img"/>
-                                    <h:outputLabel
-                                            value="QuestionnairewName:#{feedback.naireName}"/>
-                                </span>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div>
-                                <span class="feedback">
-                                    <h:graphicImage styleClass="img"/>
-                                    <h:outputLabel value="Feedback Content:"/><br/>
-                                    &nbsp;<h:outputText
-                                            value="#{feedback.content}"/>
-                                </span>
-                            </div>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-        </c:forEach>
-        <div class="button-div">
-            <h:outputLink styleClass="button" value="ManagerIndex.xhtml">Back</h:outputLink>
+    <link type="text/css" href="./java1/css/text.css" rel="stylesheet"/>
+
+    <link type="text/css" href="./java1/css/paper-dashboard.css" rel="stylesheet"/>
+
+    <link type="text/css" href="./java1/css/themify-icons.css" rel="stylesheet"/>
+
+    <link type="text/css" href="./java1/css/userStyle.css" rel="stylesheet"/>
+
+    <link type="text/css" href="./java1/css/surcss.css" rel="stylesheet"/>
+
+</head>
+
+<h:body>
+    <div class="wrapper">
+        <div class="sidebar" data-background-color="white" data-active-color="danger">
+            <h:form>
+                <div class="sidebar-wrapper">
+                    <div class="logo">
+                        <h:commandLink action="#" value="Survey" class="simple-text"/>
+                    </div>
+                    <ul class="nav">
+                        <li>
+                            <a href="ManagerIndex.xhtml?faces-redirect=true">
+                                <i class="ti-layout-grid2"></i>
+                                <p>Batch | Survey</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="generateSurvey.xhtml?faces-redirect=true">
+                                <i class="ti-stack-overflow"></i>
+                                <p>New Survey</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ModifyPersonalInformation.xhtml?faces-redirect=true">
+                                <i class="ti-user"></i>
+                                <p>Manager</p>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="FeedbackPage.xhtml?faces-redirect=true">
+                                <i class="ti-comment-alt"></i>
+                                <p>Feedback Check</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </h:form>
         </div>
-    </h:form>
+        <div class="main-panel">
+            <h:form>
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                        </div>
+                        <div class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li>
+                                    <a href="ModifyPersonalInformation.xhtml" class="dropdown-toggle"
+                                       data-toggle="dropdown">
+                                        <i class="ti-user"></i>
+                                        <p>#{managerDetailManagedBean.nickname}</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <h:commandLink action="#{managerDetailManagedBean.managerLogout}">
+                                        <i class="ti-settings"></i>
+                                        <p>Log Out</p>
+                                    </h:commandLink>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </h:form>
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+
+
+                        <div class="card" style="overflow: auto;">
+                            <div class="header">
+                                <h4 class="title">ALL FEEDBACK TO SURVEY</h4>
+                            </div>
+                            <div class="content">
+                                <ul class="list-unstyled team-members">
+
+
+                                    <c:forEach items="#{feedbackManagedBean.feedbackItems}" var="feedback" varStatus="status">
+                                        <li>
+                                            <div class="row">
+                                                <div class="col-xs-3" style="width: 10%;">
+                                                    <div class="avatar">
+                                                        <img src="./java1/img/users/image#{status.count}.jpg" alt="Circle Image"
+                                                             class="img-circle img-no-padding img-responsive"/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-6" style="width: 85%;overflow: auto;">
+                                                    FEEDBACK CONTENT :#{feedback.content}
+                                                    <br/>
+                                                    <span class="text-success"><small>SENDED BY :#{feedback.userName}</small></span>
+                                                    <br/>
+                                                    <span class="text-danger"><small>FOCUS SURVEY :#{feedback.naireName}</small></span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </c:forEach>
+
+                                </ul>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./java1/js/jquery-3.2.1.min.js"/>
 </h:body>
 </html>
+

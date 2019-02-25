@@ -1,124 +1,241 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
-<!-- DW6 -->
-<h:head>
-    <!-- Copyright 2005 Macromedia, Inc. All rights reserved. -->
-    <meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
-    <title>Untitled Document</title>
-    <!--<link rel="stylesheet" href="resources/css1.css" type="text/css"/>-->
-    <style type="text/css">
-        .buttons {
-            background-color: rgba(255, 255, 255, 0.78);
-            font-family: "Times New Roman";
-            font-size: larger;
-            box-shadow: #fffefd;
-            width: auto;
-            height: 40px;
-            border-color: #fffefd;
-            border-radius: 20px;
-            margin-left: 190px;
-        }
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+<head>
+    <title>MANAGER INDEX</title>
 
-        #top-main-div {
-            width: 100%;
-            height: 350px;
-            margin-top: 0px;
-            opacity: 0.8;
-            padding-left: 0px;
-            background-image: url("./resources/image/timg.jpg");
-            background-size: cover;
-        }
+    <link type="text/css" href="./java1/css/text.css" rel="stylesheet"/>
 
-        #content-div1-inner1 {
-            margin-top: 20px;
-            background-image: url("./resources/image/timg1.jpg");
-            background-size: cover;
-            width: 50%;
-            opacity: 0.8;
-            height: 300px;
-            float: left;
-        }
+    <link type="text/css" href="./java1/css/paper-dashboard.css" rel="stylesheet"/>
 
-        #content-div1-inner2 {
-            color: rgba(255,255,255,0.78);
-            background-color: rgba(255, 255, 255, 0.78);
-            width: 50%;
-            height: 300px;
-            display: inline;
-        }
-    </style>
-</h:head>
-<!-- The structure of this file is exactly the same as 2col_leftNav.html;
-     the only difference between the two is the stylesheet they use -->
-<h:body style="background-color: #222222">
-    <h:form>
-        <div id="top-main-div">
-            <center>
-                <h1 style="padding-top: 90px">Welcome To Manager Personal HomePage!</h1>
-                <p>You can manage your batches, create new survey and modify your personal information</p>
-            </center>
+    <link type="text/css" href="./java1/css/themify-icons.css" rel="stylesheet"/>
+
+    <link type="text/css" href="./java1/css/userStyle.css" rel="stylesheet"/>
+
+    <link type="text/css" href="./java1/css/surcss.css" rel="stylesheet"/>
+
+</head>
+<h:body>
+    <div class="wrapper">
+        <div class="sidebar" data-background-color="white" data-active-color="danger">
+            <h:form>
+                <div class="sidebar-wrapper">
+                    <div class="logo">
+                        <h:commandLink action="#" value="Survey" class="simple-text"/>
+                    </div>
+                    <ul class="nav">
+                        <li class="active">
+                            <a href="ManagerIndex.xhtml?faces-redirect=true">
+                                <i class="ti-layout-grid2"></i>
+                                <p>Batch | Survey</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="generateSurvey.xhtml?faces-redirect=true">
+                                <i class="ti-stack-overflow"></i>
+                                <p>New Survey</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ModifyPersonalInformation.xhtml?faces-redirect=true">
+                                <i class="ti-user"></i>
+                                <p>Manager</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="FeedbackPage.xhtml?faces-redirect=true">
+                                <i class="ti-comment-alt"></i>
+                                <p>Feedback Check</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </h:form>
         </div>
-        <div id="content-div1">
-            <div id="content-div1-inner1">
-            </div>
-            <div id="content-div1-inner2">
-                <center>
-                    <h3 style="padding-top: 100px">Here you can create a new Survey.</h3>
-                    <h:commandButton style="margin-left: 0px" name="goButton3" type="submit" value="Create a new Survey " styleClass="buttons"
-                                     action="generateSurvey?faces-redirect=true"/>
-                </center>
+        <div class="main-panel">
+
+            <h:form>
+                <div class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                        </div>
+                        <div class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li>
+                                    <a href="ModifyPersonalInformation.xhtml" class="dropdown-toggle">
+                                        <i class="ti-user"></i>
+
+                                        #{managerDetailManagedBean.nickname}
+
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="managerLogin.xhtml">
+                                        <i class="ti-settings"></i>
+                                        Log Out
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </h:form>
+
+            <div class="content">
+                <div class="container-fluid">
+
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="alert alert-warning">
+                                    <h:form>
+                                        <span class="ti-pie-chart"></span>
+                                        <span><b> ADD BATCH - </b> "You can create batches if you want"</span>
+
+                                        <br/>
+                                        <div class="row">
+                                            <div class="col-md-6" style="width:25%;display: inline;float:left;">
+                                                <div class="form-group">
+                                                    <label>BATCH NAME:</label><br/>
+                                                    <h:inputText class="form-control border-input"
+                                                                 pt:placeholder="Enter Batch Name" required="true"
+                                                                 value="#{batchManagedBean.batchName}">
+                                                        <f:validateLength maximum="45"/>
+                                                    </h:inputText>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12" style="width:55%;display: inline;float:left;">
+                                                <div class="form-group">
+                                                    <label>BATCH DESCRIPTION:</label><br/>
+                                                    <h:inputText class="form-control border-input"
+                                                                 pt:placeholder="Enter Batch Descriptioin"
+                                                                 style="width:100%;" required="true"
+                                                                 value="#{batchManagedBean.description}"/>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6"
+                                                 style="width:15%;display: inline;float:right;margin-top:23px;">
+                                                <div class="form-group">
+                                                    <h:commandButton styleClass="btn btn-info btn-fill btn-wd"
+                                                                     value="ADD BATCH"
+                                                                     style="display: inline;float:right;"
+                                                                     action="#{batchManagedBean.addBatch}"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </h:form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="card" style="overflow: auto">
+                                <div class="header">
+                                    <h4 class="title">Batch Manage</h4>
+                                    <p class="category">Here are all the batches created by #{managerDetailManagedBean.nickname}</p>
+                                </div>
+                                <div class="content table-responsive table-full-width">
+                                    <h:form>
+                                        <h:dataTable value="#{batchManagedBean.batchList}" var="batch"
+                                                     styleClass="table table-striped" style="width:100%;">
+                                            <h:column>
+                                                <f:facet name="header"><b>Batch Name</b></f:facet>
+                                                <h:outputText value="#{batch.batchName}"/>
+                                            </h:column>
+                                            <h:column>
+                                                <f:facet name="header"><b>Description</b></f:facet>
+                                                <h:outputText value="#{batch.description}"/>
+                                            </h:column>
+                                            <h:column>
+                                                <f:facet name="header"><b>Create Time</b></f:facet>
+                                                <h:outputText value="#{batch.createTime}"/>
+                                            </h:column>
+                                            <h:column>
+                                                <f:facet name="header"><b>Operation Survey</b></f:facet>
+                                                <f:ajax event="click" render="batchSurvey">
+                                                    <h:commandButton value="View Survey" action="ManagerViewBatches"
+                                                                     styleClass="btn btn-info btn-fill btn-wd"
+                                                                     actionListener="#{surveyManagedBean.processAction}">
+                                                        <f:attribute name="batchId" value="#{batch.batchId}"/>
+                                                    </h:commandButton>
+                                                </f:ajax>
+                                            </h:column>
+                                            <h:column>
+                                                <f:facet name="header"><b>Operation Batch</b></f:facet>
+                                                <h:commandButton value="Delete Batch" action="ManagerViewBatches"
+                                                                 styleClass="btn btn-info btn-fill btn-wd"
+                                                                 actionListener="#{batchManagedBean.processAction}">
+                                                    <f:attribute name="batchId" value="#{batch.batchId}"/>
+                                                </h:commandButton>
+                                            </h:column>
+                                        </h:dataTable>
+                                    </h:form>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="card card-plain"
+                                 style="background-color: transparent;box-shadow: none;overflow: auto;">
+                                <div class="header">
+                                    <h4 class="title">Survey Belong to Specified Batch</h4>
+                                    <p class="category">All the surveys in the batch</p>
+                                </div>
+                                <div class="content table-responsive table-full-width">
+
+                                    <h:form>
+                                        <h:dataTable id="batchSurvey" value="#{surveyManagedBean.surveyList}"
+                                                     var="survey" styleClass="table table-hover" style="width:100%;">
+                                            <h:column>
+                                                <f:facet name="header">Survey Name</f:facet>
+                                                <h:outputText value="#{survey.naireName}"/>
+                                            </h:column>
+                                            <h:column>
+                                                <f:facet name="header">Description</f:facet>
+                                                <h:outputText value="#{survey.description}"/>
+                                            </h:column>
+                                            <h:column>
+                                                <f:facet name="header">Create Time</f:facet>
+                                                <h:outputText value="#{survey.createTime}"/>
+                                            </h:column>
+                                            <h:column>
+                                                <f:facet name="header">View</f:facet>
+                                                <h:commandButton value="View Statistics" action="ViewStatistics"
+                                                                 styleClass="btn btn-info btn-fill btn-wd"
+                                                                 actionListener="#{questionManagedBean.processAction}">
+                                                    <f:attribute value="#{survey.naireId}" name="naireId"/>
+                                                </h:commandButton><br/>
+                                            </h:column>
+                                            <h:column>
+                                                <f:facet name="header">Remove</f:facet>
+                                                <f:ajax event="keydown" render="batchSurvey">
+                                                    <h:commandButton value="Delete" action="ManagerViewBatches"
+                                                                     styleClass="btn btn-info btn-fill btn-wd"
+                                                                     actionListener="#{surveyManagedBean.deleteSurvey}">
+                                                        <f:attribute value="#{survey.naireId}" name="surveyId"/>
+                                                    </h:commandButton>
+                                                </f:ajax>
+                                            </h:column>
+                                        </h:dataTable>
+                                    </h:form>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </div>
-        <div style="width: 100%">
-
-            <div style="width: auto;position: absolute">
-
-                <h:commandButton name="goButton3" type="submit" value="Check my questionairs" styleClass="buttons"
-                                 action="ManagerViewBatches?faces-redirect=true"/>
-                <h:commandButton name="goButton" value="Feedback" styleClass="buttons"
-                                 action="FeedbackPage?faces-redirect=true"/>
-                <h:commandButton name="goButton" value="Personal information" styleClass="buttons"
-                                 action="#{managerDetailManagedBean.showPersonalDetail}"/>
-                <h:commandButton name="goButton2" value="Log out" styleClass="buttons"
-                                 action="#{managerDetailManagedBean.managerLogout}"/>
-            </div>
-
-        </div>
-        <!--<div id="masthead">-->
-        <!--<h1 id="siteName">&nbsp;</h1>-->
-        <!--</div>-->
-        <!--&lt;!&ndash; end masthead &ndash;&gt;-->
-        <!--<div id="content">-->
-        <!--<div class="feature">-->
-        <!--<h3 align="center" class="STYLE6">Welcome Back</h3>-->
-        <!--<h3 align="center" class="STYLE6" id="username">Manager</h3>-->
-        <!--<p id="button4">-->
-
-        <!--</p>-->
-        <!--</div>-->
-        <!--</div>-->
-        <!--&lt;!&ndash;end content &ndash;&gt;-->
-        <!--<div id="navBar">-->
-        <!--<div id="search">-->
-        <!--<h:form>-->
-        <!--<p align="center">-->
-
-        <!--</p>-->
-        <!--<p align="center">-->
-
-        <!--</p>-->
-        <!--<p align="center">-->
-
-        <!--</p>-->
-        <!--</h:form>-->
-        <!--</div>-->
-        <!--</div>-->
-        <!--<br/>-->
-    </h:form>
+    </div>
+    <script type="text/javascript" src="./java1/js/jquery-3.2.1.min.js"/>
 </h:body>
 </html>
+

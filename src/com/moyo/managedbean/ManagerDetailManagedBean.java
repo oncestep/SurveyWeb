@@ -187,6 +187,15 @@ public class ManagerDetailManagedBean {
                 session.setAttribute("managerId", managerDetailEntity.getManagerId());
                 session.setAttribute("type", 1);
 
+                /*  通过username查出管理员信息存储到managerDetailManagedBean中  */
+                managerId = managerDetailEntity.getManagerId();
+                username = managerDetailEntity.getUserName();
+                name = managerDetailEntity.getName();
+                birthYear = managerDetailEntity.getBirthYear();
+                nickname = managerDetailEntity.getNickName();
+                mobile = managerDetailEntity.getMobile();
+                email = managerDetailEntity.getEmail();
+
                 /*  手动初始化surveyManagedBean  */
                 SurveyManagedBean surveyManagedBean = new SurveyManagedBean();
                 session.setAttribute("surveyManagedBean", surveyManagedBean);
@@ -210,7 +219,7 @@ public class ManagerDetailManagedBean {
         HttpSession session = (HttpSession) extContext.getSession(false);
 
         session.invalidate();
-        return "managerLogin";
+        return "managerLogin?face-redirect=true";
     }
 
     public String showPersonalDetail() {
@@ -255,7 +264,7 @@ public class ManagerDetailManagedBean {
         } catch (Exception e) {
             throw e;
         }
-        return "managerLogin";
+        return "managerLogin?face-redirect=true";
     }
 
     public String managerUpdate() {
@@ -271,17 +280,19 @@ public class ManagerDetailManagedBean {
         } catch (Exception e) {
             throw e;
         }
-        return "ManagerIndex";
+        return "ManagerIndex?face-redirect=true";
     }
-    public void validateEmail(FacesContext fc,UIComponent c,Object value){
+
+    public void validateEmail(FacesContext fc, UIComponent c, Object value) {
         String check = "^([a-z0-9A-Z]+[-|_|\\.]?)+[a-z0-9A-Z]@([a-z0-9A-Z]+(-[a-z0-9A-Z]+)?\\.)+[a-zA-Z]{2,}$";
         Pattern regex = Pattern.compile(check);
         Matcher matcher = regex.matcher((CharSequence) value);
         boolean flag = matcher.matches();
 //        String reg = "[a-zA-Z_]{1,}[0-9]{0,}@(([a-zA-z0-9]-*){1,}\\.){1,3}[a-zA-z\\-]{1,}";
 
-        if(!flag)
+        if (!flag) {
             throw new ValidatorException(new FacesMessage("Must enter the correct email format!"));
+        }
     }
 
 }

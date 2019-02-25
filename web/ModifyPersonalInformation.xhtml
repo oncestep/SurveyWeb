@@ -1,67 +1,217 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+<head>
+    <title>MANAGER PERSONNAL</title>
+
+    <link type="text/css" href="./java1/css/text.css" rel="stylesheet"/>
+
+    <link type="text/css" href="./java1/css/paper-dashboard.css" rel="stylesheet"/>
+
+    <link type="text/css" href="./java1/css/themify-icons.css" rel="stylesheet"/>
+
+    <link type="text/css" href="./java1/css/userStyle.css" rel="stylesheet"/>
+
+    <link type="text/css" href="./java1/css/surcss.css" rel="stylesheet"/>
+
+</head>
+
 <h:body>
-    <h:form>
-        <table>
-            <tr>
-                <td>Personal Details</td>
-            </tr>
-            <TR>
-                <TD>Password</TD>
-                <f:ajax event="keyup">
-                    <TD><h:inputSecret id="magpwdR" value="#{managerDetailManagedBean.password}"
-                                       validator="#{managerDetailManagedBean.validatePassword}" styleClass="in"
-                                       required="true" requiredMessage="Can not be empty!"/></TD>
-                </f:ajax>
-            </TR>
-            <TR>
-                <TD>Verify Password</TD>
-                <f:ajax event="keyup" render="cPasswordEorr">
-                    <TD><h:inputSecret id="magpwdRR" value="#{managerDetailManagedBean.cpassword}"
-                                       validator="#{managerDetailManagedBean.validatePassword}" styleClass="in"
-                                       required="true" requiredMessage="Can not be empty!"/></TD>
-                    <h:message for="magpwdRR" id="cPasswordEorr" style="color: red"/>
-                </f:ajax>
-            </TR>
-            <TR>
-                <TD>Name</TD>
-                <TD><h:inputText id="magname" styleClass="in" value="#{managerDetailManagedBean.name}"
-                                 required="true"
-                                 requiredMessage="Can not be empty!"/>
-                </TD>
-            </TR>
-            <TR>
-                <TD>Nickname</TD>
-                <TD><h:inputText id="magnickname" styleClass="in" value="#{managerDetailManagedBean.nickname}"
-                                 required="true"/></TD>
-            </TR>
-            <TR>
-                <TD>Phone Number</TD>
-                <TD><h:inputText id="magpn" styleClass="in" maxlength="11"
-                                 value="#{managerDetailManagedBean.mobile}"/>
-                </TD>
-            </TR>
-            <TR>
-                <TD>Email</TD>
-                <f:ajax event="keyup" render="emailEorr">
-                    <TD><h:inputText id="magemail" value="#{managerDetailManagedBean.email}" styleClass="in"
-                                     required="true"
-                                     requiredMessage="Can not be empty!"/>
-                        <h:message for="magemail" id="emailEorr" style="color: red"/></TD>
-                </f:ajax>
-            </TR>
-            <TR>
-                <td>
-                    <h:commandButton value="Register" styleClass="but"
-                                     action="#{managerDetailManagedBean.managerUpdate}"/>
-                </td>
-            </TR>
-        </table>
-    </h:form>
+    <div class="wrapper">
+        <div class="sidebar" data-background-color="white" data-active-color="danger">
+            <h:form>
+                <div class="sidebar-wrapper">
+                    <div class="logo">
+                        <h:commandLink action="#" value="Survey" class="simple-text"/>
+                    </div>
+                    <ul class="nav">
+                        <li>
+                            <a href="ManagerIndex.xhtml?faces-redirect=true">
+                                <i class="ti-layout-grid2"></i>
+                                <p>Batch | Survey</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="generateSurvey.xhtml?faces-redirect=true">
+                                <i class="ti-stack-overflow"></i>
+                                <p>New Survey</p>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="ModifyPersonalInformation.xhtml?faces-redirect=true">
+                                <i class="ti-user"></i>
+                                <p>Manager</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="FeedbackPage.xhtml?faces-redirect=true">
+                                <i class="ti-comment-alt"></i>
+                                <p>Feedback Check</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </h:form>
+        </div>
+        <div class="main-panel">
+            <h:form>
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                        </div>
+                        <div class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li>
+                                    <a href="ModifyPersonalInformation.xhtml" class="dropdown-toggle"
+                                       data-toggle="dropdown">
+                                        <i class="ti-user"></i>
+                                        <p>#{managerDetailManagedBean.nickname}</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <h:commandLink action="#{managerDetailManagedBean.managerLogout}">
+                                        <i class="ti-settings"></i>
+                                        <p>Log Out</p>
+                                    </h:commandLink>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </h:form>
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+
+                        <div class="col-lg-4 col-md-5">
+                            <div class="card card-user">
+                                <div class="image">
+                                    <img src="./java1/img/background.jpg" alt="..."/>
+                                </div>
+                                <div class="content">
+                                    <div class="author">
+                                        <img class="avatar border-white" src="./java1/img/profile-manager.jpg"
+                                             alt="..."/>
+                                        <h4 class="title">#{managerDetailManagedBean.nickname}<br/>
+                                            <a href="#">
+                                                <small>@#{managerDetailManagedBean.name}</small>
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <p class="description text-center">
+                                        "I like the way you work it <br/>
+                                        No diggity <br/>
+                                        I wanna bag it up.<br/>
+                                        Happiness<br/>
+                                        is about having each tiny wish come true"
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card">
+
+                            </div>
+                        </div>
+                        <div class="col-lg-8 col-md-7">
+                            <div class="card">
+                                <div class="header">
+                                    <h4 class="title">Edit Profile</h4>
+                                </div>
+                                <div class="content">
+                                    <h:form>
+
+                                        <h:panelGrid columns="2" cellpadding="7.5">
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <label for="nname"
+                                                               style="margin-left:15px;">Nickname</label>
+                                                        <h:inputText id="nname" pt:placeholder="Nickname"
+                                                                     required="true"
+                                                                     class="form-control border-input"
+                                                                     value="#{managerDetailManagedBean.nickname}">
+                                                            <f:validateLength maximum="20" for="nname"/>
+                                                        </h:inputText>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <label for="rname">Realname</label>
+                                                        <h:inputText id="rname" pt:placeholder="Real Name"
+                                                                     required="true"
+                                                                     class="form-control border-input"
+                                                                     value="#{managerDetailManagedBean.name}">
+                                                            <f:validateLength maximum="20" for="rname"/>
+                                                            <f:validateRegex pattern="^([\u4e00-\u9fa5]+|([a-zA-Z]+\s?)+)$" for="rname"/>
+                                                        </h:inputText>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="mobile" style="margin-left:15px;">Phone</label>
+                                                        <h:inputText id="mobile" required="true"
+                                                                     value="#{managerDetailManagedBean.mobile}"
+                                                                     pt:placeholder="Phone Number"
+                                                                     class="form-control border-input">
+                                                            <f:validateLength minimum="11" maximum="11"/>
+                                                            <!--<f:validateRegex pattern="1[3578][0-9]{9}" for="mob"/>-->
+                                                            <f:validateLongRange minimum="13000000000" maximum="18999999999" for="mobile"/>
+                                                        </h:inputText>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                    <div class="form-group">
+                                                        <label for="email">Email</label>
+                                                        <h:inputText id="email" required="true"
+                                                                     value="#{managerDetailManagedBean.email}"
+                                                                     pt:placeholder="Email"
+                                                                     class="form-control border-input">
+                                                            <f:validateLength maximum="45" for="email"/>
+                                                            <f:validateRegex pattern="^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$" for="email"/>
+                                                        </h:inputText>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-5">
+                                                <div class="form-group">
+                                                    <label for="pass">Password</label>
+                                                    <h:inputSecret id="pass" pt:placeholder="Password"
+                                                                   required="true"
+                                                                   class="form-control border-input"
+                                                                   value="#{managerDetailManagedBean.password}">
+                                                        <f:validateLength maximum="20" minimum="3" for="pass"/>
+                                                    </h:inputSecret>
+                                                </div>
+                                            </div>
+
+                                        </h:panelGrid>
+                                        <div class="text-center">
+                                            <h:commandButton action="#{managerDetailManagedBean.managerUpdate}"
+                                                             value="Update Profile"
+                                                             class="btn btn-info btn-fill btn-wd"/>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </h:form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./java1/js/jquery-3.2.1.min.js"/>
 </h:body>
 </html>
+

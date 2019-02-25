@@ -7,7 +7,7 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:c="http://java.sun.com/jstl/core">
 <h:head>
-    <title>User</title>
+    <title>USER PERSONNAL</title>
 
     <link type="text/css" href="../java1/css/text.css" rel="stylesheet"/>
     <link type="text/css" href="../java1/css/paper-dashboard.css" rel="stylesheet"/>
@@ -43,13 +43,13 @@
                     <li class="active">
                         <a href="user.xhtml?faces-redirect=true">
                             <i class="ti-user"></i>
-                            <p>User</p>
+                            <p>User Personnel</p>
                         </a>
                     </li>
                     <li>
                         <a href="question.xhtml?faces-redirect=true">
                             <i class="ti-comment-alt"></i>
-                            <p>Feedback</p>
+                            <p>Feedback Sending</p>
                         </a>
                     </li>
                 </ul>
@@ -89,7 +89,7 @@
                                 <div class="content">
                                     <h:form>
                                         <div class="author">
-                                            <img class="avatar border-white" src="../java1/img/face-2.jpg"
+                                            <img class="avatar border-white" src="../java1/img/profile.jpg"
                                                  alt="..."/>
                                             <h4 class="title">#{userDetailManagedBean.nickname}<br/>
                                                 <a href="#">
@@ -133,7 +133,7 @@
                                 <div class="content">
                                     <h:form>
 
-                                        <h:panelGrid columns="2" cellpadding="7.5">
+                                        <h:panelGrid columns="2" cellpadding="8">
                                             <div class="row">
                                                 <div class="col-md-3">
                                                     <div class="form-group">
@@ -142,7 +142,9 @@
                                                         <h:inputText id="nname" pt:placeholder="Nickname"
                                                                      required="true"
                                                                      class="form-control border-input"
-                                                                     value="#{userDetailManagedBean.nickname}"/>
+                                                                     value="#{userDetailManagedBean.nickname}">
+                                                            <f:validateLength maximum="20" for="nname"/>
+                                                        </h:inputText>
                                                     </div>
                                                 </div>
 
@@ -152,7 +154,10 @@
                                                         <h:inputText id="rname" pt:placeholder="Real Name"
                                                                      required="true"
                                                                      class="form-control border-input"
-                                                                     value="#{userDetailManagedBean.name}"/>
+                                                                     value="#{userDetailManagedBean.name}">
+                                                            <f:validateLength maximum="20" for="rname"/>
+                                                            <f:validateRegex pattern="^([\u4e00-\u9fa5]+|([a-zA-Z]+\s?)+)$" for="rname"/>
+                                                        </h:inputText>
                                                     </div>
                                                 </div>
 
@@ -177,7 +182,10 @@
                                                         <h:inputText id="mobile" required="true"
                                                                      value="#{userDetailManagedBean.mobile}"
                                                                      pt:placeholder="Phone Number"
-                                                                     class="form-control border-input"/>
+                                                                     class="form-control border-input">
+                                                            <f:validateLength minimum="11" maximum="11"/>
+                                                            <f:validateLongRange minimum="13000000000" maximum="18999999999" for="mobile"/>
+                                                        </h:inputText>
                                                     </div>
                                                 </div>
 
@@ -187,7 +195,10 @@
                                                         <h:inputText id="email" required="true"
                                                                      value="#{userDetailManagedBean.email}"
                                                                      pt:placeholder="Email"
-                                                                     class="form-control border-input"/>
+                                                                     class="form-control border-input">
+                                                            <f:validateLength maximum="45" for="email"/>
+                                                            <f:validateRegex pattern="^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$" for="email"/>
+                                                        </h:inputText>
                                                     </div>
                                                 </div>
                                             </div>
@@ -198,8 +209,9 @@
                                                     <h:inputSecret id="pass" pt:placeholder="Password"
                                                                    required="true"
                                                                    class="form-control border-input"
-                                                                   value="#{userDetailManagedBean.password}"
-                                                    />
+                                                                   value="#{userDetailManagedBean.password}">
+                                                        <f:validateLength maximum="20" minimum="3"/>
+                                                    </h:inputSecret>
                                                 </div>
                                             </div>
 

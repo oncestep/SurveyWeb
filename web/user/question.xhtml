@@ -8,7 +8,7 @@
       xmlns:c="http://java.sun.com/jstl/core"
 >
 <h:head>
-    <title>Question</title>
+    <title>USER FEEDBACK</title>
 
     <link type="text/css" href="../java1/css/text.css" rel="stylesheet"/>
 
@@ -21,8 +21,9 @@
     <link type="text/css" href="../java1/css/textarea.css" rel="stylesheet"/>
 </h:head>
 <h:body style="background: #f4f3ef">
-    <h:form>
-        <div class="wrapper">
+
+    <div class="wrapper">
+        <h:form>
             <div class="sidebar" data-background-color="white" data-active-color="danger">
                 <div class="sidebar-wrapper">
                     <div class="logo">
@@ -45,19 +46,21 @@
                         <li>
                             <a href="user.xhtml?faces-redirect=true">
                                 <i class="ti-user"></i>
-                                <p>User</p>
+                                <p>User Personnel</p>
                             </a>
                         </li>
                         <li class="active">
                             <a href="question.xhtml?faces-redirect=true">
                                 <i class="ti-comment-alt"></i>
-                                <p>Feedback</p>
+                                <p>Feedback Sending</p>
                             </a>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="main-panel">
+        </h:form>
+        <div class="main-panel">
+            <h:form>
                 <nav class="navbar navbar-default">
                     <div class="container-fluid">
                         <div class="navbar-header">
@@ -81,6 +84,8 @@
                         </div>
                     </div>
                 </nav>
+            </h:form>
+            <h:form>
                 <div>
                     <!-- Content Header (Page header) -->
                     <section class="content-header">
@@ -104,7 +109,7 @@
                                                     value="Anything Puzzled, "/></a>Please Send Us A Feedback</h3>
                                             <div class="timeline-body">
                                                 <div id="form-main">
-                                                    <div id="form-div">
+                                                    <div id="form-div" style="background-color: rgba(72,72,72,0.2);">
 
                                                         <p class="name">
                                                             <h:inputText name="name" type="text"
@@ -114,11 +119,12 @@
                                                                          pt:placeholder="Name" id="name"/>
                                                         </p>
 
-                                                        <h:selectOneMenu name="batchId"
+                                                        <h:selectOneMenu name="batchId" required="true"
                                                                          value="#{feedbackManagedBean.naireId}"
                                                                          class="feedback-input email"
                                                                          id="email" pt:placeholder="Email">
-                                                            <c:forEach items="#{surveyManagedBean.surList}"
+                                                            <!--用户回答过的问卷-->
+                                                            <c:forEach items="#{surveyManagedBean.feedBackSurvey}"
                                                                        var="survey">
                                                                 <f:selectItem itemValue="#{survey.naireId}"
                                                                               itemLabel="#{survey.naireName}"/>
@@ -155,9 +161,9 @@
                         </div>
                     </section>
                 </div>
-            </div>
+            </h:form>
         </div>
-    </h:form>
+    </div>
 </h:body>
 </html>
 

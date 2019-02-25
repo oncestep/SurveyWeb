@@ -6,7 +6,7 @@
       xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <h:head>
-    <title>Facelet Title</title>
+    <title>USER LOGIN</title>
     <link type="text/css" href="../java1/css/style.css" rel="stylesheet"/>
 </h:head>
 <h:body>
@@ -23,7 +23,7 @@
                 <h:inputText id="uid" class="inputText" value="#{userDetailManagedBean.username}"
                              pt:placeholder="Enter Your Username"
                              required="true" requiredMessage="Enter ID" validatorMessage="ID Should Be 3-20 Charaters">
-                    <f:validateLength for="id" maximum="20" minimum="3"/>
+                    <f:validateLength for="uid" maximum="20" minimum="3"/>
                 </h:inputText>
                 <h:message for="uid" errorClass="error"/>
             </div>
@@ -32,7 +32,7 @@
                                pt:placeholder="Enter Your Password"
                                required="true" requiredMessage="Enter Password"
                                validatorMessage="Password Should Be 3-20 Charaters">
-                    <f:validateLength for="id" maximum="20" minimum="3"/>
+                    <f:validateLength for="pass" maximum="20" minimum="3"/>
                 </h:inputSecret>
                 <h:message for="pass" errorClass="error"/>
             </div>
@@ -43,6 +43,10 @@
 
         <a href="register.xhtml">
             <button type="button" class="register-tis">Don't have an account?</button>
+        </a><br/>
+
+        <a href="../Main.xhtml">
+            <button type="button" class="register-tis">Back to Index</button>
         </a>
 
     </div>

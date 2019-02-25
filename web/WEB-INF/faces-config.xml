@@ -3,7 +3,7 @@
               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
               xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
     http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
-
+    
     <!--  用户注册重定向  -->
     <navigation-rule>
         <from-view-id>/user/register.xhtml</from-view-id>
@@ -53,17 +53,8 @@
         <from-view-id>*</from-view-id>
         <navigation-case>
             <from-outcome>rejected</from-outcome>
-            <to-view-id>/user/login.xhtml</to-view-id>
+            <to-view-id>/Main.xhtml</to-view-id>
             <redirect/>
-        </navigation-case>
-        <navigation-case>
-            <from-outcome>userIndex</from-outcome>
-            <to-view-id>/user/index.xhtml</to-view-id>
-            <redirect/>
-        </navigation-case>
-        <navigation-case>
-            <from-outcome>managerIndex</from-outcome>
-            <to-view-id>/ManagerIndex.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
 

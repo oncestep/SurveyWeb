@@ -6,7 +6,7 @@
       xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <h:head>
-    <title>Facelet Title</title>
+    <title>USER REGISTER</title>
     <link type="text/css" href="../java1/css/style.css" rel="stylesheet"/>
     <script type="text/javascript">
         function checkpswd() {
@@ -61,15 +61,16 @@
                                requiredMessage="Please Confrim Password" onblur="checkpswd();"
                                validatorMessage="Password Should Be 3-20 Charaters">
                     <f:validateLength maximum="20" minimum="3" for="cpass"/>
-                    <f:validateLength for="cpass" maximum="20" minimum="3"/>
                 </h:inputSecret>
                 <h:message id="repasswordMsg" for="cpass" errorClass="error"/>
             </div>
             <div>
                 <h:inputText id="rname" class="inputText" value="#{userDetailManagedBean.name}"
                              pt:placeholder="Real Name" required="true"
-                             requiredMessage="Enter Name" validatorMessage="Name Cannot be More than 20 Characters">
+                             requiredMessage="Enter Name"
+                             validatorMessage="Invalid Real Name Or Cannot be More than 20 Characters">
                     <f:validateLength maximum="20" for="rname"/>
+                    <f:validateRegex pattern="^([\u4e00-\u9fa5]+|([a-zA-Z]+\s?)+)$" for="rname"/>
                 </h:inputText>
                 <h:message for="rname" errorClass="error"/>
             </div>
@@ -96,7 +97,8 @@
             <div>
                 <h:inputText id="nname" class="inputText" value="#{userDetailManagedBean.nickname}"
                              pt:placeholder=" Nick Name" required="true"
-                             requiredMessage="Enter Name" validatorMessage="Name Cannot be More than 20 Characters">
+                             requiredMessage="Enter Nick Name"
+                             validatorMessage="Nick Name Cannot be More than 20 Characters">
                     <f:validateLength maximum="20" for="nname"/>
                 </h:inputText>
                 <h:message for="nname" errorClass="error"/>
@@ -115,7 +117,8 @@
                 <h:inputText id="emile" class="inputText" value="#{userDetailManagedBean.email}" pt:placeholder="Email"
                              required="true"
                              requiredMessage="Enter Email" validatorMessage="Invalid Email Entered">
-                    <!--<f:validateRegex pattern="" for="emile"/>-->
+                    <f:validateLength maximum="45" for="emile"/>
+                    <f:validateRegex pattern="^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$" for="emile"/>
                 </h:inputText>
                 <h:message for="emile" errorClass="error"/>
             </div>

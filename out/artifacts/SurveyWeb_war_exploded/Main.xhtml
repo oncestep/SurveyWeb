@@ -6,27 +6,20 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 
-
 <h:head>
-    <title>Main</title>
+    <title>Survey Web</title>
     <link href="resources/Main.css" rel="stylesheet" type="text/css"/>
 </h:head>
 <h:body>
-    <div id="div2">
-        <div id="div3">
-            <h1>Welcome</h1>
+    <h:form>
+        <div class="hero" style="background-image: url(./resources/image/homePage.jpg)">
+            <div class="hero__content">
+                <h1>Survey Web</h1>
+                <!--<a class="btn" href="#">Sign up</a>-->
+                <h:commandLink value="User Port" styleClass="btn" action="/user/login?faces-redirect=true"/>
+                <h:commandLink value="Manager Port" styleClass="btn" action="managerLogin?faces-redirect=true"/>
+            </div>
         </div>
-        <div id="div4">
-            <p>The Ultimate Questionnaire investigation System We Need </p>
-        </div>
-        <center>
-            <h:form>
-                <div id="buttons">
-                    <h:commandButton id="button0" value="User" styleClass="button0" action="/user/login?faces-redirect=true"/>
-                    <h:commandButton id="button1" value="Manager" styleClass="button1" action="managerLogin?faces-redirect=true"/>
-                </div>
-            </h:form>
-        </center>
-    </div>
+    </h:form>
 </h:body>
 </html>

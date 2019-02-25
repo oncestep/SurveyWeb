@@ -117,7 +117,7 @@ form{
     opacity: 1;
 }
 .btn-info.btn-fill:hover{
-    background-color: #666;
+    background-color: #2b2b2b;
     color: white;
     border-color: white;
 }
