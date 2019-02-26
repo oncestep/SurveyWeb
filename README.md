@@ -4,4 +4,4 @@
 	* 重用Bean实现数据传输
 
 # 预览
-![homepage]()
+![homepage](https://github.com/oncestep/SurveyWeb/blob/master/img/homepage.JPG)
